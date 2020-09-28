@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//lit
 namespace main_menu
 {
     public partial class Form1 : Form
@@ -15,6 +16,11 @@ namespace main_menu
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
