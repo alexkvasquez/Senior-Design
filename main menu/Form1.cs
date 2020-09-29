@@ -43,5 +43,15 @@ namespace main_menu
         {
 
         }
+
+        private void labelLogIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
