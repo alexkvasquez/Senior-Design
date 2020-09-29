@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 //lit
 namespace main_menu
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -49,9 +42,20 @@ namespace main_menu
 
         }
 
+        private void labelSendToUp_Click(object sender, EventArgs e)
+        {
+            //Going to send the user into the other form
+        }
+
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
+
 }
