@@ -65,6 +65,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::main_menu.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(107, 91);
             this.pictureBox1.Name = "pictureBox1";
@@ -84,7 +85,7 @@
             this.labelGreeting.TabIndex = 1;
             this.labelGreeting.Text = "Welcome";
             this.labelGreeting.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelGreeting.Click += new System.EventHandler(this.labelGreeting_Click);
+            
             // 
             // panelRight
             // 
@@ -103,7 +104,7 @@
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(408, 497);
             this.panelRight.TabIndex = 1;
-            this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRight_Paint);
+         
             // 
             // label3
             // 
@@ -128,6 +129,7 @@
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel1
             // 
@@ -222,7 +224,6 @@
             this.labelLogIn.Size = new System.Drawing.Size(94, 29);
             this.labelLogIn.TabIndex = 0;
             this.labelLogIn.Text = "Login In";
-            this.labelLogIn.Click += new System.EventHandler(this.labelLogIn_Click);
             // 
             // contextMenuStrip1
             // 
