@@ -25,6 +25,9 @@ namespace main_menu
         private void labelSendToUp_Click(object sender, EventArgs e)
         {
             //Going to send the user into the other form
+            this.Hide();
+            SignUp f = new SignUp();
+            f.ShowDialog();
         }
 
    
@@ -35,7 +38,7 @@ namespace main_menu
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 
