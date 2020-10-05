@@ -85,7 +85,6 @@
             this.labelGreeting.TabIndex = 1;
             this.labelGreeting.Text = "Welcome";
             this.labelGreeting.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            
             // 
             // panelRight
             // 
@@ -104,7 +103,6 @@
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(408, 497);
             this.panelRight.TabIndex = 1;
-         
             // 
             // label3
             // 
@@ -165,6 +163,7 @@
             this.lblForgotUserName.Size = new System.Drawing.Size(187, 17);
             this.lblForgotUserName.TabIndex = 6;
             this.lblForgotUserName.Text = "Forgot Username / Password?";
+            this.lblForgotUserName.Click += new System.EventHandler(this.lblForgotUserName_Click);
             // 
             // txtPassword
             // 
