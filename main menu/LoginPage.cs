@@ -30,7 +30,7 @@ namespace main_menu
             f.ShowDialog();
         }
 
-   
+
         private void label3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -38,7 +38,12 @@ namespace main_menu
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void lblForgotUserName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
