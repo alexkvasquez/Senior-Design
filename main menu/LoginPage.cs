@@ -45,6 +45,11 @@ namespace main_menu
         {
 
         }
+
+        private void panelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }
