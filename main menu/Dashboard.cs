@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace main_menu
 {
-    public partial class ForgetPassword : Form
+    public partial class Dashboard : Form
     {
-        public ForgetPassword()
+        public Dashboard()
         {
             InitializeComponent();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
-if 
