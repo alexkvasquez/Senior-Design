@@ -179,6 +179,7 @@
             this.label5.Size = new System.Drawing.Size(24, 27);
             this.label5.TabIndex = 20;
             this.label5.Text = "X";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // SignUp
             // 

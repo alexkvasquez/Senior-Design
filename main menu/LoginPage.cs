@@ -1,14 +1,23 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+
 
 //lit
 namespace main_menu
 {
+
     public partial class Login : Form
     {
+
+
+
         public Login()
         {
             InitializeComponent();
+
         }
 
 
@@ -36,10 +45,35 @@ namespace main_menu
             this.Close();
         }
 
+        MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            cnn.Open();
+            MySqlCommand cmd = cnn.CreateCommand();
+            cmd.CommandText = "SELECT userName,password from Users WHERE userName ='"+ txtUserName.Text +"' AND password ='" + txtPassword.Text + "'";
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                this.Hide();
+                Dashboard d = new Dashboard();
+                d.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Wrong Username And/Or Password1");
+                txtPassword.Clear();
+            }
+
+            cnn.Close();
+
+            
 
         }
+
+            
+        
 
         private void lblForgotUserName_Click(object sender, EventArgs e)
         {
@@ -50,6 +84,22 @@ namespace main_menu
         {
 
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelLogIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
+
