@@ -17,22 +17,17 @@ namespace main_menu
             InitializeComponent();
         }
 
-        private void lblCloseProgram_Click(object sender, EventArgs e)
+        private void lblInventory_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblWelcomeUser_Click(object sender, EventArgs e)
+        private void lblOrders_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void lblStaff_Click(object sender, EventArgs e)
         {
 
         }
@@ -42,9 +37,20 @@ namespace main_menu
 
         }
 
+        private void lblMessages_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -26,11 +26,7 @@ namespace main_menu
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void labelSendToUp_Click(object sender, EventArgs e)
         {
             //Going to send the user into the other form
@@ -48,6 +44,8 @@ namespace main_menu
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //this is going to check the data base if the login is correct
+
             cnn.Open();
             MySqlCommand cmd = cnn.CreateCommand();
             cmd.CommandText = "SELECT userName,password from Users WHERE userName ='"+ txtUserName.Text +"' AND password ='" + txtPassword.Text + "'";
@@ -67,36 +65,6 @@ namespace main_menu
             }
 
             cnn.Close();
-
-            
-
-        }
-
-            
-        
-
-        private void lblForgotUserName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelLeft_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelLogIn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUserName_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }

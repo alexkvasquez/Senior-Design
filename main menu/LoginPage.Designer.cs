@@ -42,19 +42,19 @@
             this.lblForgotUserName = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seniorDesignNewSIPDataSet = new main_menu.SeniorDesignNewSIPDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelLogIn = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.seniorDesignNewSIPDataSet = new main_menu.SeniorDesignNewSIPDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new main_menu.SeniorDesignNewSIPDataSetTableAdapters.UsersTableAdapter();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelRight.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -67,7 +67,6 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(415, 497);
             this.panelLeft.TabIndex = 0;
-            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
             // 
             // pictureBox1
             // 
@@ -134,6 +133,7 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            
             // 
             // panel1
             // 
@@ -169,7 +169,6 @@
             this.lblForgotUserName.Size = new System.Drawing.Size(187, 17);
             this.lblForgotUserName.TabIndex = 6;
             this.lblForgotUserName.Text = "Forgot Username / Password?";
-            this.lblForgotUserName.Click += new System.EventHandler(this.lblForgotUserName_Click);
             // 
             // txtPassword
             // 
@@ -183,7 +182,6 @@
             this.txtPassword.Size = new System.Drawing.Size(207, 27);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUserName
             // 
@@ -196,7 +194,16 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(207, 27);
             this.txtUserName.TabIndex = 4;
-            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.seniorDesignNewSIPDataSet;
+            // 
+            // seniorDesignNewSIPDataSet
+            // 
+            this.seniorDesignNewSIPDataSet.DataSetName = "SeniorDesignNewSIPDataSet";
+            this.seniorDesignNewSIPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -232,23 +239,12 @@
             this.labelLogIn.Size = new System.Drawing.Size(94, 29);
             this.labelLogIn.TabIndex = 0;
             this.labelLogIn.Text = "Login In";
-            this.labelLogIn.Click += new System.EventHandler(this.labelLogIn_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // seniorDesignNewSIPDataSet
-            // 
-            this.seniorDesignNewSIPDataSet.DataSetName = "SeniorDesignNewSIPDataSet";
-            this.seniorDesignNewSIPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.seniorDesignNewSIPDataSet;
             // 
             // usersTableAdapter
             // 
@@ -273,8 +269,8 @@
             this.panelRight.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
