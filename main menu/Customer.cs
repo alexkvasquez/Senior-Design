@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace main_menu
 {
-    public partial class ForgetPassword : Form
+    public partial class Customer : Form
     {
-        public ForgetPassword()
+        public Customer()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Customer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
