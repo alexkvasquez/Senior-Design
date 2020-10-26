@@ -34,7 +34,9 @@ namespace main_menu
 
         private void lblCustomers_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Customer d = new Customer();
+            d.ShowDialog();
         }
 
         private void lblMessages_Click(object sender, EventArgs e)
