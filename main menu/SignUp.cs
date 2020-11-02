@@ -39,5 +39,12 @@ namespace main_menu
         {
             this.Close();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login l = new Login();
+            l.ShowDialog();
+        }
     }
 }
