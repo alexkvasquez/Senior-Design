@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrdersPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersPage.Designer.cs">
+      <DependentUpon>OrdersPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffPage.Designer.cs">
+      <DependentUpon>StaffPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +89,18 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersPage.resx">
+      <DependentUpon>OrdersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffPage.resx">
+      <DependentUpon>StaffPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,6 +29,13 @@ namespace main_menu
             SignUp f = new SignUp();
             f.ShowDialog();
         }
+        private void labelSendToPassReset_Click(object sender, EventArgs e)
+        {
+            //Going to send the user into the other form
+            this.Hide();
+            ForgetPassword f = new ForgetPassword();
+            f.ShowDialog();
+        }
 
 
         private void label3_Click(object sender, EventArgs e)
@@ -42,6 +49,11 @@ namespace main_menu
         }
 
         private void lblForgotUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelLeft_Paint(object sender, PaintEventArgs e)
         {
 
         }
