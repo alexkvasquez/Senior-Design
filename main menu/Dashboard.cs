@@ -34,13 +34,14 @@ namespace main_menu
 
         private void lblCustomers_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Customer d = new Customer();
             d.ShowDialog();
         }
 
         private void lblMessages_Click(object sender, EventArgs e)
         {
+            Message m = new Message();
+            m.ShowDialog();
 
         }
 
@@ -59,7 +60,20 @@ namespace main_menu
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void lblCloseProgram_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure that you want to close the porgram", "EXIT", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

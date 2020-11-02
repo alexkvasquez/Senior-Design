@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textCompanyCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,12 +176,25 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label5.Font = new System.Drawing.Font("Candara", 16F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.label5.Location = new System.Drawing.Point(371, 12);
+            this.label5.Location = new System.Drawing.Point(365, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 27);
             this.label5.TabIndex = 20;
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label6.Font = new System.Drawing.Font("Candara", 16F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.label6.Location = new System.Drawing.Point(12, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 27);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Back";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // SignUp
             // 
@@ -191,6 +205,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(401, 681);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textCompanyCode);
             this.Controls.Add(this.label3);
@@ -223,5 +238,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textCompanyCode;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

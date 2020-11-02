@@ -49,6 +49,7 @@ namespace main_menu
 
         private void Inventory_Load(object sender, EventArgs e)
         {
+
                     }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -57,6 +58,11 @@ namespace main_menu
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editInventory_Click(object sender, EventArgs e)
         {
 
         }

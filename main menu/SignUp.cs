@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace main_menu
 {
@@ -41,9 +40,11 @@ namespace main_menu
             this.Close();
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Login l = new Login();
+            l.ShowDialog();
         }
     }
 }

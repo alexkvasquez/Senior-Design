@@ -67,7 +67,7 @@ namespace main_menu
             }
             else
             {
-                MessageBox.Show("Wrong Username And/Or Password1");
+                MessageBox.Show("Wrong Username And/Or Password");
                 txtPassword.Clear();
             }
 

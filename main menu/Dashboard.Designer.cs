@@ -38,8 +38,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblStaff = new System.Windows.Forms.Label();
             this.lblOrders = new System.Windows.Forms.Label();
-            this.lblCloseProgram = new System.Windows.Forms.Label();
             this.lblInventory = new System.Windows.Forms.Label();
+            this.lblCloseProgram = new System.Windows.Forms.Label();
             this.lblWelcomeUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -55,6 +55,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalSales = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,19 +65,22 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sideMenu
             // 
             this.sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.sideMenu.Controls.Add(this.pictureBox3);
+            this.sideMenu.Controls.Add(this.pictureBox2);
             this.sideMenu.Controls.Add(this.lblCustomers);
             this.sideMenu.Controls.Add(this.pictureBox1);
             this.sideMenu.Controls.Add(this.lblMessages);
             this.sideMenu.Controls.Add(this.button1);
             this.sideMenu.Controls.Add(this.lblStaff);
             this.sideMenu.Controls.Add(this.lblOrders);
-            this.sideMenu.Controls.Add(this.lblCloseProgram);
             this.sideMenu.Controls.Add(this.lblInventory);
             this.sideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideMenu.Location = new System.Drawing.Point(0, 0);
@@ -147,18 +152,6 @@
             this.lblOrders.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblOrders.Click += new System.EventHandler(this.lblOrders_Click);
             // 
-            // lblCloseProgram
-            // 
-            this.lblCloseProgram.AutoSize = true;
-            this.lblCloseProgram.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblCloseProgram.Font = new System.Drawing.Font("Candara", 18F);
-            this.lblCloseProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblCloseProgram.Location = new System.Drawing.Point(12, 9);
-            this.lblCloseProgram.Name = "lblCloseProgram";
-            this.lblCloseProgram.Size = new System.Drawing.Size(26, 29);
-            this.lblCloseProgram.TabIndex = 4;
-            this.lblCloseProgram.Text = "X";
-            // 
             // lblInventory
             // 
             this.lblInventory.AutoSize = true;
@@ -171,6 +164,19 @@
             this.lblInventory.Text = "Inventory";
             this.lblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblInventory.Click += new System.EventHandler(this.lblInventory_Click);
+            // 
+            // lblCloseProgram
+            // 
+            this.lblCloseProgram.AutoSize = true;
+            this.lblCloseProgram.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblCloseProgram.Font = new System.Drawing.Font("Candara", 18F);
+            this.lblCloseProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.lblCloseProgram.Location = new System.Drawing.Point(968, 9);
+            this.lblCloseProgram.Name = "lblCloseProgram";
+            this.lblCloseProgram.Size = new System.Drawing.Size(26, 29);
+            this.lblCloseProgram.TabIndex = 4;
+            this.lblCloseProgram.Text = "X";
+            this.lblCloseProgram.Click += new System.EventHandler(this.lblCloseProgram_Click);
             // 
             // lblWelcomeUser
             // 
@@ -193,6 +199,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblWelcomeUser);
             this.panel1.Controls.Add(this.chart1);
+            this.panel1.Controls.Add(this.lblCloseProgram);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(193, 0);
             this.panel1.Name = "panel1";
@@ -297,6 +304,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lblTotalSales);
             this.panel3.Location = new System.Drawing.Point(25, 69);
@@ -342,6 +350,26 @@
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::main_menu.Properties.Resources.personSilo1;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 275);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::main_menu.Properties.Resources.mailSilo;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 346);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -361,6 +389,7 @@
             this.Controls.Add(this.sideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.sideMenu.ResumeLayout(false);
             this.sideMenu.PerformLayout();
@@ -371,6 +400,8 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -402,5 +433,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotalSales;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
