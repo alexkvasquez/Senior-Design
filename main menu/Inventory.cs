@@ -66,5 +66,10 @@ namespace main_menu
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

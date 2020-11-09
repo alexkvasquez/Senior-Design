@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtCompanyCode = new System.Windows.Forms.TextBox();
+            this.txtReenterPassword = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textCompanyCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,16 +54,17 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // btnLogin
+            // btnSignUp
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.btnLogin.Location = new System.Drawing.Point(133, 598);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(140, 29);
-            this.btnLogin.TabIndex = 9;
-            this.btnLogin.Text = "Sign Up";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnSignUp.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.btnSignUp.Location = new System.Drawing.Point(133, 598);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(140, 29);
+            this.btnSignUp.TabIndex = 9;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            
             // 
             // txtUserName
             // 
@@ -77,17 +78,17 @@
             this.txtUserName.TabIndex = 10;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtCompanyCode
+            // txtReenterPassword
             // 
-            this.txtCompanyCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.txtCompanyCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCompanyCode.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtCompanyCode.Location = new System.Drawing.Point(100, 422);
-            this.txtCompanyCode.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCompanyCode.Name = "txtCompanyCode";
-            this.txtCompanyCode.Size = new System.Drawing.Size(207, 27);
-            this.txtCompanyCode.TabIndex = 11;
-            this.txtCompanyCode.Text = " ";
+            this.txtReenterPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.txtReenterPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtReenterPassword.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtReenterPassword.Location = new System.Drawing.Point(100, 422);
+            this.txtReenterPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtReenterPassword.Name = "txtReenterPassword";
+            this.txtReenterPassword.Size = new System.Drawing.Size(207, 27);
+            this.txtReenterPassword.TabIndex = 11;
+            this.txtReenterPassword.Text = " ";
             // 
             // txtPassword
             // 
@@ -157,17 +158,17 @@
             this.label4.Text = "Company Code";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // textCompanyCode
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Candara", 12F);
-            this.textBox1.Location = new System.Drawing.Point(100, 520);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 27);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = " ";
+            this.textCompanyCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.textCompanyCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textCompanyCode.Font = new System.Drawing.Font("Candara", 12F);
+            this.textCompanyCode.Location = new System.Drawing.Point(100, 520);
+            this.textCompanyCode.Margin = new System.Windows.Forms.Padding(2);
+            this.textCompanyCode.Name = "textCompanyCode";
+            this.textCompanyCode.Size = new System.Drawing.Size(207, 27);
+            this.textCompanyCode.TabIndex = 18;
+            this.textCompanyCode.Text = " ";
             // 
             // label5
             // 
@@ -206,14 +207,14 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textCompanyCode);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtCompanyCode);
+            this.Controls.Add(this.txtReenterPassword);
             this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
@@ -227,15 +228,15 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtCompanyCode;
+        private System.Windows.Forms.TextBox txtReenterPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textCompanyCode;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
     }
