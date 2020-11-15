@@ -60,7 +60,7 @@
   <xs:element name="SeniorDesignNewSIPDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SeniorDesignNewSIPDataSet3" msprop:Generator_UserDSName="SeniorDesignNewSIPDataSet3">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="items" msprop:Generator_TableClassName="itemsDataTable" msprop:Generator_TableVarName="tableitems" msprop:Generator_TablePropName="items" msprop:Generator_RowDeletingName="itemsRowDeleting" msprop:Generator_RowChangingName="itemsRowChanging" msprop:Generator_RowEvHandlerName="itemsRowChangeEventHandler" msprop:Generator_RowDeletedName="itemsRowDeleted" msprop:Generator_UserTableName="items" msprop:Generator_RowChangedName="itemsRowChanged" msprop:Generator_RowEvArgName="itemsRowChangeEvent" msprop:Generator_RowClassName="itemsRow">
+        <xs:element name="items" msprop:Generator_TableClassName="itemsDataTable" msprop:Generator_TableVarName="tableitems" msprop:Generator_RowChangedName="itemsRowChanged" msprop:Generator_TablePropName="items" msprop:Generator_RowDeletingName="itemsRowDeleting" msprop:Generator_RowChangingName="itemsRowChanging" msprop:Generator_RowEvHandlerName="itemsRowChangeEventHandler" msprop:Generator_RowDeletedName="itemsRowDeleted" msprop:Generator_RowClassName="itemsRow" msprop:Generator_UserTableName="items" msprop:Generator_RowEvArgName="itemsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="sku" msprop:Generator_ColumnVarNameInTable="columnsku" msprop:Generator_ColumnPropNameInRow="sku" msprop:Generator_ColumnPropNameInTable="skuColumn" msprop:Generator_UserColumnName="sku" type="xs:int" />

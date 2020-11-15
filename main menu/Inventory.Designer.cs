@@ -33,10 +33,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.editInventory = new System.Windows.Forms.Button();
             this.inventoryToOrders = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,6 +111,15 @@
             this.panel2.Size = new System.Drawing.Size(584, 471);
             this.panel2.TabIndex = 1;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(65, 45);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(455, 258);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(65, 348);
@@ -139,15 +148,6 @@
             this.inventoryToOrders.TabIndex = 1;
             this.inventoryToOrders.Text = "Go To Orders";
             this.inventoryToOrders.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(65, 45);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(455, 258);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // Inventory
             // 
