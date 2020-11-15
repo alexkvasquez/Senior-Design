@@ -19,7 +19,9 @@ namespace main_menu
 
         private void lblInventory_Click(object sender, EventArgs e)
         {
-
+            Inventory d = new Inventory();
+            this.Hide();
+            d.ShowDialog();
         }
 
         private void lblOrders_Click(object sender, EventArgs e)
@@ -65,11 +67,11 @@ namespace main_menu
             DialogResult dialogResult = MessageBox.Show("Are you sure that you want to close the porgram", "EXIT", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                this.Close();
+                System.Windows.Forms.Application.Exit();
             }
             else if (dialogResult == DialogResult.No)
             {
-                
+
             }
         }
 
