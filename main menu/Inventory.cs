@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,36 +17,59 @@ namespace main_menu
             InitializeComponent();
         }
 
-        MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
-
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            cnn.Open();
-            //MySqlDataAdapter adapter = new MySqlDataAdapter();
-        
 
-            //SELECT userName,password from Users WHERE userName ='"+ txtUserName.Text +"' AND password ='" + txtPassword.Text + "'";
-           string cmd = "SELECT itemName, itemSize, Quantity from employees";
-
-            MySqlCommand sql = new MySqlCommand(cmd, cnn);
-            MySqlDataReader rd;
-            rd = sql.ExecuteReader();
-            listView1.Items.Clear();
-            while (rd.Read())
-            {
-                ListViewItem lv = new ListViewItem(rd.GetString(0).ToString());
-                lv.SubItems.Add(rd.GetString(1).ToString()); 
-                lv.SubItems.Add(rd.GetString(2).ToString());
-
-                listView1.Items.Add(lv);
-            }
-
-            rd.Close();
-            sql.Dispose();
-            cnn.Close();
         }
 
-      
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InventorySearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inventoryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inventory_Load(object sender, EventArgs e)
+        {
+
+                    }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editInventory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
