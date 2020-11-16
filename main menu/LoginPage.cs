@@ -46,7 +46,6 @@ namespace main_menu
 
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
 
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //this is going to check the data base if the login is correct

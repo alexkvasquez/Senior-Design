@@ -435,7 +435,7 @@
             // editInventory
             // 
             this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.editInventory.Location = new System.Drawing.Point(20, 412);
+            this.editInventory.Location = new System.Drawing.Point(20, 421);
             this.editInventory.Margin = new System.Windows.Forms.Padding(2);
             this.editInventory.Name = "editInventory";
             this.editInventory.Size = new System.Drawing.Size(363, 27);
