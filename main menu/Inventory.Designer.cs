@@ -54,7 +54,6 @@
             this.lblRetailPrice = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblOnHands = new System.Windows.Forms.Label();
-            this.lblCloseProgram = new System.Windows.Forms.Label();
             this.lblVendor = new System.Windows.Forms.Label();
             this.lblItemSize = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
@@ -73,6 +72,8 @@
             this.itemsTableAdapter1 = new main_menu.SeniorDesignNewSIPDataSet3TableAdapters.itemsTableAdapter();
             this.itemsTableAdapter2 = new main_menu.SeniorDesignNewSIPDataSet4TableAdapters.itemsTableAdapter();
             this.process1 = new System.Diagnostics.Process();
+            this.seniorDesignNewSIPDataSet21 = new main_menu.SeniorDesignNewSIPDataSet2();
+            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,6 +89,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -139,6 +142,7 @@
             this.inventoryToOrders.TabIndex = 1;
             this.inventoryToOrders.Text = "Go To Orders";
             this.inventoryToOrders.UseVisualStyleBackColor = true;
+            this.inventoryToOrders.Click += new System.EventHandler(this.inventoryToOrders_Click_1);
             // 
             // panel2
             // 
@@ -229,6 +233,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.HomeIconPic);
             this.panel3.Controls.Add(this.txtTextDes);
             this.panel3.Controls.Add(this.txtTextretail);
             this.panel3.Controls.Add(this.txtTextSku);
@@ -240,7 +245,6 @@
             this.panel3.Controls.Add(this.lblRetailPrice);
             this.panel3.Controls.Add(this.lblDescription);
             this.panel3.Controls.Add(this.lblOnHands);
-            this.panel3.Controls.Add(this.lblCloseProgram);
             this.panel3.Controls.Add(this.lblVendor);
             this.panel3.Controls.Add(this.lblItemSize);
             this.panel3.Controls.Add(this.lbl);
@@ -376,19 +380,6 @@
             this.lblOnHands.TabIndex = 13;
             this.lblOnHands.Text = "Hand Ons:";
             // 
-            // lblCloseProgram
-            // 
-            this.lblCloseProgram.AutoSize = true;
-            this.lblCloseProgram.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblCloseProgram.Font = new System.Drawing.Font("Candara", 18F);
-            this.lblCloseProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblCloseProgram.Location = new System.Drawing.Point(377, 7);
-            this.lblCloseProgram.Name = "lblCloseProgram";
-            this.lblCloseProgram.Size = new System.Drawing.Size(26, 29);
-            this.lblCloseProgram.TabIndex = 5;
-            this.lblCloseProgram.Text = "X";
-            this.lblCloseProgram.Click += new System.EventHandler(this.lblCloseProgram_Click);
-            // 
             // lblVendor
             // 
             this.lblVendor.AutoSize = true;
@@ -515,6 +506,22 @@
             this.process1.StartInfo.UserName = "";
             this.process1.SynchronizingObject = this;
             // 
+            // seniorDesignNewSIPDataSet21
+            // 
+            this.seniorDesignNewSIPDataSet21.DataSetName = "SeniorDesignNewSIPDataSet2";
+            this.seniorDesignNewSIPDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // HomeIconPic
+            // 
+            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
+            this.HomeIconPic.Location = new System.Drawing.Point(368, 12);
+            this.HomeIconPic.Name = "HomeIconPic";
+            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
+            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomeIconPic.TabIndex = 5;
+            this.HomeIconPic.TabStop = false;
+            this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,6 +556,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -595,7 +604,6 @@
         private System.Windows.Forms.Label lblRetailPrice;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblOnHands;
-        private System.Windows.Forms.Label lblCloseProgram;
         private System.Windows.Forms.Label lblVendor;
         private System.Windows.Forms.Label lblItemSize;
         private System.Windows.Forms.Label lbl;
@@ -604,5 +612,7 @@
         private System.Windows.Forms.TextBox txtTextDes;
         private System.Windows.Forms.TextBox txtTextretail;
         private System.Diagnostics.Process process1;
+        private System.Windows.Forms.PictureBox HomeIconPic;
+        private SeniorDesignNewSIPDataSet2 seniorDesignNewSIPDataSet21;
     }
 }

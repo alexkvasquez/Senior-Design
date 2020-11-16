@@ -39,15 +39,16 @@
             this.txtLookupName = new System.Windows.Forms.TextBox();
             this.lblCustomerTitle = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.HomeIconPic);
             this.panel1.Controls.Add(this.btnAddCust);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -167,19 +168,17 @@
             this.listBox1.Size = new System.Drawing.Size(341, 560);
             this.listBox1.TabIndex = 0;
             // 
-            // label5
+            // HomeIconPic
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label5.Font = new System.Drawing.Font("Candara", 16F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.label5.Location = new System.Drawing.Point(664, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 27);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "X";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.HomeIconPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
+            this.HomeIconPic.Location = new System.Drawing.Point(659, 12);
+            this.HomeIconPic.Name = "HomeIconPic";
+            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
+            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomeIconPic.TabIndex = 19;
+            this.HomeIconPic.TabStop = false;
+            this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
             // 
             // Customer
             // 
@@ -194,6 +193,7 @@
             this.Load += new System.EventHandler(this.Customer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,6 +211,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAddPhone;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox HomeIconPic;
     }
 }

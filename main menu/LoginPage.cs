@@ -30,18 +30,19 @@ namespace main_menu
             SignUp f = new SignUp();
             f.ShowDialog();
         }
-        private void labelSendToPassReset_Click(object sender, EventArgs e)
-        {
-            //Going to send the user into the other form
-            this.Hide();
-            ForgetPassword f = new ForgetPassword();
-            f.ShowDialog();
-        }
 
 
         private void label3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Are you sure that you want to close the program", "EXIT", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
         }
 
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
@@ -88,6 +89,13 @@ namespace main_menu
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblForgotUserName_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ForgetPassword f = new ForgetPassword();
+            f.ShowDialog();
         }
     }
 

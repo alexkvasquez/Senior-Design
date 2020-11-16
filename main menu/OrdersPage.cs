@@ -29,7 +29,16 @@ namespace main_menu
 
         private void ordersToInventory_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
+            Inventory I = new Inventory();
+            I.ShowDialog();
+        }
 
+        private void HomeIconPic_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard m = new Dashboard();
+            m.ShowDialog();
         }
     }
 }

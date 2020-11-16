@@ -27,9 +27,12 @@ namespace main_menu
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+
+        private void HomeIconPic_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Dashboard x = new Dashboard();
+            x.ShowDialog();
         }
     }
 }

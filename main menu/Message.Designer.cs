@@ -30,24 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnRefresh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnApprove = new System.Windows.Forms.Button();
             this.lblWelcomeUser = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.panel1.Controls.Add(this.HomeIconPic);
             this.panel1.Controls.Add(this.listView1);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnApprove);
@@ -59,18 +60,36 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label3
+            // listView1
             // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label3.Font = new System.Drawing.Font("Candara", 12F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.label3.Location = new System.Drawing.Point(711, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 19);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2,
+            this.columnHeader1,
+            this.columnHeader3});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(12, 62);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(712, 437);
+            this.listView1.TabIndex = 13;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.DisplayIndex = 1;
+            this.columnHeader2.Text = "Description";
+            this.columnHeader2.Width = 380;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.DisplayIndex = 0;
+            this.columnHeader1.Text = "Subject";
+            this.columnHeader1.Width = 183;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Status";
+            this.columnHeader3.Width = 177;
             // 
             // btnRefresh
             // 
@@ -117,36 +136,17 @@
             this.lblWelcomeUser.Text = "Message Center";
             this.lblWelcomeUser.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // listView1
+            // HomeIconPic
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2,
-            this.columnHeader1,
-            this.columnHeader3});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 62);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(712, 437);
-            this.listView1.TabIndex = 13;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.DisplayIndex = 0;
-            this.columnHeader1.Text = "Subject";
-            this.columnHeader1.Width = 183;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.DisplayIndex = 1;
-            this.columnHeader2.Text = "Description";
-            this.columnHeader2.Width = 380;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Status";
-            this.columnHeader3.Width = 177;
+            this.HomeIconPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
+            this.HomeIconPic.Location = new System.Drawing.Point(705, 12);
+            this.HomeIconPic.Name = "HomeIconPic";
+            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
+            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomeIconPic.TabIndex = 20;
+            this.HomeIconPic.TabStop = false;
+            this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
             // 
             // Message
             // 
@@ -160,6 +160,7 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,10 +173,10 @@
         private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.PictureBox HomeIconPic;
     }
 }

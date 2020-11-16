@@ -55,7 +55,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalSales = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.OrdersIconPic = new System.Windows.Forms.PictureBox();
+            this.StaffIconPic = new System.Windows.Forms.PictureBox();
+            this.CustomersIconPic = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideMenu.SuspendLayout();
@@ -65,7 +68,9 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersIconPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffIconPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersIconPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +78,10 @@
             // sideMenu
             // 
             this.sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.sideMenu.Controls.Add(this.pictureBox3);
+            this.sideMenu.Controls.Add(this.lblLogout);
+            this.sideMenu.Controls.Add(this.OrdersIconPic);
+            this.sideMenu.Controls.Add(this.StaffIconPic);
+            this.sideMenu.Controls.Add(this.CustomersIconPic);
             this.sideMenu.Controls.Add(this.pictureBox2);
             this.sideMenu.Controls.Add(this.lblCustomers);
             this.sideMenu.Controls.Add(this.pictureBox1);
@@ -93,7 +101,7 @@
             this.lblCustomers.AutoSize = true;
             this.lblCustomers.Font = new System.Drawing.Font("Candara", 18F);
             this.lblCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblCustomers.Location = new System.Drawing.Point(51, 281);
+            this.lblCustomers.Location = new System.Drawing.Point(51, 285);
             this.lblCustomers.Name = "lblCustomers";
             this.lblCustomers.Size = new System.Drawing.Size(122, 29);
             this.lblCustomers.TabIndex = 7;
@@ -106,7 +114,7 @@
             this.lblMessages.AutoSize = true;
             this.lblMessages.Font = new System.Drawing.Font("Candara", 18F);
             this.lblMessages.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblMessages.Location = new System.Drawing.Point(51, 346);
+            this.lblMessages.Location = new System.Drawing.Point(51, 356);
             this.lblMessages.Name = "lblMessages";
             this.lblMessages.Size = new System.Drawing.Size(112, 29);
             this.lblMessages.TabIndex = 9;
@@ -118,9 +126,9 @@
             // 
             this.button1.Font = new System.Drawing.Font("Candara", 14F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.button1.Location = new System.Drawing.Point(0, 710);
+            this.button1.Location = new System.Drawing.Point(12, 693);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 54);
+            this.button1.Size = new System.Drawing.Size(171, 54);
             this.button1.TabIndex = 8;
             this.button1.Text = "Start POS";
             this.button1.UseVisualStyleBackColor = true;
@@ -131,7 +139,7 @@
             this.lblStaff.AutoSize = true;
             this.lblStaff.Font = new System.Drawing.Font("Candara", 18F);
             this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblStaff.Location = new System.Drawing.Point(51, 209);
+            this.lblStaff.Location = new System.Drawing.Point(51, 217);
             this.lblStaff.Name = "lblStaff";
             this.lblStaff.Size = new System.Drawing.Size(61, 29);
             this.lblStaff.TabIndex = 6;
@@ -144,7 +152,7 @@
             this.lblOrders.AutoSize = true;
             this.lblOrders.Font = new System.Drawing.Font("Candara", 18F);
             this.lblOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblOrders.Location = new System.Drawing.Point(51, 139);
+            this.lblOrders.Location = new System.Drawing.Point(51, 149);
             this.lblOrders.Name = "lblOrders";
             this.lblOrders.Size = new System.Drawing.Size(83, 29);
             this.lblOrders.TabIndex = 5;
@@ -157,7 +165,7 @@
             this.lblInventory.AutoSize = true;
             this.lblInventory.Font = new System.Drawing.Font("Candara", 18F);
             this.lblInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblInventory.Location = new System.Drawing.Point(51, 76);
+            this.lblInventory.Location = new System.Drawing.Point(51, 78);
             this.lblInventory.Name = "lblInventory";
             this.lblInventory.Size = new System.Drawing.Size(112, 29);
             this.lblInventory.TabIndex = 1;
@@ -234,7 +242,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(197, 29);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Hot Iteams";
+            this.label7.Text = "Hot Items";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
@@ -265,7 +273,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(197, 29);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Iteams Sold";
+            this.label5.Text = "Items Sold";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -349,35 +357,74 @@
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
-            // pictureBox3
+            // lblLogout
             // 
-            this.pictureBox3.Image = global::main_menu.Properties.Resources.personSilo1;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 275);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 35);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.lblLogout.Font = new System.Drawing.Font("Candara", 18F);
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblLogout.Location = new System.Drawing.Point(51, 9);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(86, 29);
+            this.lblLogout.TabIndex = 14;
+            this.lblLogout.Text = "Logout";
+            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblLogout.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // OrdersIconPic
+            // 
+            this.OrdersIconPic.Image = global::main_menu.Properties.Resources.orders_icon;
+            this.OrdersIconPic.Location = new System.Drawing.Point(16, 149);
+            this.OrdersIconPic.Name = "OrdersIconPic";
+            this.OrdersIconPic.Size = new System.Drawing.Size(29, 29);
+            this.OrdersIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.OrdersIconPic.TabIndex = 13;
+            this.OrdersIconPic.TabStop = false;
+            this.OrdersIconPic.Click += new System.EventHandler(this.OrdersIconPic_Click);
+            // 
+            // StaffIconPic
+            // 
+            this.StaffIconPic.Image = global::main_menu.Properties.Resources.staff_icon;
+            this.StaffIconPic.Location = new System.Drawing.Point(16, 217);
+            this.StaffIconPic.Name = "StaffIconPic";
+            this.StaffIconPic.Size = new System.Drawing.Size(29, 29);
+            this.StaffIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StaffIconPic.TabIndex = 12;
+            this.StaffIconPic.TabStop = false;
+            this.StaffIconPic.Click += new System.EventHandler(this.StaffIconPic_Click);
+            // 
+            // CustomersIconPic
+            // 
+            this.CustomersIconPic.Image = global::main_menu.Properties.Resources.personSilo1;
+            this.CustomersIconPic.Location = new System.Drawing.Point(16, 285);
+            this.CustomersIconPic.Name = "CustomersIconPic";
+            this.CustomersIconPic.Size = new System.Drawing.Size(29, 29);
+            this.CustomersIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CustomersIconPic.TabIndex = 11;
+            this.CustomersIconPic.TabStop = false;
+            this.CustomersIconPic.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::main_menu.Properties.Resources.mailSilo;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 346);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 356);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 78);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Dashboard
             // 
@@ -399,7 +446,9 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersIconPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffIconPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersIconPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -433,6 +482,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotalSales;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox CustomersIconPic;
+        private System.Windows.Forms.PictureBox StaffIconPic;
+        private System.Windows.Forms.PictureBox OrdersIconPic;
+        private System.Windows.Forms.Label lblLogout;
     }
 }

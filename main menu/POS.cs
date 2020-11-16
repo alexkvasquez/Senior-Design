@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace main_menu
 {
-    public partial class Message : Form
+    public partial class POS : Form
     {
-        public Message()
+        public POS()
         {
             InitializeComponent();
         }
@@ -22,32 +22,27 @@ namespace main_menu
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
-        private void HomeIconPic_Click(object sender, EventArgs e)
+        private void lblOrders_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
             Dashboard x = new Dashboard();

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblStaff = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,7 +38,7 @@
             this.clockOut = new System.Windows.Forms.Button();
             this.ClockIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +46,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblStaff);
             this.panel1.Controls.Add(this.panel2);
@@ -57,22 +56,22 @@
             this.panel1.Size = new System.Drawing.Size(228, 600);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox3
+            // HomeIconPic
             // 
-            this.pictureBox3.Image = global::main_menu.Properties.Resources.Home_Icon;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
+            this.HomeIconPic.Location = new System.Drawing.Point(857, 12);
+            this.HomeIconPic.Name = "HomeIconPic";
+            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
+            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomeIconPic.TabIndex = 18;
+            this.HomeIconPic.TabStop = false;
+            this.HomeIconPic.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::main_menu.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 114);
+            this.pictureBox1.Location = new System.Drawing.Point(44, 65);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(140, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -84,7 +83,7 @@
             this.lblStaff.AutoSize = true;
             this.lblStaff.Font = new System.Drawing.Font("Candara", 18F);
             this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.lblStaff.Location = new System.Drawing.Point(86, 82);
+            this.lblStaff.Location = new System.Drawing.Point(81, 33);
             this.lblStaff.Name = "lblStaff";
             this.lblStaff.Size = new System.Drawing.Size(61, 29);
             this.lblStaff.TabIndex = 16;
@@ -98,7 +97,7 @@
             this.panel2.Controls.Add(this.viewSchedule);
             this.panel2.Controls.Add(this.clockOut);
             this.panel2.Controls.Add(this.ClockIn);
-            this.panel2.Location = new System.Drawing.Point(11, 265);
+            this.panel2.Location = new System.Drawing.Point(11, 246);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(204, 324);
@@ -155,6 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(898, 600);
+            this.Controls.Add(this.HomeIconPic);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -162,7 +162,7 @@
             this.Text = "Staff Page";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -179,6 +179,6 @@
         private System.Windows.Forms.Button ClockIn;
         private System.Windows.Forms.Label lblStaff;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox HomeIconPic;
     }
 }

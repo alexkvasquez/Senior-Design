@@ -19,14 +19,6 @@ namespace main_menu
             InitializeComponent();
         }
 
-        private void lblCloseProgram_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Dashboard m = new Dashboard();
-            m.ShowDialog();
-
-        }
-
 
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -203,6 +195,20 @@ namespace main_menu
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void HomeIconPic_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard m = new Dashboard();
+            m.ShowDialog();
+        }
+
+        private void inventoryToOrders_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrdersPage O = new OrdersPage();
+            O.ShowDialog();
         }
     }
 }
