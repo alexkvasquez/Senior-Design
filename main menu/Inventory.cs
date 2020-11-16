@@ -36,6 +36,7 @@ namespace main_menu
 
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
 
+
         private void Inventory_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet4.items' table. You can move, or remove it, as needed.
@@ -97,6 +98,105 @@ namespace main_menu
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                txtTextSku.Text = row.Cells[0].Value.ToString();
+                txtTextName.Text = row.Cells[1].Value.ToString();
+                txtTextItemSize.Text = row.Cells[2].Value.ToString();
+                txtTextOnHands.Text = row.Cells[3].Value.ToString();
+            }
+            cnn.Open();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT Description,Vendor,retailPrice from items WHERE sku = " + int.Parse(txtTextSku.Text) + "", cnn);
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    switch (int.Parse(dr.GetValue(1).ToString()))
+                    {
+                        case 1145:
+                            txtTextVendor.Text = "Manhattan Beer Distributors";
+                            break;
+                        case 13546:
+                            txtTextVendor.Text = "SKI Beer Corporation";
+                            break;
+                        case 15674:
+                            txtTextVendor.Text = "Clare Rose Inc";
+                            break;
+                        case 32654:
+                            txtTextVendor.Text = "Boening Brothers Inc";
+                            break;
+                        case 65498:
+                            txtTextVendor.Text = "Union Beer Distributors";
+                            break;
+                    }
+
+
+                    txtTextDes.Text = (dr.GetValue(0).ToString());
+                    //txtTextVendor.Text = (dr.GetValue(1).ToString());
+                    txtTextretail.Text = (dr.GetValue(2).ToString());
+                }
+
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void editInventory_Click(object sender, EventArgs e)
+        {
+            //cnn.Open();
+            //MySqlCommand cmd = new MySqlCommand("SELECT level from Users WHERE userName =" + globals.username + "", cnn);
+            //MySqlDataReader dr = cmd.ExecuteReader();
+
+            //if (dr.Read())
+            //{
+            //   string hold = (dr.GetValue(0).ToString());
+            //    if (hold.Equals("Manager"))
+            //    {
+            //        s
+            //    }
+            //    else
+            //    {
+
+            //    }
+            //}
+            //cnn.Close();
+            try
+            {
+                if (globals.level.Equals("Employee"))
+                {
+                    MessageBox.Show("You do not hasve access", "SIP");
+                }
+                else
+                {
+                    cnn.Open();
+                    MySqlCommand cmd = new MySqlCommand("UPDATE items SET Quantity =" + int.Parse(txtTextOnHands.Text) + " WHERE sku =" +
+                        int.Parse(txtTextSku.Text) + "", cnn);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
 
         }
     }

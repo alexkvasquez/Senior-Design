@@ -42,6 +42,24 @@
             this.itemsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.seniorDesignNewSIPDataSet4 = new main_menu.SeniorDesignNewSIPDataSet4();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtTextDes = new System.Windows.Forms.TextBox();
+            this.txtTextretail = new System.Windows.Forms.TextBox();
+            this.txtTextSku = new System.Windows.Forms.TextBox();
+            this.txtTextVendor = new System.Windows.Forms.TextBox();
+            this.txtTextName = new System.Windows.Forms.TextBox();
+            this.txtTextOnHands = new System.Windows.Forms.TextBox();
+            this.txtTextItemSize = new System.Windows.Forms.TextBox();
+            this.lbldesdisplay = new System.Windows.Forms.Label();
+            this.lblRetailPrice = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblOnHands = new System.Windows.Forms.Label();
+            this.lblCloseProgram = new System.Windows.Forms.Label();
+            this.lblVendor = new System.Windows.Forms.Label();
+            this.lblItemSize = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
+            this.lblItemName = new System.Windows.Forms.Label();
+            this.editInventory = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.seniorDesignNewSIPDataSet2 = new main_menu.SeniorDesignNewSIPDataSet2();
@@ -54,30 +72,14 @@
             this.itemsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter1 = new main_menu.SeniorDesignNewSIPDataSet3TableAdapters.itemsTableAdapter();
             this.itemsTableAdapter2 = new main_menu.SeniorDesignNewSIPDataSet4TableAdapters.itemsTableAdapter();
-            this.editInventory = new System.Windows.Forms.Button();
-            this.lblItemName = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
-            this.lblItemSize = new System.Windows.Forms.Label();
-            this.lblVendor = new System.Windows.Forms.Label();
-            this.lblCloseProgram = new System.Windows.Forms.Label();
-            this.lblOnHands = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.lblRetailPrice = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbldesdisplay = new System.Windows.Forms.Label();
-            this.txtTextItemSize = new System.Windows.Forms.TextBox();
-            this.txtTextOnHands = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txtTextVendor = new System.Windows.Forms.TextBox();
-            this.txtText = new System.Windows.Forms.TextBox();
-            this.txtTextretail = new System.Windows.Forms.TextBox();
-            this.txtTextDes = new System.Windows.Forms.TextBox();
+            this.process1 = new System.Diagnostics.Process();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet4)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
@@ -86,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -169,9 +170,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(28, 17);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(451, 362);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // skuDataGridViewTextBoxColumn
             // 
@@ -222,11 +226,229 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Search  for Item:";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtTextDes);
+            this.panel3.Controls.Add(this.txtTextretail);
+            this.panel3.Controls.Add(this.txtTextSku);
+            this.panel3.Controls.Add(this.txtTextVendor);
+            this.panel3.Controls.Add(this.txtTextName);
+            this.panel3.Controls.Add(this.txtTextOnHands);
+            this.panel3.Controls.Add(this.txtTextItemSize);
+            this.panel3.Controls.Add(this.lbldesdisplay);
+            this.panel3.Controls.Add(this.lblRetailPrice);
+            this.panel3.Controls.Add(this.lblDescription);
+            this.panel3.Controls.Add(this.lblOnHands);
+            this.panel3.Controls.Add(this.lblCloseProgram);
+            this.panel3.Controls.Add(this.lblVendor);
+            this.panel3.Controls.Add(this.lblItemSize);
+            this.panel3.Controls.Add(this.lbl);
+            this.panel3.Controls.Add(this.lblItemName);
+            this.panel3.Controls.Add(this.editInventory);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.panel3.Location = new System.Drawing.Point(508, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(406, 472);
+            this.panel3.TabIndex = 11;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // txtTextDes
+            // 
+            this.txtTextDes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
+            this.txtTextDes.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtTextDes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTextDes.Location = new System.Drawing.Point(129, 290);
+            this.txtTextDes.Multiline = true;
+            this.txtTextDes.Name = "txtTextDes";
+            this.txtTextDes.ReadOnly = true;
+            this.txtTextDes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTextDes.Size = new System.Drawing.Size(224, 117);
+            this.txtTextDes.TabIndex = 30;
+            // 
+            // txtTextretail
+            // 
+            this.txtTextretail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
+            this.txtTextretail.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtTextretail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTextretail.Location = new System.Drawing.Point(129, 244);
+            this.txtTextretail.Name = "txtTextretail";
+            this.txtTextretail.ReadOnly = true;
+            this.txtTextretail.Size = new System.Drawing.Size(224, 27);
+            this.txtTextretail.TabIndex = 29;
+            // 
+            // txtTextSku
+            // 
+            this.txtTextSku.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
+            this.txtTextSku.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtTextSku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTextSku.Location = new System.Drawing.Point(129, 60);
+            this.txtTextSku.Name = "txtTextSku";
+            this.txtTextSku.ReadOnly = true;
+            this.txtTextSku.Size = new System.Drawing.Size(224, 27);
+            this.txtTextSku.TabIndex = 28;
+            // 
+            // txtTextVendor
+            // 
+            this.txtTextVendor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
+            this.txtTextVendor.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtTextVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTextVendor.Location = new System.Drawing.Point(129, 152);
+            this.txtTextVendor.Name = "txtTextVendor";
+            this.txtTextVendor.ReadOnly = true;
+            this.txtTextVendor.Size = new System.Drawing.Size(224, 27);
+            this.txtTextVendor.TabIndex = 27;
+            // 
+            // txtTextName
+            // 
+            this.txtTextName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
+            this.txtTextName.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtTextName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTextName.Location = new System.Drawing.Point(129, 14);
+            this.txtTextName.Name = "txtTextName";
+            this.txtTextName.ReadOnly = true;
+            this.txtTextName.Size = new System.Drawing.Size(224, 27);
+            this.txtTextName.TabIndex = 26;
+            this.txtTextName.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // txtTextOnHands
+            // 
+            this.txtTextOnHands.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
+            this.txtTextOnHands.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtTextOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTextOnHands.Location = new System.Drawing.Point(129, 198);
+            this.txtTextOnHands.Name = "txtTextOnHands";
+            this.txtTextOnHands.Size = new System.Drawing.Size(224, 27);
+            this.txtTextOnHands.TabIndex = 25;
+            // 
+            // txtTextItemSize
+            // 
+            this.txtTextItemSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
+            this.txtTextItemSize.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtTextItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTextItemSize.Location = new System.Drawing.Point(129, 106);
+            this.txtTextItemSize.Name = "txtTextItemSize";
+            this.txtTextItemSize.ReadOnly = true;
+            this.txtTextItemSize.Size = new System.Drawing.Size(224, 27);
+            this.txtTextItemSize.TabIndex = 24;
+            // 
+            // lbldesdisplay
+            // 
+            this.lbldesdisplay.AutoSize = true;
+            this.lbldesdisplay.Font = new System.Drawing.Font("Candara", 12F);
+            this.lbldesdisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lbldesdisplay.Location = new System.Drawing.Point(112, 312);
+            this.lbldesdisplay.Name = "lbldesdisplay";
+            this.lbldesdisplay.Size = new System.Drawing.Size(0, 19);
+            this.lbldesdisplay.TabIndex = 16;
+            // 
+            // lblRetailPrice
+            // 
+            this.lblRetailPrice.AutoSize = true;
+            this.lblRetailPrice.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblRetailPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblRetailPrice.Location = new System.Drawing.Point(16, 247);
+            this.lblRetailPrice.Name = "lblRetailPrice";
+            this.lblRetailPrice.Size = new System.Drawing.Size(85, 19);
+            this.lblRetailPrice.TabIndex = 15;
+            this.lblRetailPrice.Text = "RetailPrice:";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblDescription.Location = new System.Drawing.Point(16, 293);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(90, 19);
+            this.lblDescription.TabIndex = 14;
+            this.lblDescription.Text = "Description:";
+            // 
+            // lblOnHands
+            // 
+            this.lblOnHands.AutoSize = true;
+            this.lblOnHands.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblOnHands.Location = new System.Drawing.Point(16, 201);
+            this.lblOnHands.Name = "lblOnHands";
+            this.lblOnHands.Size = new System.Drawing.Size(79, 19);
+            this.lblOnHands.TabIndex = 13;
+            this.lblOnHands.Text = "Hand Ons:";
+            // 
+            // lblCloseProgram
+            // 
+            this.lblCloseProgram.AutoSize = true;
+            this.lblCloseProgram.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblCloseProgram.Font = new System.Drawing.Font("Candara", 18F);
+            this.lblCloseProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblCloseProgram.Location = new System.Drawing.Point(377, 7);
+            this.lblCloseProgram.Name = "lblCloseProgram";
+            this.lblCloseProgram.Size = new System.Drawing.Size(26, 29);
+            this.lblCloseProgram.TabIndex = 5;
+            this.lblCloseProgram.Text = "X";
+            this.lblCloseProgram.Click += new System.EventHandler(this.lblCloseProgram_Click);
+            // 
+            // lblVendor
+            // 
+            this.lblVendor.AutoSize = true;
+            this.lblVendor.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblVendor.Location = new System.Drawing.Point(16, 155);
+            this.lblVendor.Name = "lblVendor";
+            this.lblVendor.Size = new System.Drawing.Size(63, 19);
+            this.lblVendor.TabIndex = 12;
+            this.lblVendor.Text = "Vendor:";
+            // 
+            // lblItemSize
+            // 
+            this.lblItemSize.AutoSize = true;
+            this.lblItemSize.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblItemSize.Location = new System.Drawing.Point(16, 109);
+            this.lblItemSize.Name = "lblItemSize";
+            this.lblItemSize.Size = new System.Drawing.Size(73, 19);
+            this.lblItemSize.TabIndex = 11;
+            this.lblItemSize.Text = "Item Size:";
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Candara", 12F);
+            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lbl.Location = new System.Drawing.Point(16, 63);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(38, 19);
+            this.lbl.TabIndex = 10;
+            this.lbl.Text = "Sku:";
+            // 
+            // lblItemName
+            // 
+            this.lblItemName.AutoSize = true;
+            this.lblItemName.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblItemName.Location = new System.Drawing.Point(16, 17);
+            this.lblItemName.Name = "lblItemName";
+            this.lblItemName.Size = new System.Drawing.Size(87, 19);
+            this.lblItemName.TabIndex = 9;
+            this.lblItemName.Text = "Item Name:";
+            // 
+            // editInventory
+            // 
+            this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.editInventory.Location = new System.Drawing.Point(20, 412);
+            this.editInventory.Margin = new System.Windows.Forms.Padding(2);
+            this.editInventory.Name = "editInventory";
+            this.editInventory.Size = new System.Drawing.Size(363, 27);
+            this.editInventory.TabIndex = 3;
+            this.editInventory.Text = "Edit Inventory";
+            this.editInventory.UseVisualStyleBackColor = true;
+            this.editInventory.Click += new System.EventHandler(this.editInventory_Click);
+            // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(28, 428);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(304, 20);
+            this.txtSearch.Size = new System.Drawing.Size(451, 20);
             this.txtSearch.TabIndex = 11;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
@@ -282,215 +504,15 @@
             // 
             this.itemsTableAdapter2.ClearBeforeFill = true;
             // 
-            // editInventory
+            // process1
             // 
-            this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.editInventory.Location = new System.Drawing.Point(20, 412);
-            this.editInventory.Margin = new System.Windows.Forms.Padding(2);
-            this.editInventory.Name = "editInventory";
-            this.editInventory.Size = new System.Drawing.Size(363, 27);
-            this.editInventory.TabIndex = 3;
-            this.editInventory.Text = "Edit Inventory";
-            this.editInventory.UseVisualStyleBackColor = true;
-            // 
-            // lblItemName
-            // 
-            this.lblItemName.AutoSize = true;
-            this.lblItemName.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblItemName.Location = new System.Drawing.Point(16, 17);
-            this.lblItemName.Name = "lblItemName";
-            this.lblItemName.Size = new System.Drawing.Size(87, 19);
-            this.lblItemName.TabIndex = 9;
-            this.lblItemName.Text = "Item Name:";
-            // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Candara", 12F);
-            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lbl.Location = new System.Drawing.Point(16, 63);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(38, 19);
-            this.lbl.TabIndex = 10;
-            this.lbl.Text = "Sku:";
-            // 
-            // lblItemSize
-            // 
-            this.lblItemSize.AutoSize = true;
-            this.lblItemSize.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblItemSize.Location = new System.Drawing.Point(16, 109);
-            this.lblItemSize.Name = "lblItemSize";
-            this.lblItemSize.Size = new System.Drawing.Size(73, 19);
-            this.lblItemSize.TabIndex = 11;
-            this.lblItemSize.Text = "Item Size:";
-            // 
-            // lblVendor
-            // 
-            this.lblVendor.AutoSize = true;
-            this.lblVendor.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblVendor.Location = new System.Drawing.Point(16, 155);
-            this.lblVendor.Name = "lblVendor";
-            this.lblVendor.Size = new System.Drawing.Size(63, 19);
-            this.lblVendor.TabIndex = 12;
-            this.lblVendor.Text = "Vendor:";
-            // 
-            // lblCloseProgram
-            // 
-            this.lblCloseProgram.AutoSize = true;
-            this.lblCloseProgram.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblCloseProgram.Font = new System.Drawing.Font("Candara", 18F);
-            this.lblCloseProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblCloseProgram.Location = new System.Drawing.Point(377, 7);
-            this.lblCloseProgram.Name = "lblCloseProgram";
-            this.lblCloseProgram.Size = new System.Drawing.Size(26, 29);
-            this.lblCloseProgram.TabIndex = 5;
-            this.lblCloseProgram.Text = "X";
-            this.lblCloseProgram.Click += new System.EventHandler(this.lblCloseProgram_Click);
-            // 
-            // lblOnHands
-            // 
-            this.lblOnHands.AutoSize = true;
-            this.lblOnHands.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblOnHands.Location = new System.Drawing.Point(16, 201);
-            this.lblOnHands.Name = "lblOnHands";
-            this.lblOnHands.Size = new System.Drawing.Size(79, 19);
-            this.lblOnHands.TabIndex = 13;
-            this.lblOnHands.Text = "Hand Ons:";
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblDescription.Location = new System.Drawing.Point(16, 293);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(90, 19);
-            this.lblDescription.TabIndex = 14;
-            this.lblDescription.Text = "Description:";
-            // 
-            // lblRetailPrice
-            // 
-            this.lblRetailPrice.AutoSize = true;
-            this.lblRetailPrice.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblRetailPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblRetailPrice.Location = new System.Drawing.Point(16, 247);
-            this.lblRetailPrice.Name = "lblRetailPrice";
-            this.lblRetailPrice.Size = new System.Drawing.Size(85, 19);
-            this.lblRetailPrice.TabIndex = 15;
-            this.lblRetailPrice.Text = "RetailPrice:";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtTextDes);
-            this.panel3.Controls.Add(this.txtTextretail);
-            this.panel3.Controls.Add(this.txtText);
-            this.panel3.Controls.Add(this.txtTextVendor);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.txtTextOnHands);
-            this.panel3.Controls.Add(this.txtTextItemSize);
-            this.panel3.Controls.Add(this.lbldesdisplay);
-            this.panel3.Controls.Add(this.lblRetailPrice);
-            this.panel3.Controls.Add(this.lblDescription);
-            this.panel3.Controls.Add(this.lblOnHands);
-            this.panel3.Controls.Add(this.lblCloseProgram);
-            this.panel3.Controls.Add(this.lblVendor);
-            this.panel3.Controls.Add(this.lblItemSize);
-            this.panel3.Controls.Add(this.lbl);
-            this.panel3.Controls.Add(this.lblItemName);
-            this.panel3.Controls.Add(this.editInventory);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.panel3.Location = new System.Drawing.Point(508, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(406, 472);
-            this.panel3.TabIndex = 11;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // lbldesdisplay
-            // 
-            this.lbldesdisplay.AutoSize = true;
-            this.lbldesdisplay.Font = new System.Drawing.Font("Candara", 12F);
-            this.lbldesdisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lbldesdisplay.Location = new System.Drawing.Point(112, 312);
-            this.lbldesdisplay.Name = "lbldesdisplay";
-            this.lbldesdisplay.Size = new System.Drawing.Size(0, 19);
-            this.lbldesdisplay.TabIndex = 16;
-            // 
-            // txtTextItemSize
-            // 
-            this.txtTextItemSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
-            this.txtTextItemSize.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtTextItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextItemSize.Location = new System.Drawing.Point(129, 106);
-            this.txtTextItemSize.Name = "txtTextItemSize";
-            this.txtTextItemSize.Size = new System.Drawing.Size(115, 27);
-            this.txtTextItemSize.TabIndex = 24;
-            // 
-            // txtTextOnHands
-            // 
-            this.txtTextOnHands.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
-            this.txtTextOnHands.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtTextOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextOnHands.Location = new System.Drawing.Point(129, 198);
-            this.txtTextOnHands.Name = "txtTextOnHands";
-            this.txtTextOnHands.Size = new System.Drawing.Size(115, 27);
-            this.txtTextOnHands.TabIndex = 25;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
-            this.textBox4.Font = new System.Drawing.Font("Candara", 12F);
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.textBox4.Location = new System.Drawing.Point(129, 14);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(115, 27);
-            this.textBox4.TabIndex = 26;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // txtTextVendor
-            // 
-            this.txtTextVendor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
-            this.txtTextVendor.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtTextVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextVendor.Location = new System.Drawing.Point(129, 152);
-            this.txtTextVendor.Name = "txtTextVendor";
-            this.txtTextVendor.Size = new System.Drawing.Size(115, 27);
-            this.txtTextVendor.TabIndex = 27;
-            // 
-            // txtText
-            // 
-            this.txtText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
-            this.txtText.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtText.Location = new System.Drawing.Point(129, 60);
-            this.txtText.Name = "txtText";
-            this.txtText.Size = new System.Drawing.Size(115, 27);
-            this.txtText.TabIndex = 28;
-            // 
-            // txtTextretail
-            // 
-            this.txtTextretail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
-            this.txtTextretail.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtTextretail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextretail.Location = new System.Drawing.Point(129, 244);
-            this.txtTextretail.Name = "txtTextretail";
-            this.txtTextretail.Size = new System.Drawing.Size(115, 27);
-            this.txtTextretail.TabIndex = 29;
-            // 
-            // txtTextDes
-            // 
-            this.txtTextDes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
-            this.txtTextDes.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtTextDes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextDes.Location = new System.Drawing.Point(129, 290);
-            this.txtTextDes.Multiline = true;
-            this.txtTextDes.Name = "txtTextDes";
-            this.txtTextDes.Size = new System.Drawing.Size(115, 20);
-            this.txtTextDes.TabIndex = 30;
+            this.process1.StartInfo.Domain = "";
+            this.process1.StartInfo.LoadUserProfile = false;
+            this.process1.StartInfo.Password = null;
+            this.process1.StartInfo.StandardErrorEncoding = null;
+            this.process1.StartInfo.StandardOutputEncoding = null;
+            this.process1.StartInfo.UserName = "";
+            this.process1.SynchronizingObject = this;
             // 
             // Inventory
             // 
@@ -516,6 +538,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
@@ -524,8 +548,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -563,9 +585,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemSizeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtText;
+        private System.Windows.Forms.TextBox txtTextSku;
         private System.Windows.Forms.TextBox txtTextVendor;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTextName;
         private System.Windows.Forms.TextBox txtTextOnHands;
         private System.Windows.Forms.TextBox txtTextItemSize;
         private System.Windows.Forms.Label lbldesdisplay;
@@ -580,5 +602,6 @@
         private System.Windows.Forms.Button editInventory;
         private System.Windows.Forms.TextBox txtTextDes;
         private System.Windows.Forms.TextBox txtTextretail;
+        private System.Diagnostics.Process process1;
     }
 }
