@@ -93,6 +93,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
     <Compile Include="globals.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\main menu.exe.config" />
     <None Include="packages.config" />
@@ -483,6 +492,12 @@
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.2\THIRD-PARTY-NOTICES.TXT" />
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.2\useSharedDesignerContext.txt" />
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.2\version.txt" />
+    <Content Include="Resources\beer.png" />
+    <None Include="Resources\Home_Icon.png" />
+    <Content Include="Resources\mailSilo.PNG" />
+    <Content Include="Resources\mailSilo1.PNG" />
+    <Content Include="Resources\personSilo1.png" />
+    <Content Include="Resources\personSilo11.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
