@@ -19,15 +19,7 @@ namespace main_menu
             InitializeComponent();
         }
 
-
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
-
 
         private void Inventory_Load(object sender, EventArgs e)
         {
@@ -56,7 +48,6 @@ namespace main_menu
             //cnn.Close();
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is a test");
@@ -67,13 +58,20 @@ namespace main_menu
         {
             int selectedRow = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[selectedRow];
-
-
-
         }
 
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
+            //this going to clear the textboxes for new search
+            txtTextSku.Clear();
+            txtTextDes.Clear();
+            txtTextItemSize.Clear();
+            txtTextName.Clear();
+            txtTextOnHands.Clear();
+            txtTextretail.Clear();
+            txtTextVendor.Clear();
+
+            //this is going to searh the database for word that matchs item
             cnn.Open();
             MySqlCommand cmd = new MySqlCommand("SELECT sku,itemName,itemSize,Quantity from items WHERE itemName LIKE '%" + txtSearch.Text + "%'", cnn);
             MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
@@ -83,18 +81,9 @@ namespace main_menu
             cnn.Close();
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            //this is going to get information from the datagrid view to fill extra information panel
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
@@ -103,9 +92,10 @@ namespace main_menu
                 txtTextItemSize.Text = row.Cells[2].Value.ToString();
                 txtTextOnHands.Text = row.Cells[3].Value.ToString();
             }
-            cnn.Open();
+
             try
             {
+                cnn.Open();
                 MySqlCommand cmd = new MySqlCommand("SELECT Description,Vendor,retailPrice from items WHERE sku = " + int.Parse(txtTextSku.Text) + "", cnn);
 
                 MySqlDataReader dr = cmd.ExecuteReader();
@@ -135,41 +125,20 @@ namespace main_menu
                     txtTextDes.Text = (dr.GetValue(0).ToString());
                     //txtTextVendor.Text = (dr.GetValue(1).ToString());
                     txtTextretail.Text = (dr.GetValue(2).ToString());
+                    cnn.Close();
                 }
-
                 cnn.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
 
         private void editInventory_Click(object sender, EventArgs e)
         {
-            //cnn.Open();
-            //MySqlCommand cmd = new MySqlCommand("SELECT level from Users WHERE userName =" + globals.username + "", cnn);
-            //MySqlDataReader dr = cmd.ExecuteReader();
-
-            //if (dr.Read())
-            //{
-            //   string hold = (dr.GetValue(0).ToString());
-            //    if (hold.Equals("Manager"))
-            //    {
-            //        s
-            //    }
-            //    else
-            //    {
-
-            //    }
-            //}
-            //cnn.Close();
+            //this is going to edit on hands
             try
             {
                 if (globals.level.Equals("Employee"))
@@ -187,13 +156,6 @@ namespace main_menu
             {
                 MessageBox.Show(ex.Message);
             }
-
-
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 

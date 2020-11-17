@@ -43,6 +43,7 @@
             this.seniorDesignNewSIPDataSet4 = new main_menu.SeniorDesignNewSIPDataSet4();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.txtTextDes = new System.Windows.Forms.TextBox();
             this.txtTextretail = new System.Windows.Forms.TextBox();
             this.txtTextSku = new System.Windows.Forms.TextBox();
@@ -73,7 +74,6 @@
             this.itemsTableAdapter2 = new main_menu.SeniorDesignNewSIPDataSet4TableAdapters.itemsTableAdapter();
             this.process1 = new System.Diagnostics.Process();
             this.seniorDesignNewSIPDataSet21 = new main_menu.SeniorDesignNewSIPDataSet2();
-            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -81,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet4)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
@@ -90,7 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -157,10 +157,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(914, 472);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
@@ -179,7 +182,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(451, 362);
             this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // skuDataGridViewTextBoxColumn
@@ -256,7 +258,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(406, 472);
             this.panel3.TabIndex = 11;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // HomeIconPic
+            // 
+            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
+            this.HomeIconPic.Location = new System.Drawing.Point(368, 12);
+            this.HomeIconPic.Name = "HomeIconPic";
+            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
+            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomeIconPic.TabIndex = 5;
+            this.HomeIconPic.TabStop = false;
+            this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
             // 
             // txtTextDes
             // 
@@ -314,7 +326,6 @@
             this.txtTextName.ReadOnly = true;
             this.txtTextName.Size = new System.Drawing.Size(224, 27);
             this.txtTextName.TabIndex = 26;
-            this.txtTextName.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtTextOnHands
             // 
@@ -511,17 +522,6 @@
             this.seniorDesignNewSIPDataSet21.DataSetName = "SeniorDesignNewSIPDataSet2";
             this.seniorDesignNewSIPDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // HomeIconPic
-            // 
-            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
-            this.HomeIconPic.Location = new System.Drawing.Point(368, 12);
-            this.HomeIconPic.Name = "HomeIconPic";
-            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
-            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HomeIconPic.TabIndex = 5;
-            this.HomeIconPic.TabStop = false;
-            this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
-            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,6 +548,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
@@ -557,7 +558,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             this.ResumeLayout(false);
 
         }
