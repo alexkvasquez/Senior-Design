@@ -40,5 +40,10 @@ namespace main_menu
             Dashboard m = new Dashboard();
             m.ShowDialog();
         }
+
+        private void editInventory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

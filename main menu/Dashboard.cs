@@ -17,6 +17,11 @@ namespace main_menu
             InitializeComponent();
         }
 
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            lblWelcomeUser.Text = "Welcome " + globals.name + " ";
+        }
+
         private void lblInventory_Click(object sender, EventArgs e)
         {
             Inventory d = new Inventory();
@@ -50,7 +55,6 @@ namespace main_menu
             this.Hide();
             Message m = new Message();
             m.ShowDialog();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -125,5 +129,7 @@ namespace main_menu
             Login l = new Login();
             l.ShowDialog();
         }
+
+        
     }
 }

@@ -10,5 +10,6 @@ namespace main_menu
     {
         public static string username;
         public static string level;
+        public static string name;
     }
 }

@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.sideMenu = new System.Windows.Forms.Panel();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.OrdersIconPic = new System.Windows.Forms.PictureBox();
+            this.StaffIconPic = new System.Windows.Forms.PictureBox();
+            this.CustomersIconPic = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblCustomers = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMessages = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblStaff = new System.Windows.Forms.Label();
@@ -55,24 +61,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalSales = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblLogout = new System.Windows.Forms.Label();
-            this.OrdersIconPic = new System.Windows.Forms.PictureBox();
-            this.StaffIconPic = new System.Windows.Forms.PictureBox();
-            this.CustomersIconPic = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersIconPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffIconPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersIconPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersIconPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StaffIconPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomersIconPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sideMenu
@@ -96,6 +96,64 @@
             this.sideMenu.Size = new System.Drawing.Size(193, 759);
             this.sideMenu.TabIndex = 0;
             // 
+            // lblLogout
+            // 
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.lblLogout.Font = new System.Drawing.Font("Candara", 18F);
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblLogout.Location = new System.Drawing.Point(51, 9);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(86, 29);
+            this.lblLogout.TabIndex = 14;
+            this.lblLogout.Text = "Logout";
+            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblLogout.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // OrdersIconPic
+            // 
+            this.OrdersIconPic.Image = global::main_menu.Properties.Resources.orders_icon;
+            this.OrdersIconPic.Location = new System.Drawing.Point(16, 149);
+            this.OrdersIconPic.Name = "OrdersIconPic";
+            this.OrdersIconPic.Size = new System.Drawing.Size(29, 29);
+            this.OrdersIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.OrdersIconPic.TabIndex = 13;
+            this.OrdersIconPic.TabStop = false;
+            this.OrdersIconPic.Click += new System.EventHandler(this.OrdersIconPic_Click);
+            // 
+            // StaffIconPic
+            // 
+            this.StaffIconPic.Image = global::main_menu.Properties.Resources.staff_icon;
+            this.StaffIconPic.Location = new System.Drawing.Point(16, 217);
+            this.StaffIconPic.Name = "StaffIconPic";
+            this.StaffIconPic.Size = new System.Drawing.Size(29, 29);
+            this.StaffIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StaffIconPic.TabIndex = 12;
+            this.StaffIconPic.TabStop = false;
+            this.StaffIconPic.Click += new System.EventHandler(this.StaffIconPic_Click);
+            // 
+            // CustomersIconPic
+            // 
+            this.CustomersIconPic.Image = global::main_menu.Properties.Resources.personSilo1;
+            this.CustomersIconPic.Location = new System.Drawing.Point(16, 285);
+            this.CustomersIconPic.Name = "CustomersIconPic";
+            this.CustomersIconPic.Size = new System.Drawing.Size(29, 29);
+            this.CustomersIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CustomersIconPic.TabIndex = 11;
+            this.CustomersIconPic.TabStop = false;
+            this.CustomersIconPic.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::main_menu.Properties.Resources.mailSilo;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 356);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // lblCustomers
             // 
             this.lblCustomers.AutoSize = true;
@@ -108,6 +166,17 @@
             this.lblCustomers.Text = "Customers";
             this.lblCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblCustomers.Click += new System.EventHandler(this.lblCustomers_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(16, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblMessages
             // 
@@ -357,75 +426,6 @@
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
             // 
-            // lblLogout
-            // 
-            this.lblLogout.AutoSize = true;
-            this.lblLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.lblLogout.Font = new System.Drawing.Font("Candara", 18F);
-            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblLogout.Location = new System.Drawing.Point(51, 9);
-            this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(86, 29);
-            this.lblLogout.TabIndex = 14;
-            this.lblLogout.Text = "Logout";
-            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblLogout.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // OrdersIconPic
-            // 
-            this.OrdersIconPic.Image = global::main_menu.Properties.Resources.orders_icon;
-            this.OrdersIconPic.Location = new System.Drawing.Point(16, 149);
-            this.OrdersIconPic.Name = "OrdersIconPic";
-            this.OrdersIconPic.Size = new System.Drawing.Size(29, 29);
-            this.OrdersIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.OrdersIconPic.TabIndex = 13;
-            this.OrdersIconPic.TabStop = false;
-            this.OrdersIconPic.Click += new System.EventHandler(this.OrdersIconPic_Click);
-            // 
-            // StaffIconPic
-            // 
-            this.StaffIconPic.Image = global::main_menu.Properties.Resources.staff_icon;
-            this.StaffIconPic.Location = new System.Drawing.Point(16, 217);
-            this.StaffIconPic.Name = "StaffIconPic";
-            this.StaffIconPic.Size = new System.Drawing.Size(29, 29);
-            this.StaffIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.StaffIconPic.TabIndex = 12;
-            this.StaffIconPic.TabStop = false;
-            this.StaffIconPic.Click += new System.EventHandler(this.StaffIconPic_Click);
-            // 
-            // CustomersIconPic
-            // 
-            this.CustomersIconPic.Image = global::main_menu.Properties.Resources.personSilo1;
-            this.CustomersIconPic.Location = new System.Drawing.Point(16, 285);
-            this.CustomersIconPic.Name = "CustomersIconPic";
-            this.CustomersIconPic.Size = new System.Drawing.Size(29, 29);
-            this.CustomersIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CustomersIconPic.TabIndex = 11;
-            this.CustomersIconPic.TabStop = false;
-            this.CustomersIconPic.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::main_menu.Properties.Resources.mailSilo;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 356);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,8 +437,14 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.sideMenu.ResumeLayout(false);
             this.sideMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersIconPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffIconPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomersIconPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -446,11 +452,6 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersIconPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StaffIconPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomersIconPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

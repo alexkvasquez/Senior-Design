@@ -53,13 +53,14 @@ namespace main_menu
 
             cnn.Open();
             MySqlCommand cmd = cnn.CreateCommand();
-            cmd.CommandText = "SELECT userName,password,level from Users WHERE userName ='"+ txtUserName.Text +"' AND password ='" + txtPassword.Text + "'";
+            cmd.CommandText = "SELECT userName,password,level,Name from Users WHERE userName ='"+ txtUserName.Text +"' AND password ='" + txtPassword.Text + "'";
             MySqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.Read())
             {
                 globals.username = reader.GetValue(0).ToString();
                 globals.level = reader.GetValue(2).ToString();
+                globals.name = reader.GetValue(3).ToString();
                 this.Hide();
                 Dashboard d = new Dashboard();
                 d.ShowDialog();
