@@ -36,13 +36,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.orderItem7 = new System.Windows.Forms.Button();
-            this.orderItem3 = new System.Windows.Forms.Button();
             this.orderItem6 = new System.Windows.Forms.Button();
             this.orderItem1 = new System.Windows.Forms.Button();
             this.orderItem5 = new System.Windows.Forms.Button();
             this.orderItem2 = new System.Windows.Forms.Button();
             this.orderItem4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -115,7 +115,6 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
             this.panel2.Controls.Add(this.HomeIconPic);
             this.panel2.Controls.Add(this.orderItem7);
-            this.panel2.Controls.Add(this.orderItem3);
             this.panel2.Controls.Add(this.orderItem6);
             this.panel2.Controls.Add(this.orderItem1);
             this.panel2.Controls.Add(this.orderItem5);
@@ -149,17 +148,6 @@
             this.orderItem7.TabIndex = 17;
             this.orderItem7.Text = "Order Item";
             this.orderItem7.UseVisualStyleBackColor = true;
-            // 
-            // orderItem3
-            // 
-            this.orderItem3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.orderItem3.Location = new System.Drawing.Point(4, 205);
-            this.orderItem3.Margin = new System.Windows.Forms.Padding(2);
-            this.orderItem3.Name = "orderItem3";
-            this.orderItem3.Size = new System.Drawing.Size(100, 26);
-            this.orderItem3.TabIndex = 13;
-            this.orderItem3.Text = "Order Item";
-            this.orderItem3.UseVisualStyleBackColor = true;
             // 
             // orderItem6
             // 
@@ -225,10 +213,21 @@
             "(15674)\tClare Rose Inc",
             "(32654)\tBoening Brothers Inc",
             "(65498)\tUnion Beer Distributors"});
-            this.comboBox1.Location = new System.Drawing.Point(213, 19);
+            this.comboBox1.Location = new System.Drawing.Point(194, 35);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(221, 21);
             this.comboBox1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 14F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.label1.Location = new System.Drawing.Point(194, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 23);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
             // 
             // OrdersPage
             // 
@@ -236,6 +235,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(916, 470);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -249,16 +249,18 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button orderItem7;
-        private System.Windows.Forms.Button orderItem3;
         private System.Windows.Forms.Button orderItem6;
         private System.Windows.Forms.Button orderItem1;
         private System.Windows.Forms.Button orderItem5;
@@ -275,5 +277,6 @@
         private System.Windows.Forms.PictureBox HomeIconPic;
         private System.Windows.Forms.Label lblOrders;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

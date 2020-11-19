@@ -67,6 +67,7 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(415, 497);
             this.panelLeft.TabIndex = 0;
+            this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint_1);
             // 
             // labelGreeting
             // 

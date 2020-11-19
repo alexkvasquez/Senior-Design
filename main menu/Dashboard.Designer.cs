@@ -313,6 +313,7 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Hot Items";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
             // 
             // panel4
             // 
