@@ -48,5 +48,7 @@ namespace main_menu
             Dashboard x = new Dashboard();
             x.ShowDialog();
         }
+
+   
     }
 }
