@@ -10,25 +10,24 @@ using System.Windows.Forms;
 
 namespace main_menu
 {
-    public partial class Customer : Form
+    public partial class Staff : Form
     {
-        public Customer()
+        public Staff()
         {
             InitializeComponent();
         }
 
-        private void Customer_Load(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-
-        private void HomeIconPic_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
             Dashboard x = new Dashboard();

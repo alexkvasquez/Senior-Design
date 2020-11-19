@@ -46,5 +46,12 @@ namespace main_menu
         {
             this.Close();
         }
+
+        private void HomeIconPic_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard x = new Dashboard();
+            x.ShowDialog();
+        }
     }
 }

@@ -32,7 +32,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelGreeting = new System.Windows.Forms.Label();
             this.panelRight = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,12 +48,13 @@
             this.labelLogIn = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.usersTableAdapter = new main_menu.SeniorDesignNewSIPDataSetTableAdapters.UsersTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelRight.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -68,16 +68,6 @@
             this.panelLeft.Size = new System.Drawing.Size(415, 497);
             this.panelLeft.TabIndex = 0;
             this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::main_menu.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(107, 91);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 203);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // labelGreeting
             // 
@@ -169,6 +159,7 @@
             this.lblForgotUserName.Size = new System.Drawing.Size(187, 17);
             this.lblForgotUserName.TabIndex = 6;
             this.lblForgotUserName.Text = "Forgot Username / Password?";
+            this.lblForgotUserName.Click += new System.EventHandler(this.lblForgotUserName_Click);
             // 
             // txtPassword
             // 
@@ -250,6 +241,17 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::main_menu.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(107, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(213, 203);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,13 +266,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelLeft.ResumeLayout(false);
             this.panelLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,7 +284,6 @@
         private System.Windows.Forms.Label labelGreeting;
         private System.Windows.Forms.Label labelLogIn;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -295,6 +296,7 @@
         private SeniorDesignNewSIPDataSet seniorDesignNewSIPDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private SeniorDesignNewSIPDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        public System.Windows.Forms.TextBox txtUserName;
     }
 }
 

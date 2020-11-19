@@ -41,5 +41,12 @@ namespace main_menu
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard x = new Dashboard();
+            x.ShowDialog();
+        }
     }
 }

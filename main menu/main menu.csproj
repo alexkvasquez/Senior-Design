@@ -93,6 +93,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS.Designer.cs">
+      <DependentUpon>POS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="globals.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +117,12 @@
     </Compile>
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
@@ -123,19 +142,18 @@
     <Compile Include="ForgetPassword.Designer.cs">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="OrdersPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrdersPage.Designer.cs">
       <DependentUpon>OrdersPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="POS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="POS.Designer.cs">
-      <DependentUpon>POS.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,19 +167,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SeniorDesignNewSIPDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SeniorDesignNewSIPDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeniorDesignNewSIPDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SeniorDesignNewSIPDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeniorDesignNewSIPDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SeniorDesignNewSIPDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeniorDesignNewSIPDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SeniorDesignNewSIPDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeniorDesignNewSIPDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StaffPage.Designer.cs">
-      <DependentUpon>StaffPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="utils.cs" />
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,17 +202,20 @@
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrdersPage.resx">
       <DependentUpon>OrdersPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="POS.resx">
-      <DependentUpon>POS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,8 +225,8 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffPage.resx">
-      <DependentUpon>StaffPage.cs</DependentUpon>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\main menu.exe.config" />
     <None Include="packages.config" />
@@ -258,6 +292,50 @@
     </None>
     <None Include="SeniorDesignNewSIPDataSet.xss">
       <DependentUpon>SeniorDesignNewSIPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet1.xsc">
+      <DependentUpon>SeniorDesignNewSIPDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeniorDesignNewSIPDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet1.xss">
+      <DependentUpon>SeniorDesignNewSIPDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet2.xsc">
+      <DependentUpon>SeniorDesignNewSIPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeniorDesignNewSIPDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet2.xss">
+      <DependentUpon>SeniorDesignNewSIPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet3.xsc">
+      <DependentUpon>SeniorDesignNewSIPDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeniorDesignNewSIPDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet3.xss">
+      <DependentUpon>SeniorDesignNewSIPDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet4.xsc">
+      <DependentUpon>SeniorDesignNewSIPDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeniorDesignNewSIPDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet4.xss">
+      <DependentUpon>SeniorDesignNewSIPDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -422,9 +500,18 @@
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.2\THIRD-PARTY-NOTICES.TXT" />
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.2\useSharedDesignerContext.txt" />
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.2\version.txt" />
+    <Content Include="Resources\beer.png" />
+    <None Include="Resources\staff icon.png" />
+    <None Include="Resources\Home_Icon.png" />
+    <Content Include="Resources\mailSilo.PNG" />
+    <Content Include="Resources\mailSilo1.PNG" />
+    <None Include="Resources\orders icon.png" />
+    <Content Include="Resources\personSilo1.png" />
+    <Content Include="Resources\personSilo11.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
+    <Folder Include="obj\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
