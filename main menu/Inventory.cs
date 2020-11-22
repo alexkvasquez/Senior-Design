@@ -148,8 +148,13 @@ namespace main_menu
                 else
                 {
                     cnn.Open();
-                    MySqlCommand cmd = new MySqlCommand("UPDATE items SET Quantity =" + int.Parse(txtTextOnHands.Text) + " WHERE sku =" +
-                        int.Parse(txtTextSku.Text) + "", cnn);
+                    MySqlCommand cmd = new MySqlCommand("UPDATE items SET Quantity = '" + int.Parse(txtTextOnHands.Text) + "' WHERE sku ='" +
+                        int.Parse(txtTextSku.Text) + "'", cnn);
+                    cmd.ExecuteReader();
+                    MessageBox.Show("Inventory has been updated");
+                    cnn.Close();
+                    this.itemsTableAdapter2.Fill(this.seniorDesignNewSIPDataSet4.items);
+                    
                 }
             }
             catch (Exception ex)
@@ -171,6 +176,11 @@ namespace main_menu
             this.Hide();
             OrdersPage O = new OrdersPage();
             O.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

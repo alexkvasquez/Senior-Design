@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblOrders = new System.Windows.Forms.Label();
             this.ordersToInventory = new System.Windows.Forms.Button();
@@ -41,12 +42,18 @@
             this.orderItem5 = new System.Windows.Forms.Button();
             this.orderItem2 = new System.Windows.Forms.Button();
             this.orderItem4 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbVendorName = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.seniorDesignNewSIPDataSet5 = new main_menu.SeniorDesignNewSIPDataSet5();
+            this.vendorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vendorTableAdapter = new main_menu.SeniorDesignNewSIPDataSet5TableAdapters.VendorTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -204,19 +211,16 @@
             this.orderItem4.Text = "Order Item";
             this.orderItem4.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbVendorName
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "(1145) \tManhattan Beer Distributors",
-            "(13546) \tSKI Beer Corporation",
-            "(15674)\tClare Rose Inc",
-            "(32654)\tBoening Brothers Inc",
-            "(65498)\tUnion Beer Distributors"});
-            this.comboBox1.Location = new System.Drawing.Point(194, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(221, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cbVendorName.DataSource = this.vendorBindingSource;
+            this.cbVendorName.DisplayMember = "vendorName";
+            this.cbVendorName.Font = new System.Drawing.Font("Candara", 8.25F);
+            this.cbVendorName.FormattingEnabled = true;
+            this.cbVendorName.Location = new System.Drawing.Point(194, 35);
+            this.cbVendorName.Name = "cbVendorName";
+            this.cbVendorName.Size = new System.Drawing.Size(221, 21);
+            this.cbVendorName.TabIndex = 5;
             // 
             // label1
             // 
@@ -225,9 +229,35 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.label1.Location = new System.Drawing.Point(194, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 23);
+            this.label1.Size = new System.Drawing.Size(122, 23);
             this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.label1.Text = "Select Vendor";
+            // 
+            // seniorDesignNewSIPDataSet5
+            // 
+            this.seniorDesignNewSIPDataSet5.DataSetName = "SeniorDesignNewSIPDataSet5";
+            this.seniorDesignNewSIPDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vendorBindingSource
+            // 
+            this.vendorBindingSource.DataMember = "Vendor";
+            this.vendorBindingSource.DataSource = this.seniorDesignNewSIPDataSet5;
+            // 
+            // vendorTableAdapter
+            // 
+            this.vendorTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.button1.Location = new System.Drawing.Point(420, 29);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 29);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Start Order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // OrdersPage
             // 
@@ -235,19 +265,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(916, 470);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbVendorName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrdersPage";
             this.Text = "OrdersPage";
+            this.Load += new System.EventHandler(this.OrdersPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,7 +310,11 @@
 
         private System.Windows.Forms.PictureBox HomeIconPic;
         private System.Windows.Forms.Label lblOrders;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbVendorName;
         private System.Windows.Forms.Label label1;
+        private SeniorDesignNewSIPDataSet5 seniorDesignNewSIPDataSet5;
+        private System.Windows.Forms.BindingSource vendorBindingSource;
+        private SeniorDesignNewSIPDataSet5TableAdapters.VendorTableAdapter vendorTableAdapter;
+        private System.Windows.Forms.Button button1;
     }
 }

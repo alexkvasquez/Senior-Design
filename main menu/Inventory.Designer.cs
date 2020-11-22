@@ -127,7 +127,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::main_menu.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(2, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,13 +178,14 @@
             this.quantityDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.itemsBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(21, 14);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(338, 294);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // skuDataGridViewTextBoxColumn
@@ -259,7 +260,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel3.Location = new System.Drawing.Point(382, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(304, 384);
             this.panel3.TabIndex = 11;
@@ -268,7 +269,7 @@
             // 
             this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
             this.HomeIconPic.Location = new System.Drawing.Point(276, 10);
-            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(2);
             this.HomeIconPic.Name = "HomeIconPic";
             this.HomeIconPic.Size = new System.Drawing.Size(22, 24);
             this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -282,7 +283,7 @@
             this.txtTextDes.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextDes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextDes.Location = new System.Drawing.Point(97, 236);
-            this.txtTextDes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextDes.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextDes.Multiline = true;
             this.txtTextDes.Name = "txtTextDes";
             this.txtTextDes.ReadOnly = true;
@@ -296,7 +297,7 @@
             this.txtTextretail.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextretail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextretail.Location = new System.Drawing.Point(97, 198);
-            this.txtTextretail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextretail.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextretail.Name = "txtTextretail";
             this.txtTextretail.ReadOnly = true;
             this.txtTextretail.Size = new System.Drawing.Size(169, 27);
@@ -308,7 +309,7 @@
             this.txtTextSku.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextSku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextSku.Location = new System.Drawing.Point(97, 49);
-            this.txtTextSku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextSku.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextSku.Name = "txtTextSku";
             this.txtTextSku.ReadOnly = true;
             this.txtTextSku.Size = new System.Drawing.Size(169, 27);
@@ -320,7 +321,7 @@
             this.txtTextVendor.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextVendor.Location = new System.Drawing.Point(97, 124);
-            this.txtTextVendor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextVendor.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextVendor.Name = "txtTextVendor";
             this.txtTextVendor.ReadOnly = true;
             this.txtTextVendor.Size = new System.Drawing.Size(169, 27);
@@ -332,7 +333,7 @@
             this.txtTextName.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextName.Location = new System.Drawing.Point(97, 11);
-            this.txtTextName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextName.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextName.Name = "txtTextName";
             this.txtTextName.ReadOnly = true;
             this.txtTextName.Size = new System.Drawing.Size(169, 27);
@@ -344,7 +345,7 @@
             this.txtTextOnHands.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextOnHands.Location = new System.Drawing.Point(97, 161);
-            this.txtTextOnHands.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextOnHands.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextOnHands.Name = "txtTextOnHands";
             this.txtTextOnHands.Size = new System.Drawing.Size(169, 27);
             this.txtTextOnHands.TabIndex = 25;
@@ -355,7 +356,7 @@
             this.txtTextItemSize.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextItemSize.Location = new System.Drawing.Point(97, 86);
-            this.txtTextItemSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextItemSize.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextItemSize.Name = "txtTextItemSize";
             this.txtTextItemSize.ReadOnly = true;
             this.txtTextItemSize.Size = new System.Drawing.Size(169, 27);
@@ -470,7 +471,7 @@
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(21, 348);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(339, 20);
             this.txtSearch.TabIndex = 11;
