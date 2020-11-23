@@ -119,7 +119,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(163, 384);
+            this.panel1.Size = new System.Drawing.Size(163, 463);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -137,7 +137,7 @@
             // inventoryToOrders
             // 
             this.inventoryToOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.inventoryToOrders.Location = new System.Drawing.Point(16, 347);
+            this.inventoryToOrders.Location = new System.Drawing.Point(11, 414);
             this.inventoryToOrders.Margin = new System.Windows.Forms.Padding(2);
             this.inventoryToOrders.Name = "inventoryToOrders";
             this.inventoryToOrders.Size = new System.Drawing.Size(132, 32);
@@ -153,11 +153,12 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txtSearch);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel2.Location = new System.Drawing.Point(163, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(686, 384);
+            this.panel2.Size = new System.Drawing.Size(747, 463);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -183,9 +184,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(338, 294);
+            this.dataGridView1.Size = new System.Drawing.Size(404, 365);
             this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // skuDataGridViewTextBoxColumn
@@ -231,7 +231,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.label1.Location = new System.Drawing.Point(18, 327);
+            this.label1.Location = new System.Drawing.Point(17, 400);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 19);
@@ -259,10 +259,10 @@
             this.panel3.Controls.Add(this.editInventory);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.panel3.Location = new System.Drawing.Point(382, 0);
+            this.panel3.Location = new System.Drawing.Point(443, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(304, 384);
+            this.panel3.Size = new System.Drawing.Size(304, 463);
             this.panel3.TabIndex = 11;
             // 
             // HomeIconPic
@@ -282,7 +282,7 @@
             this.txtTextDes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.txtTextDes.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextDes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextDes.Location = new System.Drawing.Point(97, 236);
+            this.txtTextDes.Location = new System.Drawing.Point(97, 290);
             this.txtTextDes.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextDes.Multiline = true;
             this.txtTextDes.Name = "txtTextDes";
@@ -296,7 +296,7 @@
             this.txtTextretail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.txtTextretail.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextretail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextretail.Location = new System.Drawing.Point(97, 198);
+            this.txtTextretail.Location = new System.Drawing.Point(97, 241);
             this.txtTextretail.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextretail.Name = "txtTextretail";
             this.txtTextretail.ReadOnly = true;
@@ -308,7 +308,7 @@
             this.txtTextSku.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.txtTextSku.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextSku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextSku.Location = new System.Drawing.Point(97, 49);
+            this.txtTextSku.Location = new System.Drawing.Point(97, 57);
             this.txtTextSku.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextSku.Name = "txtTextSku";
             this.txtTextSku.ReadOnly = true;
@@ -320,7 +320,7 @@
             this.txtTextVendor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.txtTextVendor.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextVendor.Location = new System.Drawing.Point(97, 124);
+            this.txtTextVendor.Location = new System.Drawing.Point(97, 149);
             this.txtTextVendor.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextVendor.Name = "txtTextVendor";
             this.txtTextVendor.ReadOnly = true;
@@ -344,7 +344,7 @@
             this.txtTextOnHands.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.txtTextOnHands.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextOnHands.Location = new System.Drawing.Point(97, 161);
+            this.txtTextOnHands.Location = new System.Drawing.Point(97, 195);
             this.txtTextOnHands.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextOnHands.Name = "txtTextOnHands";
             this.txtTextOnHands.Size = new System.Drawing.Size(169, 27);
@@ -355,7 +355,7 @@
             this.txtTextItemSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
             this.txtTextItemSize.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTextItemSize.Location = new System.Drawing.Point(97, 86);
+            this.txtTextItemSize.Location = new System.Drawing.Point(97, 103);
             this.txtTextItemSize.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextItemSize.Name = "txtTextItemSize";
             this.txtTextItemSize.ReadOnly = true;
@@ -367,7 +367,7 @@
             this.lbldesdisplay.AutoSize = true;
             this.lbldesdisplay.Font = new System.Drawing.Font("Candara", 12F);
             this.lbldesdisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lbldesdisplay.Location = new System.Drawing.Point(84, 254);
+            this.lbldesdisplay.Location = new System.Drawing.Point(84, 402);
             this.lbldesdisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldesdisplay.Name = "lbldesdisplay";
             this.lbldesdisplay.Size = new System.Drawing.Size(0, 19);
@@ -378,7 +378,7 @@
             this.lblRetailPrice.AutoSize = true;
             this.lblRetailPrice.Font = new System.Drawing.Font("Candara", 12F);
             this.lblRetailPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblRetailPrice.Location = new System.Drawing.Point(12, 201);
+            this.lblRetailPrice.Location = new System.Drawing.Point(12, 268);
             this.lblRetailPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRetailPrice.Name = "lblRetailPrice";
             this.lblRetailPrice.Size = new System.Drawing.Size(85, 19);
@@ -390,7 +390,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Candara", 12F);
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblDescription.Location = new System.Drawing.Point(12, 238);
+            this.lblDescription.Location = new System.Drawing.Point(7, 290);
             this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(90, 19);
@@ -402,7 +402,7 @@
             this.lblOnHands.AutoSize = true;
             this.lblOnHands.Font = new System.Drawing.Font("Candara", 12F);
             this.lblOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblOnHands.Location = new System.Drawing.Point(12, 163);
+            this.lblOnHands.Location = new System.Drawing.Point(12, 222);
             this.lblOnHands.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnHands.Name = "lblOnHands";
             this.lblOnHands.Size = new System.Drawing.Size(79, 19);
@@ -414,7 +414,7 @@
             this.lblVendor.AutoSize = true;
             this.lblVendor.Font = new System.Drawing.Font("Candara", 12F);
             this.lblVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblVendor.Location = new System.Drawing.Point(12, 126);
+            this.lblVendor.Location = new System.Drawing.Point(12, 157);
             this.lblVendor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVendor.Name = "lblVendor";
             this.lblVendor.Size = new System.Drawing.Size(63, 19);
@@ -426,7 +426,7 @@
             this.lblItemSize.AutoSize = true;
             this.lblItemSize.Font = new System.Drawing.Font("Candara", 12F);
             this.lblItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblItemSize.Location = new System.Drawing.Point(12, 89);
+            this.lblItemSize.Location = new System.Drawing.Point(12, 106);
             this.lblItemSize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemSize.Name = "lblItemSize";
             this.lblItemSize.Size = new System.Drawing.Size(73, 19);
@@ -438,7 +438,7 @@
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Candara", 12F);
             this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lbl.Location = new System.Drawing.Point(12, 51);
+            this.lbl.Location = new System.Drawing.Point(12, 60);
             this.lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(38, 19);
@@ -460,17 +460,18 @@
             // editInventory
             // 
             this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.editInventory.Location = new System.Drawing.Point(15, 342);
+            this.editInventory.Location = new System.Drawing.Point(16, 421);
             this.editInventory.Margin = new System.Windows.Forms.Padding(2);
             this.editInventory.Name = "editInventory";
             this.editInventory.Size = new System.Drawing.Size(272, 22);
             this.editInventory.TabIndex = 3;
             this.editInventory.Text = "Edit Inventory";
             this.editInventory.UseVisualStyleBackColor = true;
+            this.editInventory.Click += new System.EventHandler(this.editInventory_Click_1);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(21, 348);
+            this.txtSearch.Location = new System.Drawing.Point(21, 421);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(339, 20);
@@ -550,7 +551,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(850, 384);
+            this.ClientSize = new System.Drawing.Size(910, 463);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Maroon;

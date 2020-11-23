@@ -99,10 +99,10 @@
     <Compile Include="POS.Designer.cs">
       <DependentUpon>POS.cs</DependentUpon>
     </Compile>
-    <Compile Include="SeniorDesignNewSIPDataSet5.Designer.cs">
+    <Compile Include="SeniorDesignNewSIPDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SeniorDesignNewSIPDataSet5.xsd</DependentUpon>
+      <DependentUpon>SeniorDesignNewSIPDataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
@@ -213,6 +213,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -346,16 +347,16 @@
     <None Include="SeniorDesignNewSIPDataSet4.xss">
       <DependentUpon>SeniorDesignNewSIPDataSet4.xsd</DependentUpon>
     </None>
-    <None Include="SeniorDesignNewSIPDataSet5.xsc">
-      <DependentUpon>SeniorDesignNewSIPDataSet5.xsd</DependentUpon>
+    <None Include="SeniorDesignNewSIPDataSet6.xsc">
+      <DependentUpon>SeniorDesignNewSIPDataSet6.xsd</DependentUpon>
     </None>
-    <None Include="SeniorDesignNewSIPDataSet5.xsd">
+    <None Include="SeniorDesignNewSIPDataSet6.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SeniorDesignNewSIPDataSet5.Designer.cs</LastGenOutput>
+      <LastGenOutput>SeniorDesignNewSIPDataSet6.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SeniorDesignNewSIPDataSet5.xss">
-      <DependentUpon>SeniorDesignNewSIPDataSet5.xsd</DependentUpon>
+    <None Include="SeniorDesignNewSIPDataSet6.xss">
+      <DependentUpon>SeniorDesignNewSIPDataSet6.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
