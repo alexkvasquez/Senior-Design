@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblOrders = new System.Windows.Forms.Label();
             this.ordersToInventory = new System.Windows.Forms.Button();
-            this.editInventory = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.editInventory = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.HomeIconPic = new System.Windows.Forms.PictureBox();
-            this.btnAddItemOrder = new System.Windows.Forms.Button();
             this.cbVendorName = new System.Windows.Forms.ComboBox();
             this.vendorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -46,12 +45,6 @@
             this.lblOrderNumber = new System.Windows.Forms.Label();
             this.lblVendorName = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sku = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vendor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BuyinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.seniorDesignNewSIPDataSet6 = new main_menu.SeniorDesignNewSIPDataSet6();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,6 +58,8 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,7 +78,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel1.Controls.Add(this.lblOrders);
             this.panel1.Controls.Add(this.ordersToInventory);
-            this.panel1.Controls.Add(this.editInventory);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -115,18 +110,6 @@
             this.ordersToInventory.UseVisualStyleBackColor = true;
             this.ordersToInventory.Click += new System.EventHandler(this.ordersToInventory_Click_1);
             // 
-            // editInventory
-            // 
-            this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.editInventory.Location = new System.Drawing.Point(11, 450);
-            this.editInventory.Margin = new System.Windows.Forms.Padding(2);
-            this.editInventory.Name = "editInventory";
-            this.editInventory.Size = new System.Drawing.Size(164, 39);
-            this.editInventory.TabIndex = 12;
-            this.editInventory.Text = "View In-Place Orders";
-            this.editInventory.UseVisualStyleBackColor = true;
-            this.editInventory.Click += new System.EventHandler(this.editInventory_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -138,10 +121,23 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // editInventory
+            // 
+            this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.editInventory.Location = new System.Drawing.Point(5, 493);
+            this.editInventory.Margin = new System.Windows.Forms.Padding(2);
+            this.editInventory.Name = "editInventory";
+            this.editInventory.Size = new System.Drawing.Size(101, 31);
+            this.editInventory.TabIndex = 12;
+            this.editInventory.Text = "Submit Order";
+            this.editInventory.UseVisualStyleBackColor = true;
+            this.editInventory.Click += new System.EventHandler(this.editInventory_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
             this.panel2.Controls.Add(this.HomeIconPic);
+            this.panel2.Controls.Add(this.editInventory);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(812, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -159,19 +155,6 @@
             this.HomeIconPic.TabIndex = 18;
             this.HomeIconPic.TabStop = false;
             this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
-            // 
-            // btnAddItemOrder
-            // 
-            this.btnAddItemOrder.Font = new System.Drawing.Font("Candara", 9F);
-            this.btnAddItemOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.btnAddItemOrder.Location = new System.Drawing.Point(647, 73);
-            this.btnAddItemOrder.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddItemOrder.Name = "btnAddItemOrder";
-            this.btnAddItemOrder.Size = new System.Drawing.Size(145, 26);
-            this.btnAddItemOrder.TabIndex = 11;
-            this.btnAddItemOrder.Text = "Add Item to Order";
-            this.btnAddItemOrder.UseVisualStyleBackColor = true;
-            this.btnAddItemOrder.Visible = false;
             // 
             // cbVendorName
             // 
@@ -247,19 +230,13 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sku,
-            this.itemName,
-            this.itemSize,
-            this.Vendor,
-            this.BuyinPrice,
-            this.Quantity});
             this.dataGridView1.Location = new System.Drawing.Point(198, 103);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -269,42 +246,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(594, 191);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.Visible = false;
-            // 
-            // sku
-            // 
-            this.sku.HeaderText = "sku";
-            this.sku.Name = "sku";
-            this.sku.ReadOnly = true;
-            // 
-            // itemName
-            // 
-            this.itemName.HeaderText = "Item Name";
-            this.itemName.Name = "itemName";
-            this.itemName.ReadOnly = true;
-            // 
-            // itemSize
-            // 
-            this.itemSize.HeaderText = "Item Size";
-            this.itemSize.Name = "itemSize";
-            this.itemSize.ReadOnly = true;
-            // 
-            // Vendor
-            // 
-            this.Vendor.HeaderText = "Vendor";
-            this.Vendor.Name = "Vendor";
-            this.Vendor.ReadOnly = true;
-            // 
-            // BuyinPrice
-            // 
-            this.BuyinPrice.HeaderText = "Buy In Price";
-            this.BuyinPrice.Name = "BuyinPrice";
-            this.BuyinPrice.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
             // itemsBindingSource1
             // 
@@ -329,7 +271,7 @@
             this.txtSearch.AcceptsTab = true;
             this.txtSearch.Location = new System.Drawing.Point(316, 79);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(326, 19);
+            this.txtSearch.Size = new System.Drawing.Size(476, 19);
             this.txtSearch.TabIndex = 19;
             this.txtSearch.Text = "";
             this.txtSearch.Visible = false;
@@ -353,8 +295,9 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AllowUserToResizeColumns = false;
             this.dataGridView2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -366,12 +309,12 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
+            this.dataGridView2.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView2.Location = new System.Drawing.Point(198, 333);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView2.Size = new System.Drawing.Size(594, 191);
             this.dataGridView2.TabIndex = 21;
             this.dataGridView2.Visible = false;
@@ -381,36 +324,55 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "sku";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Item Name";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Item Size";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "Vendor";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.HeaderText = "Buy In Price";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.HeaderText = "Quantity";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteItemToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // deleteItemToolStripMenuItem
+            // 
+            this.deleteItemToolStripMenuItem.Name = "deleteItemToolStripMenuItem";
+            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteItemToolStripMenuItem.Text = "Delete Item";
+            this.deleteItemToolStripMenuItem.Click += new System.EventHandler(this.deleteItemToolStripMenuItem_Click);
             // 
             // OrdersPage
             // 
@@ -422,7 +384,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnAddItemOrder);
             this.Controls.Add(this.lblVendorName);
             this.Controls.Add(this.lblOrderNumber);
             this.Controls.Add(this.button1);
@@ -433,6 +394,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrdersPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrdersPage";
             this.Load += new System.EventHandler(this.OrdersPage_Load);
             this.panel1.ResumeLayout(false);
@@ -446,6 +408,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,7 +421,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnAddItemOrder;
         private System.Windows.Forms.Button ordersToInventory;
         private System.Windows.Forms.Button editInventory;
         private void ordersToInventory_Click(object sender, System.EventArgs e)
@@ -482,12 +444,6 @@
         private System.Windows.Forms.BindingSource itemsBindingSource1;
         private System.Windows.Forms.RichTextBox txtSearch;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sku;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemSize;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vendor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BuyinPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -495,5 +451,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteItemToolStripMenuItem;
     }
 }

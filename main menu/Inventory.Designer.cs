@@ -378,7 +378,7 @@
             this.lblRetailPrice.AutoSize = true;
             this.lblRetailPrice.Font = new System.Drawing.Font("Candara", 12F);
             this.lblRetailPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblRetailPrice.Location = new System.Drawing.Point(12, 268);
+            this.lblRetailPrice.Location = new System.Drawing.Point(8, 244);
             this.lblRetailPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRetailPrice.Name = "lblRetailPrice";
             this.lblRetailPrice.Size = new System.Drawing.Size(85, 19);
@@ -402,7 +402,7 @@
             this.lblOnHands.AutoSize = true;
             this.lblOnHands.Font = new System.Drawing.Font("Candara", 12F);
             this.lblOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblOnHands.Location = new System.Drawing.Point(12, 222);
+            this.lblOnHands.Location = new System.Drawing.Point(8, 198);
             this.lblOnHands.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnHands.Name = "lblOnHands";
             this.lblOnHands.Size = new System.Drawing.Size(79, 19);
@@ -414,7 +414,7 @@
             this.lblVendor.AutoSize = true;
             this.lblVendor.Font = new System.Drawing.Font("Candara", 12F);
             this.lblVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblVendor.Location = new System.Drawing.Point(12, 157);
+            this.lblVendor.Location = new System.Drawing.Point(8, 152);
             this.lblVendor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVendor.Name = "lblVendor";
             this.lblVendor.Size = new System.Drawing.Size(63, 19);
@@ -426,7 +426,7 @@
             this.lblItemSize.AutoSize = true;
             this.lblItemSize.Font = new System.Drawing.Font("Candara", 12F);
             this.lblItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblItemSize.Location = new System.Drawing.Point(12, 106);
+            this.lblItemSize.Location = new System.Drawing.Point(7, 106);
             this.lblItemSize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemSize.Name = "lblItemSize";
             this.lblItemSize.Size = new System.Drawing.Size(73, 19);
@@ -438,7 +438,7 @@
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Candara", 12F);
             this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lbl.Location = new System.Drawing.Point(12, 60);
+            this.lbl.Location = new System.Drawing.Point(7, 60);
             this.lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(38, 19);
@@ -450,7 +450,7 @@
             this.lblItemName.AutoSize = true;
             this.lblItemName.Font = new System.Drawing.Font("Candara", 12F);
             this.lblItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblItemName.Location = new System.Drawing.Point(12, 14);
+            this.lblItemName.Location = new System.Drawing.Point(8, 14);
             this.lblItemName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemName.Name = "lblItemName";
             this.lblItemName.Size = new System.Drawing.Size(87, 19);
