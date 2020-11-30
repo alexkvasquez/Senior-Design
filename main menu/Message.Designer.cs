@@ -30,208 +30,137 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.HomeIconPic = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnApprove = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnApprove = new System.Windows.Forms.Button();
             this.lblWelcomeUser = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.seniorDesignNewSIPDataSet = new main_menu.SeniorDesignNewSIPDataSet();
-            this.seniorDesignNewSIPDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.newtableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.new_tableTableAdapter = new main_menu.SeniorDesignNewSIPDataSetTableAdapters.new_tableTableAdapter();
+            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newtableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.HomeIconPic);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.btnRefresh);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnApprove);
             this.panel1.Controls.Add(this.lblWelcomeUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1767, 1094);
+            this.panel1.Size = new System.Drawing.Size(746, 569);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel2
+            // listView1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.HomeIconPic);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.btnApprove);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btnRefresh);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1451, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(316, 1094);
-            this.panel2.TabIndex = 23;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2,
+            this.columnHeader1,
+            this.columnHeader3});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(12, 62);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(712, 437);
+            this.listView1.TabIndex = 13;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // button3
+            // columnHeader2
             // 
-            this.button3.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.button3.Location = new System.Drawing.Point(25, 359);
-            this.button3.Margin = new System.Windows.Forms.Padding(6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(266, 56);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Mark As Read";
-            this.button3.UseVisualStyleBackColor = true;
+            this.columnHeader2.DisplayIndex = 1;
+            this.columnHeader2.Text = "Description";
+            this.columnHeader2.Width = 380;
             // 
-            // button4
+            // columnHeader1
             // 
-            this.button4.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.button4.Location = new System.Drawing.Point(25, 252);
-            this.button4.Margin = new System.Windows.Forms.Padding(6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(266, 56);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Mark All As Read";
-            this.button4.UseVisualStyleBackColor = true;
+            this.columnHeader1.DisplayIndex = 0;
+            this.columnHeader1.Text = "Subject";
+            this.columnHeader1.Width = 183;
             // 
-            // HomeIconPic
+            // columnHeader3
             // 
-            this.HomeIconPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
-            this.HomeIconPic.Location = new System.Drawing.Point(244, 6);
-            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(6);
-            this.HomeIconPic.Name = "HomeIconPic";
-            this.HomeIconPic.Size = new System.Drawing.Size(58, 56);
-            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HomeIconPic.TabIndex = 20;
-            this.HomeIconPic.TabStop = false;
-            this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.button2.Location = new System.Drawing.Point(25, 787);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(266, 56);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Message for Team";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnApprove
-            // 
-            this.btnApprove.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApprove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.btnApprove.Location = new System.Drawing.Point(25, 466);
-            this.btnApprove.Margin = new System.Windows.Forms.Padding(6);
-            this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(266, 56);
-            this.btnApprove.TabIndex = 9;
-            this.btnApprove.Text = "Approve";
-            this.btnApprove.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.button1.Location = new System.Drawing.Point(25, 573);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 56);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Decline";
-            this.button1.UseVisualStyleBackColor = true;
+            this.columnHeader3.Text = "Status";
+            this.columnHeader3.Width = 177;
             // 
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.btnRefresh.Location = new System.Drawing.Point(25, 680);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRefresh.Location = new System.Drawing.Point(596, 505);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(266, 56);
+            this.btnRefresh.Size = new System.Drawing.Size(133, 29);
             this.btnRefresh.TabIndex = 11;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // button1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.seniorDesignNewSIPDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1366, 886);
-            this.dataGridView1.TabIndex = 21;
+            this.button1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.button1.Location = new System.Drawing.Point(308, 505);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 29);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Decline";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnApprove
+            // 
+            this.btnApprove.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApprove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.btnApprove.Location = new System.Drawing.Point(17, 505);
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.Size = new System.Drawing.Size(133, 29);
+            this.btnApprove.TabIndex = 9;
+            this.btnApprove.Text = "Approve";
+            this.btnApprove.UseVisualStyleBackColor = true;
             // 
             // lblWelcomeUser
             // 
             this.lblWelcomeUser.AutoSize = true;
             this.lblWelcomeUser.Font = new System.Drawing.Font("Candara", 18F);
             this.lblWelcomeUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.lblWelcomeUser.Location = new System.Drawing.Point(24, 17);
-            this.lblWelcomeUser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblWelcomeUser.Location = new System.Drawing.Point(12, 9);
             this.lblWelcomeUser.Name = "lblWelcomeUser";
-            this.lblWelcomeUser.Size = new System.Drawing.Size(352, 59);
+            this.lblWelcomeUser.Size = new System.Drawing.Size(175, 29);
             this.lblWelcomeUser.TabIndex = 1;
             this.lblWelcomeUser.Text = "Message Center";
             this.lblWelcomeUser.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // seniorDesignNewSIPDataSet
+            // HomeIconPic
             // 
-            this.seniorDesignNewSIPDataSet.DataSetName = "SeniorDesignNewSIPDataSet";
-            this.seniorDesignNewSIPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // seniorDesignNewSIPDataSetBindingSource
-            // 
-            this.seniorDesignNewSIPDataSetBindingSource.DataSource = this.seniorDesignNewSIPDataSet;
-            this.seniorDesignNewSIPDataSetBindingSource.Position = 0;
-            // 
-            // newtableBindingSource
-            // 
-            this.newtableBindingSource.DataMember = "new_table";
-            this.newtableBindingSource.DataSource = this.seniorDesignNewSIPDataSetBindingSource;
-            // 
-            // new_tableTableAdapter
-            // 
-            this.new_tableTableAdapter.ClearBeforeFill = true;
+            this.HomeIconPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
+            this.HomeIconPic.Location = new System.Drawing.Point(705, 12);
+            this.HomeIconPic.Name = "HomeIconPic";
+            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
+            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomeIconPic.TabIndex = 20;
+            this.HomeIconPic.TabStop = false;
+            this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
             // 
             // Message
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1767, 1094);
+            this.ClientSize = new System.Drawing.Size(746, 569);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Message";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Message_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newtableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,15 +173,10 @@
         private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.PictureBox HomeIconPic;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource seniorDesignNewSIPDataSetBindingSource;
-        private SeniorDesignNewSIPDataSet seniorDesignNewSIPDataSet;
-        private System.Windows.Forms.BindingSource newtableBindingSource;
-        private SeniorDesignNewSIPDataSetTableAdapters.new_tableTableAdapter new_tableTableAdapter;
     }
 }
