@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtAddName = new System.Windows.Forms.TextBox();
+            this.btnDeleteCustomer = new System.Windows.Forms.Button();
+            this.txtAddPhone = new System.Windows.Forms.TextBox();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.lblEditPhone = new System.Windows.Forms.Label();
@@ -46,10 +49,6 @@
             this.lblAddPhone = new System.Windows.Forms.Label();
             this.lblAddName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAddPhone = new System.Windows.Forms.TextBox();
-            this.txtAddName = new System.Windows.Forms.TextBox();
-            this.btnDeleteCustomer = new System.Windows.Forms.Button();
-            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +59,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.txtAddName);
             this.panel1.Controls.Add(this.btnDeleteCustomer);
+            this.panel1.Controls.Add(this.txtAddPhone);
             this.panel1.Controls.Add(this.txtCustomerID);
             this.panel1.Controls.Add(this.lblCustomerID);
             this.panel1.Controls.Add(this.lblEditPhone);
@@ -74,17 +75,43 @@
             this.panel1.Controls.Add(this.lblAddPhone);
             this.panel1.Controls.Add(this.lblAddName);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtAddPhone);
-            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 466);
+            this.panel1.Size = new System.Drawing.Size(702, 562);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtAddName
+            // 
+            this.txtAddName.BackColor = System.Drawing.Color.White;
+            this.txtAddName.Location = new System.Drawing.Point(17, 80);
+            this.txtAddName.Name = "txtAddName";
+            this.txtAddName.Size = new System.Drawing.Size(191, 20);
+            this.txtAddName.TabIndex = 30;
+            // 
+            // btnDeleteCustomer
+            // 
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(123, 501);
+            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
+            this.btnDeleteCustomer.Size = new System.Drawing.Size(85, 23);
+            this.btnDeleteCustomer.TabIndex = 29;
+            this.btnDeleteCustomer.Text = "Delete";
+            this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
+            // 
+            // txtAddPhone
+            // 
+            this.txtAddPhone.BackColor = System.Drawing.Color.White;
+            this.txtAddPhone.Location = new System.Drawing.Point(17, 136);
+            this.txtAddPhone.Name = "txtAddPhone";
+            this.txtAddPhone.Size = new System.Drawing.Size(191, 20);
+            this.txtAddPhone.TabIndex = 5;
+            // 
             // txtCustomerID
             // 
             this.txtCustomerID.BackColor = System.Drawing.Color.White;
             this.txtCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCustomerID.Location = new System.Drawing.Point(17, 331);
+            this.txtCustomerID.Location = new System.Drawing.Point(17, 342);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.ReadOnly = true;
             this.txtCustomerID.Size = new System.Drawing.Size(191, 20);
@@ -95,7 +122,7 @@
             this.lblCustomerID.AutoSize = true;
             this.lblCustomerID.Font = new System.Drawing.Font("Candara", 12F);
             this.lblCustomerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblCustomerID.Location = new System.Drawing.Point(13, 309);
+            this.lblCustomerID.Location = new System.Drawing.Point(13, 320);
             this.lblCustomerID.Name = "lblCustomerID";
             this.lblCustomerID.Size = new System.Drawing.Size(93, 19);
             this.lblCustomerID.TabIndex = 27;
@@ -106,7 +133,7 @@
             this.lblEditPhone.AutoSize = true;
             this.lblEditPhone.Font = new System.Drawing.Font("Candara", 12F);
             this.lblEditPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblEditPhone.Location = new System.Drawing.Point(13, 425);
+            this.lblEditPhone.Location = new System.Drawing.Point(13, 431);
             this.lblEditPhone.Name = "lblEditPhone";
             this.lblEditPhone.Size = new System.Drawing.Size(112, 19);
             this.lblEditPhone.TabIndex = 26;
@@ -117,7 +144,7 @@
             this.lblEditName.AutoSize = true;
             this.lblEditName.Font = new System.Drawing.Font("Candara", 12F);
             this.lblEditName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblEditName.Location = new System.Drawing.Point(13, 367);
+            this.lblEditName.Location = new System.Drawing.Point(13, 375);
             this.lblEditName.Name = "lblEditName";
             this.lblEditName.Size = new System.Drawing.Size(49, 19);
             this.lblEditName.TabIndex = 25;
@@ -127,7 +154,7 @@
             // 
             this.txtEditPhone.BackColor = System.Drawing.Color.White;
             this.txtEditPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEditPhone.Location = new System.Drawing.Point(17, 447);
+            this.txtEditPhone.Location = new System.Drawing.Point(17, 453);
             this.txtEditPhone.Name = "txtEditPhone";
             this.txtEditPhone.Size = new System.Drawing.Size(191, 20);
             this.txtEditPhone.TabIndex = 24;
@@ -136,14 +163,14 @@
             // 
             this.txtEditName.BackColor = System.Drawing.Color.White;
             this.txtEditName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEditName.Location = new System.Drawing.Point(17, 389);
+            this.txtEditName.Location = new System.Drawing.Point(17, 397);
             this.txtEditName.Name = "txtEditName";
             this.txtEditName.Size = new System.Drawing.Size(191, 20);
             this.txtEditName.TabIndex = 23;
             // 
             // btnUpdateCustomer
             // 
-            this.btnUpdateCustomer.Location = new System.Drawing.Point(17, 496);
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(17, 501);
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
             this.btnUpdateCustomer.Size = new System.Drawing.Size(85, 23);
             this.btnUpdateCustomer.TabIndex = 22;
@@ -156,7 +183,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 18F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.label4.Location = new System.Drawing.Point(12, 271);
+            this.label4.Location = new System.Drawing.Point(12, 277);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(203, 29);
             this.label4.TabIndex = 21;
@@ -171,7 +198,7 @@
             this.panel2.Controls.Add(this.lblCustomerTitle);
             this.panel2.Location = new System.Drawing.Point(278, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 560);
+            this.panel2.Size = new System.Drawing.Size(424, 562);
             this.panel2.TabIndex = 20;
             // 
             // txtCustomerSearch
@@ -205,7 +232,7 @@
             // 
             this.HomeIconPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
-            this.HomeIconPic.Location = new System.Drawing.Point(381, 12);
+            this.HomeIconPic.Location = new System.Drawing.Point(383, 12);
             this.HomeIconPic.Name = "HomeIconPic";
             this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
             this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -224,10 +251,9 @@
             this.lblCustomerTitle.TabIndex = 1;
             this.lblCustomerTitle.Text = "Cutomer Information";
             // 
-            // 
             // btnAddCust
-            this.btnAddCust.Location = new System.Drawing.Point(17, 188);
-            this.btnAddCust.Location = new System.Drawing.Point(17, 402);
+            // 
+            this.btnAddCust.Location = new System.Drawing.Point(17, 182);
             this.btnAddCust.Name = "btnAddCust";
             this.btnAddCust.Size = new System.Drawing.Size(85, 23);
             this.btnAddCust.TabIndex = 9;
@@ -236,83 +262,42 @@
             this.btnAddCust.Click += new System.EventHandler(this.btnAddCust_Click);
             // 
             // lblAddPhone
+            // 
             this.lblAddPhone.AutoSize = true;
             this.lblAddPhone.Font = new System.Drawing.Font("Candara", 12F);
             this.lblAddPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblAddPhone.Location = new System.Drawing.Point(13, 116);
+            this.lblAddPhone.Location = new System.Drawing.Point(13, 114);
             this.lblAddPhone.Name = "lblAddPhone";
             this.lblAddPhone.Size = new System.Drawing.Size(112, 19);
             this.lblAddPhone.TabIndex = 8;
             this.lblAddPhone.Text = "Phone Number";
-            this.label3.Text = "Phone Number";
             // 
             // lblAddName
+            // 
             this.lblAddName.AutoSize = true;
             this.lblAddName.Font = new System.Drawing.Font("Candara", 12F);
             this.lblAddName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblAddName.Location = new System.Drawing.Point(13, 55);
+            this.lblAddName.Location = new System.Drawing.Point(13, 58);
             this.lblAddName.Name = "lblAddName";
             this.lblAddName.Size = new System.Drawing.Size(49, 19);
             this.lblAddName.TabIndex = 7;
             this.lblAddName.Text = "Name";
-            this.label2.Text = "Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 18F);
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Location = new System.Drawing.Point(12, 215);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 29);
             this.label1.TabIndex = 6;
             this.label1.Text = "Add Customer";
             // 
-            // txtAddPhone
-            // 
-            this.txtAddPhone.BackColor = System.Drawing.Color.White;
-            this.txtAddPhone.Location = new System.Drawing.Point(17, 138);
-            this.txtAddPhone.Location = new System.Drawing.Point(17, 352);
-            this.txtAddPhone.Name = "txtAddPhone";
-            this.txtAddPhone.Size = new System.Drawing.Size(191, 20);
-            this.txtAddPhone.TabIndex = 5;
-            // 
-            // txtAddName
-            // 
-            this.txtAddName.BackColor = System.Drawing.Color.White;
-            this.txtAddName.Location = new System.Drawing.Point(17, 77);
-            this.txtAddName.Location = new System.Drawing.Point(17, 291);
-            this.txtAddName.Name = "txtAddName";
-            this.txtAddName.Size = new System.Drawing.Size(191, 20);
-            this.txtAddName.TabIndex = 3;
-            // 
-            // btnDeleteCustomer
-            // 
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(123, 496);
-            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-            this.btnDeleteCustomer.Size = new System.Drawing.Size(85, 23);
-            this.btnDeleteCustomer.TabIndex = 29;
-            this.btnDeleteCustomer.Text = "Delete";
-            this.btnDeleteCustomer.UseVisualStyleBackColor = true;
-            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
-            // 
-            // HomeIconPic
-            // 
-            this.HomeIconPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
-            this.HomeIconPic.Location = new System.Drawing.Point(659, 12);
-            this.HomeIconPic.Name = "HomeIconPic";
-            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
-            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HomeIconPic.TabIndex = 19;
-            this.HomeIconPic.TabStop = false;
-            this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
-            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 466);
+            this.ClientSize = new System.Drawing.Size(702, 562);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Customer";
@@ -333,7 +318,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCustomerTitle;
-        private System.Windows.Forms.TextBox txtAddName;
         private System.Windows.Forms.Button btnAddCust;
         private System.Windows.Forms.Label lblAddPhone;
         private System.Windows.Forms.Label lblAddName;
@@ -352,5 +336,6 @@
         private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.Label lblCustomerID;
         private System.Windows.Forms.Button btnDeleteCustomer;
+        private System.Windows.Forms.TextBox txtAddName;
     }
 }
