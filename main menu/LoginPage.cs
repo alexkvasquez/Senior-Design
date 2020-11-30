@@ -106,6 +106,11 @@ namespace main_menu
             ForgetPassword f = new ForgetPassword();
             f.ShowDialog();
         }
+
+        private void panelRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 
