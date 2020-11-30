@@ -17,31 +17,6 @@ namespace main_menu
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -52,6 +27,13 @@ namespace main_menu
             this.Hide();
             Dashboard x = new Dashboard();
             x.ShowDialog();
+        }
+
+        private void Message_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet.new_table' table. You can move, or remove it, as needed.
+            this.new_tableTableAdapter.Fill(this.seniorDesignNewSIPDataSet.new_table);
+
         }
     }
 }

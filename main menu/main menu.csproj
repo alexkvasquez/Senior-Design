@@ -99,6 +99,9 @@
     <Compile Include="POS.Designer.cs">
       <DependentUpon>POS.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeniorDesignNewSIPDataSet2.cs">
+      <DependentUpon>SeniorDesignNewSIPDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SeniorDesignNewSIPDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -176,11 +179,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SeniorDesignNewSIPDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SeniorDesignNewSIPDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SeniorDesignNewSIPDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SeniorDesignNewSIPDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -319,7 +317,6 @@
     </None>
     <None Include="SeniorDesignNewSIPDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SeniorDesignNewSIPDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="SeniorDesignNewSIPDataSet2.xss">
