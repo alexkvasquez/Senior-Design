@@ -62,18 +62,15 @@
             this.editInventory = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.seniorDesignNewSIPDataSet2 = new main_menu.SeniorDesignNewSIPDataSet2();
             this.seniorDesignNewSIPDataSet = new main_menu.SeniorDesignNewSIPDataSet();
             this.seniorDesignNewSIPDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.seniorDesignNewSIPDataSet1 = new main_menu.SeniorDesignNewSIPDataSet1();
             this.seniorDesignNewSIPDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsTableAdapter = new main_menu.SeniorDesignNewSIPDataSet2TableAdapters.itemsTableAdapter();
             this.seniorDesignNewSIPDataSet3 = new main_menu.SeniorDesignNewSIPDataSet3();
             this.itemsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter1 = new main_menu.SeniorDesignNewSIPDataSet3TableAdapters.itemsTableAdapter();
             this.itemsTableAdapter2 = new main_menu.SeniorDesignNewSIPDataSet4TableAdapters.itemsTableAdapter();
             this.process1 = new System.Diagnostics.Process();
-            this.seniorDesignNewSIPDataSet21 = new main_menu.SeniorDesignNewSIPDataSet2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -83,15 +80,12 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet21)).BeginInit();
-            this.SuspendLayout();
             // 
             // textBox1
             // 
@@ -478,15 +472,8 @@
             this.txtSearch.TabIndex = 11;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged_1);
             // 
-            // itemsBindingSource
-            // 
-            this.itemsBindingSource.DataMember = "items";
-            this.itemsBindingSource.DataSource = this.seniorDesignNewSIPDataSet2;
-            // 
-            // seniorDesignNewSIPDataSet2
-            // 
-            this.seniorDesignNewSIPDataSet2.DataSetName = "SeniorDesignNewSIPDataSet2";
-            this.seniorDesignNewSIPDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         
+            //
             // 
             // seniorDesignNewSIPDataSet
             // 
@@ -507,11 +494,7 @@
             // 
             this.seniorDesignNewSIPDataSet1BindingSource.DataSource = this.seniorDesignNewSIPDataSet1;
             this.seniorDesignNewSIPDataSet1BindingSource.Position = 0;
-            // 
-            // itemsTableAdapter
-            // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
-            // 
+            //
             // seniorDesignNewSIPDataSet3
             // 
             this.seniorDesignNewSIPDataSet3.DataSetName = "SeniorDesignNewSIPDataSet3";
@@ -539,12 +522,7 @@
             this.process1.StartInfo.StandardOutputEncoding = null;
             this.process1.StartInfo.UserName = "";
             this.process1.SynchronizingObject = this;
-            // 
-            // seniorDesignNewSIPDataSet21
-            // 
-            this.seniorDesignNewSIPDataSet21.DataSetName = "SeniorDesignNewSIPDataSet2";
-            this.seniorDesignNewSIPDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+            //
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,14 +551,12 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet21)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -601,9 +577,7 @@
         private SeniorDesignNewSIPDataSet seniorDesignNewSIPDataSet;
         private System.Windows.Forms.BindingSource seniorDesignNewSIPDataSet1BindingSource;
         private SeniorDesignNewSIPDataSet1 seniorDesignNewSIPDataSet1;
-        private SeniorDesignNewSIPDataSet2 seniorDesignNewSIPDataSet2;
         private System.Windows.Forms.BindingSource itemsBindingSource;
-        private SeniorDesignNewSIPDataSet2TableAdapters.itemsTableAdapter itemsTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private SeniorDesignNewSIPDataSet3 seniorDesignNewSIPDataSet3;
@@ -636,6 +610,5 @@
         private System.Windows.Forms.TextBox txtTextretail;
         private System.Diagnostics.Process process1;
         private System.Windows.Forms.PictureBox HomeIconPic;
-        private SeniorDesignNewSIPDataSet2 seniorDesignNewSIPDataSet21;
     }
 }
