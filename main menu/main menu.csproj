@@ -193,6 +193,7 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="utils.cs" />
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -504,6 +505,8 @@
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.2\useSharedDesignerContext.txt" />
     <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.2\version.txt" />
     <Content Include="Resources\beer.png" />
+    <Content Include="UpgradeLog.htm" />
+    <Content Include="UpgradeLog2.htm" />
     <None Include="Resources\staff icon.png" />
     <None Include="Resources\Home_Icon.png" />
     <Content Include="Resources\mailSilo.PNG" />

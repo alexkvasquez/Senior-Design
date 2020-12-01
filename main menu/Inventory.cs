@@ -172,5 +172,10 @@ namespace main_menu
             OrdersPage O = new OrdersPage();
             O.ShowDialog();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
