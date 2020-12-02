@@ -222,7 +222,7 @@ namespace main_menu
                     MessageBox.Show("Order has been successfully placed!");
 
                     this.Hide();
-                    OrdersPage x = new OrdersPage();
+                    ReportForm x = new ReportForm();
                     x.ShowDialog();
                 }
 
