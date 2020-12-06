@@ -65,11 +65,12 @@ namespace main_menu
                 MessageBox.Show("Passwords do not match");
             else
             {
+                string hash = hashing(txtNewPassword.Text);
                 try
                 {
                     MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
                     cnn.Open();
-                    MySqlCommand cmd = new MySqlCommand("UPDATE Users SET password = '" + txtNewPassword.Text + "' WHERE idUsers = '" + txtEmployeeID.Text + "' AND userName = '" + txtUsername.Text + "'", cnn);
+                    MySqlCommand cmd = new MySqlCommand("UPDATE Users SET password = '" + hash + "' WHERE idUsers = '" + txtEmployeeID.Text + "' AND userName = '" + txtUsername.Text + "'", cnn);
                     int ret = cmd.ExecuteNonQuery();
 
                     //Used the commented out command below to test and see the return value of the rows affected by the SQL Query
@@ -103,6 +104,30 @@ namespace main_menu
         void Clear()
         {
             txtConfirmPassword.Text = txtEmployeeID.Text = txtNewPassword.Text = txtUsername.Text = "";
+
+        }
+
+        private string hashing(String str)
+        {
+            string hash;
+
+            MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
+            cnn.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT sha2('" + txtNewPassword.Text + "',512)", cnn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                hash = reader.GetValue(0).ToString();
+                cnn.Close();
+                return hash;
+
+            }
+            else
+            {
+                cnn.Close();
+                return null;
+            }
 
         }
 
