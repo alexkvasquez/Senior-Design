@@ -16,6 +16,24 @@ namespace main_menu
         public Staff()
         {
             InitializeComponent();
+            try
+            {
+                cnn.Open();
+                MySqlCommand cmd2 = new MySqlCommand("SELECT * FROM SeniorDesignNewSIP.EmployeeTimeClock WHERE TimeClockID = '" + globals.TimeClockID + "'", cnn);
+                MySqlDataAdapter ad = new MySqlDataAdapter(cmd2);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns[2].Width = 130;
+                dataGridView1.Columns[3].Width = 130;
+                cmd2.ExecuteNonQuery();
+                cnn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
@@ -50,7 +68,15 @@ namespace main_menu
                 }
 
                 MessageBox.Show("Clock-in Successful");
+                cnn.Close();
 
+                cnn.Open();
+                MySqlCommand cmd2 = new MySqlCommand("SELECT * FROM SeniorDesignNewSIP.EmployeeTimeClock WHERE TimeClockID = '" + globals.TimeClockID + "'", cnn);
+                MySqlDataAdapter ad = new MySqlDataAdapter(cmd2);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                dataGridView1.DataSource = dt;
+                cmd2.ExecuteNonQuery();
                 cnn.Close();
 
             }
@@ -73,11 +99,25 @@ namespace main_menu
 
                 cnn.Close();
 
+                cnn.Open();
+                MySqlCommand cmd2 = new MySqlCommand("SELECT * FROM SeniorDesignNewSIP.EmployeeTimeClock WHERE TimeClockID = '" + globals.TimeClockID + "'", cnn);
+                MySqlDataAdapter ad = new MySqlDataAdapter(cmd2);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                dataGridView1.DataSource = dt;
+                cmd2.ExecuteNonQuery();
+                cnn.Close();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void viewSchedule_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
