@@ -134,10 +134,7 @@
             // 
             this.dataViewPOSCart.AllowUserToAddRows = false;
             this.dataViewPOSCart.AllowUserToDeleteRows = false;
-            this.dataViewPOSCart.AllowUserToResizeColumns = false;
-            this.dataViewPOSCart.AllowUserToResizeRows = false;
             this.dataViewPOSCart.AutoGenerateColumns = false;
-            this.dataViewPOSCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataViewPOSCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.dataViewPOSCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataViewPOSCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -148,7 +145,6 @@
             this.dataViewPOSCart.DataSource = this.itemsBindingSource5;
             this.dataViewPOSCart.Location = new System.Drawing.Point(872, 90);
             this.dataViewPOSCart.Name = "dataViewPOSCart";
-            this.dataViewPOSCart.RowHeadersVisible = false;
             this.dataViewPOSCart.RowHeadersWidth = 51;
             this.dataViewPOSCart.RowTemplate.Height = 24;
             this.dataViewPOSCart.Size = new System.Drawing.Size(680, 359);
@@ -162,6 +158,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -170,6 +167,7 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // retailPrice
             // 
@@ -177,6 +175,7 @@
             this.retailPrice.HeaderText = "retailPrice";
             this.retailPrice.MinimumWidth = 6;
             this.retailPrice.Name = "retailPrice";
+            this.retailPrice.Width = 125;
             // 
             // itemSize
             // 
@@ -185,6 +184,7 @@
             this.itemSize.MinimumWidth = 6;
             this.itemSize.Name = "itemSize";
             this.itemSize.ReadOnly = true;
+            this.itemSize.Width = 125;
             // 
             // itemsBindingSource5
             // 
@@ -226,14 +226,10 @@
             // 
             this.dataViewPOS.AllowUserToAddRows = false;
             this.dataViewPOS.AllowUserToDeleteRows = false;
-            this.dataViewPOS.AllowUserToResizeColumns = false;
-            this.dataViewPOS.AllowUserToResizeRows = false;
-            this.dataViewPOS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataViewPOS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.dataViewPOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataViewPOS.Location = new System.Drawing.Point(295, 90);
             this.dataViewPOS.Name = "dataViewPOS";
-            this.dataViewPOS.RowHeadersVisible = false;
             this.dataViewPOS.RowHeadersWidth = 51;
             this.dataViewPOS.RowTemplate.Height = 24;
             this.dataViewPOS.Size = new System.Drawing.Size(570, 359);
