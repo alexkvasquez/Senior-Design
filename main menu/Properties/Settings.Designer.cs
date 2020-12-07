@@ -33,5 +33,16 @@ namespace main_menu.Properties {
                 return ((string)(this["SeniorDesignNewSIPConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=104.198.30.14;user id=\"Joseph Curcio\";password=12341234;persistsecurityinf" +
+            "o=True;database=SeniorDesignNewSIP")]
+        public string SeniorDesignNewSIPConnectionString1 {
+            get {
+                return ((string)(this["SeniorDesignNewSIPConnectionString1"]));
+            }
+        }
     }
 }

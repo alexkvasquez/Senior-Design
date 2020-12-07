@@ -99,6 +99,11 @@
     <Compile Include="POS.Designer.cs">
       <DependentUpon>POS.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeniorDesignNewSIPDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeniorDesignNewSIPDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +345,17 @@
     </None>
     <None Include="SeniorDesignNewSIPDataSet4.xss">
       <DependentUpon>SeniorDesignNewSIPDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet5.xsc">
+      <DependentUpon>SeniorDesignNewSIPDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeniorDesignNewSIPDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SeniorDesignNewSIPDataSet5.xss">
+      <DependentUpon>SeniorDesignNewSIPDataSet5.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
