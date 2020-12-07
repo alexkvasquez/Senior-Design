@@ -40,9 +40,5 @@ namespace main_menu
             cnn.Close();
         }
 
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
