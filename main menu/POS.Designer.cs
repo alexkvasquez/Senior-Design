@@ -74,6 +74,9 @@
             this.seniorDesignNewSIPDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter3 = new main_menu.SeniorDesignNewSIPDataSet5TableAdapters.itemsTableAdapter();
+            this.lblTransactionID = new System.Windows.Forms.Label();
+            this.txtTransactionID = new System.Windows.Forms.TextBox();
+            this.seniorDesignNewSIPDataSet1 = new main_menu.SeniorDesignNewSIPDataSet();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataViewPOSCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource5)).BeginInit();
@@ -93,11 +96,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.panel1.Controls.Add(this.txtTransactionID);
+            this.panel1.Controls.Add(this.lblTransactionID);
             this.panel1.Controls.Add(this.dataViewPOSCart);
             this.panel1.Controls.Add(this.lblItemSearch);
             this.panel1.Controls.Add(this.HomeIconPic);
@@ -244,6 +250,7 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.txtTotal.Location = new System.Drawing.Point(1016, 628);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(180, 22);
@@ -252,6 +259,7 @@
             // 
             // txtTax
             // 
+            this.txtTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.txtTax.Location = new System.Drawing.Point(1016, 584);
             this.txtTax.Name = "txtTax";
             this.txtTax.Size = new System.Drawing.Size(180, 22);
@@ -260,6 +268,7 @@
             // 
             // txtSubTotal
             // 
+            this.txtSubTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.txtSubTotal.Location = new System.Drawing.Point(1016, 537);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.Size = new System.Drawing.Size(180, 22);
@@ -427,8 +436,9 @@
             this.btnViewStock.Name = "btnViewStock";
             this.btnViewStock.Size = new System.Drawing.Size(257, 66);
             this.btnViewStock.TabIndex = 14;
-            this.btnViewStock.Text = "View Stock";
+            this.btnViewStock.Text = "View Inventory";
             this.btnViewStock.UseVisualStyleBackColor = true;
+            this.btnViewStock.Click += new System.EventHandler(this.btnViewStock_Click);
             // 
             // lblCart
             // 
@@ -526,6 +536,31 @@
             // 
             this.itemsTableAdapter3.ClearBeforeFill = true;
             // 
+            // lblTransactionID
+            // 
+            this.lblTransactionID.AutoSize = true;
+            this.lblTransactionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblTransactionID.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblTransactionID.ForeColor = System.Drawing.Color.Black;
+            this.lblTransactionID.Location = new System.Drawing.Point(295, 465);
+            this.lblTransactionID.Name = "lblTransactionID";
+            this.lblTransactionID.Size = new System.Drawing.Size(135, 24);
+            this.lblTransactionID.TabIndex = 31;
+            this.lblTransactionID.Text = "Transaction ID:";
+            // 
+            // txtTransactionID
+            // 
+            this.txtTransactionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTransactionID.Location = new System.Drawing.Point(440, 468);
+            this.txtTransactionID.Name = "txtTransactionID";
+            this.txtTransactionID.Size = new System.Drawing.Size(296, 22);
+            this.txtTransactionID.TabIndex = 32;
+            // 
+            // seniorDesignNewSIPDataSet1
+            // 
+            this.seniorDesignNewSIPDataSet1.DataSetName = "SeniorDesignNewSIPDataSet";
+            this.seniorDesignNewSIPDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -558,6 +593,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -609,5 +645,8 @@
         private SeniorDesignNewSIPDataSet5 seniorDesignNewSIPDataSet5;
         private System.Windows.Forms.BindingSource itemsBindingSource5;
         private SeniorDesignNewSIPDataSet5TableAdapters.itemsTableAdapter itemsTableAdapter3;
+        private System.Windows.Forms.TextBox txtTransactionID;
+        private System.Windows.Forms.Label lblTransactionID;
+        private SeniorDesignNewSIPDataSet seniorDesignNewSIPDataSet1;
     }
 }

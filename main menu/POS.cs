@@ -38,8 +38,15 @@ namespace main_menu
            The dataviewset named dataViewPOSCart is the data view of the ITEM SEARCH section
            I realized too late I mixed them up and didnt want to waste time changing the name of the tables everywhere
         */
+
+        //used to perform separate instance between first add item and future add item's
         int i = 0;
+
+        //Creates Middleman database used to store which items to add and remove
+
         DataTable dt = new DataTable();
+
+        //Define variables used to display and keep track of subtotal, tax and total. Tax Rate is hard coded for now, can be changed for the future
         double subTotal = 0;
         double taxRate = 0.08875;
         double tax = 0;
@@ -48,10 +55,10 @@ namespace main_menu
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             
-         
-           
             //Differentiates between first addition to cart and later additions
             //First addition needs to be separate because first addition creates middleman data table, later additions add to it.
+            //Simultaniously Functions as a 'Start Sale' button, since first iteration is separate from future iterations.
+
             if (i == 0)
             {
                 //Middleman Data Table
@@ -103,7 +110,7 @@ namespace main_menu
                         dt.Rows.Add(row.Cells[1].Value, row.Cells[2].Value, row.Cells[3].Value, row.Cells[4].Value);
                         //Gets Double value of price, displays that value in subtotal text box.
                         subTotal = subTotal + Convert.ToDouble(row.Cells[3].Value);
-                        txtSubTotal.Text = "$" + subTotal.ToString();
+                        txtSubTotal.Text = "$" + Math.Round(subTotal, 2, MidpointRounding.AwayFromZero).ToString();
 
                         //Gets value of Tax and displays that value in tax text box.
                         tax = subTotal * taxRate;
@@ -131,6 +138,7 @@ namespace main_menu
             {
                 foreach (DataGridViewRow row in dataViewPOS.Rows)
                 {
+                  
 
                     bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn2"].Value);
                     if (isSelected)
@@ -139,7 +147,7 @@ namespace main_menu
                         
                         //Gets Double value of price, displays that value in subtotal text box.
                         subTotal = subTotal - Convert.ToDouble(row.Cells[3].Value);
-                        txtSubTotal.Text = "$" + subTotal.ToString();
+                        txtSubTotal.Text = "$" + Math.Round(subTotal, 2, MidpointRounding.AwayFromZero).ToString();
 
                         //Gets value of Tax and displays that value in tax text box.
                         tax = subTotal * taxRate;
@@ -149,10 +157,18 @@ namespace main_menu
                         total = subTotal + tax;
                         txtTotal.Text = "$" + Math.Round(total, 2, MidpointRounding.AwayFromZero).ToString();
 
+                        //Removes Row from the Cart
                         dataViewPOS.Rows.RemoveAt(row.Index);
                     }
 
+                   
+
+
+
                 }
+
+
+                //Updates the Cart Data Table
                 dataViewPOS.Update();
                 dataViewPOS.Refresh();
             }
@@ -228,7 +244,7 @@ namespace main_menu
         {
 
         }
-private void txtTotal_TextChanged(object sender, EventArgs e)
+        private void txtTotal_TextChanged(object sender, EventArgs e)
         {
             
         }
@@ -249,6 +265,12 @@ private void txtTotal_TextChanged(object sender, EventArgs e)
         private void dataViewPOSCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnViewStock_Click(object sender, EventArgs e)
+        {
+            Inventory ToInventory = new Inventory();
+            ToInventory.ShowDialog(); // Shows Orders Page
         }
     }
 }
