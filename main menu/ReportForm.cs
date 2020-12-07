@@ -24,6 +24,13 @@ namespace main_menu
             InitializeComponent();
         }
 
+        private void ReportForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            OrdersPage x = new OrdersPage();
+            x.ShowDialog();
+        }
+
         private void ReportForm_Load(object sender, EventArgs e)
         {
             string cmd = "SELECT order_product.*, SeniorDesignNewSIP.Order.vendor, SeniorDesignNewSIP.Order.date, SeniorDesignNewSIP.Order.employeeID," +

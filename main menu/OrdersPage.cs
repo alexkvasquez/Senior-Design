@@ -172,7 +172,7 @@ namespace main_menu
         {
             if(dataGridView2.Rows.Count >=1) 
             {
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want submmit the order.", "Adding Items to Order", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want submit the order.", "Adding Items to Order", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
 
