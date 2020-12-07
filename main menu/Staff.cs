@@ -24,8 +24,8 @@ namespace main_menu
                 DataTable dt = new DataTable();
                 ad.Fill(dt);
                 dataGridView1.DataSource = dt;
-                dataGridView1.Columns[2].Width = 130;
-                dataGridView1.Columns[3].Width = 130;
+                //dataGridView1.Columns[2].Width = 130;
+                //dataGridView1.Columns[3].Width = 130;
                 cmd2.ExecuteNonQuery();
                 cnn.Close();
 
