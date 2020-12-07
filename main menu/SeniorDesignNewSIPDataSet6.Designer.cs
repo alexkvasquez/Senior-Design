@@ -20,17 +20,17 @@ namespace main_menu {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SeniorDesignNewSIPDataSet5")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SeniorDesignNewSIPDataSet6")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SeniorDesignNewSIPDataSet5 : global::System.Data.DataSet {
+    public partial class SeniorDesignNewSIPDataSet6 : global::System.Data.DataSet {
         
-        private VendorDataTable tableVendor;
+        private itemsDataTable tableitems;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public SeniorDesignNewSIPDataSet5() {
+        public SeniorDesignNewSIPDataSet6() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace main_menu {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected SeniorDesignNewSIPDataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SeniorDesignNewSIPDataSet6(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace main_menu {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Vendor"] != null)) {
-                    base.Tables.Add(new VendorDataTable(ds.Tables["Vendor"]));
+                if ((ds.Tables["items"] != null)) {
+                    base.Tables.Add(new itemsDataTable(ds.Tables["items"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace main_menu {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public VendorDataTable Vendor {
+        public itemsDataTable items {
             get {
-                return this.tableVendor;
+                return this.tableitems;
             }
         }
         
@@ -127,7 +127,7 @@ namespace main_menu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SeniorDesignNewSIPDataSet5 cln = ((SeniorDesignNewSIPDataSet5)(base.Clone()));
+            SeniorDesignNewSIPDataSet6 cln = ((SeniorDesignNewSIPDataSet6)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace main_menu {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Vendor"] != null)) {
-                    base.Tables.Add(new VendorDataTable(ds.Tables["Vendor"]));
+                if ((ds.Tables["items"] != null)) {
+                    base.Tables.Add(new itemsDataTable(ds.Tables["items"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace main_menu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableVendor = ((VendorDataTable)(base.Tables["Vendor"]));
+            this.tableitems = ((itemsDataTable)(base.Tables["items"]));
             if ((initTable == true)) {
-                if ((this.tableVendor != null)) {
-                    this.tableVendor.InitVars();
+                if ((this.tableitems != null)) {
+                    this.tableitems.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace main_menu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SeniorDesignNewSIPDataSet5";
+            this.DataSetName = "SeniorDesignNewSIPDataSet6";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SeniorDesignNewSIPDataSet5.xsd";
+            this.Namespace = "http://tempuri.org/SeniorDesignNewSIPDataSet6.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableVendor = new VendorDataTable();
-            base.Tables.Add(this.tableVendor);
+            this.tableitems = new itemsDataTable();
+            base.Tables.Add(this.tableitems);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeVendor() {
+        private bool ShouldSerializeitems() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace main_menu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SeniorDesignNewSIPDataSet5 ds = new SeniorDesignNewSIPDataSet5();
+            SeniorDesignNewSIPDataSet6 ds = new SeniorDesignNewSIPDataSet6();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,29 @@ namespace main_menu {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void VendorRowChangeEventHandler(object sender, VendorRowChangeEvent e);
+        public delegate void itemsRowChangeEventHandler(object sender, itemsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class VendorDataTable : global::System.Data.TypedTableBase<VendorRow> {
+        public partial class itemsDataTable : global::System.Data.TypedTableBase<itemsRow> {
             
-            private global::System.Data.DataColumn columnidVendor;
+            private global::System.Data.DataColumn columnsku;
             
-            private global::System.Data.DataColumn columnvendorName;
+            private global::System.Data.DataColumn columnitemName;
+            
+            private global::System.Data.DataColumn columnitemSize;
+            
+            private global::System.Data.DataColumn columnVendor;
+            
+            private global::System.Data.DataColumn columnbuyInprice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VendorDataTable() {
-                this.TableName = "Vendor";
+            public itemsDataTable() {
+                this.TableName = "items";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +300,7 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal VendorDataTable(global::System.Data.DataTable table) {
+            internal itemsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +317,48 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected VendorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected itemsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idVendorColumn {
+            public global::System.Data.DataColumn skuColumn {
                 get {
-                    return this.columnidVendor;
+                    return this.columnsku;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn vendorNameColumn {
+            public global::System.Data.DataColumn itemNameColumn {
                 get {
-                    return this.columnvendorName;
+                    return this.columnitemName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn itemSizeColumn {
+                get {
+                    return this.columnitemSize;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn VendorColumn {
+                get {
+                    return this.columnVendor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn buyInpriceColumn {
+                get {
+                    return this.columnbuyInprice;
                 }
             }
             
@@ -343,53 +373,56 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VendorRow this[int index] {
+            public itemsRow this[int index] {
                 get {
-                    return ((VendorRow)(this.Rows[index]));
+                    return ((itemsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event VendorRowChangeEventHandler VendorRowChanging;
+            public event itemsRowChangeEventHandler itemsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event VendorRowChangeEventHandler VendorRowChanged;
+            public event itemsRowChangeEventHandler itemsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event VendorRowChangeEventHandler VendorRowDeleting;
+            public event itemsRowChangeEventHandler itemsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event VendorRowChangeEventHandler VendorRowDeleted;
+            public event itemsRowChangeEventHandler itemsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddVendorRow(VendorRow row) {
+            public void AdditemsRow(itemsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VendorRow AddVendorRow(int idVendor, string vendorName) {
-                VendorRow rowVendorRow = ((VendorRow)(this.NewRow()));
+            public itemsRow AdditemsRow(int sku, string itemName, string itemSize, int Vendor, decimal buyInprice) {
+                itemsRow rowitemsRow = ((itemsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idVendor,
-                        vendorName};
-                rowVendorRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowVendorRow);
-                return rowVendorRow;
+                        sku,
+                        itemName,
+                        itemSize,
+                        Vendor,
+                        buyInprice};
+                rowitemsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowitemsRow);
+                return rowitemsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VendorRow FindByidVendor(int idVendor) {
-                return ((VendorRow)(this.Rows.Find(new object[] {
-                            idVendor})));
+            public itemsRow FindBysku(int sku) {
+                return ((itemsRow)(this.Rows.Find(new object[] {
+                            sku})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                VendorDataTable cln = ((VendorDataTable)(base.Clone()));
+                itemsDataTable cln = ((itemsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -397,55 +430,68 @@ namespace main_menu {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new VendorDataTable();
+                return new itemsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnidVendor = base.Columns["idVendor"];
-                this.columnvendorName = base.Columns["vendorName"];
+                this.columnsku = base.Columns["sku"];
+                this.columnitemName = base.Columns["itemName"];
+                this.columnitemSize = base.Columns["itemSize"];
+                this.columnVendor = base.Columns["Vendor"];
+                this.columnbuyInprice = base.Columns["buyInprice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnidVendor = new global::System.Data.DataColumn("idVendor", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidVendor);
-                this.columnvendorName = new global::System.Data.DataColumn("vendorName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvendorName);
+                this.columnsku = new global::System.Data.DataColumn("sku", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsku);
+                this.columnitemName = new global::System.Data.DataColumn("itemName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitemName);
+                this.columnitemSize = new global::System.Data.DataColumn("itemSize", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitemSize);
+                this.columnVendor = new global::System.Data.DataColumn("Vendor", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVendor);
+                this.columnbuyInprice = new global::System.Data.DataColumn("buyInprice", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbuyInprice);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidVendor}, true));
-                this.columnidVendor.AllowDBNull = false;
-                this.columnidVendor.Unique = true;
-                this.columnvendorName.AllowDBNull = false;
-                this.columnvendorName.MaxLength = 45;
+                                this.columnsku}, true));
+                this.columnsku.AllowDBNull = false;
+                this.columnsku.Unique = true;
+                this.columnitemName.AllowDBNull = false;
+                this.columnitemName.MaxLength = 100;
+                this.columnitemSize.AllowDBNull = false;
+                this.columnitemSize.MaxLength = 45;
+                this.columnVendor.AllowDBNull = false;
+                this.columnbuyInprice.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VendorRow NewVendorRow() {
-                return ((VendorRow)(this.NewRow()));
+            public itemsRow NewitemsRow() {
+                return ((itemsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new VendorRow(builder);
+                return new itemsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(VendorRow);
+                return typeof(itemsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.VendorRowChanged != null)) {
-                    this.VendorRowChanged(this, new VendorRowChangeEvent(((VendorRow)(e.Row)), e.Action));
+                if ((this.itemsRowChanged != null)) {
+                    this.itemsRowChanged(this, new itemsRowChangeEvent(((itemsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -453,8 +499,8 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.VendorRowChanging != null)) {
-                    this.VendorRowChanging(this, new VendorRowChangeEvent(((VendorRow)(e.Row)), e.Action));
+                if ((this.itemsRowChanging != null)) {
+                    this.itemsRowChanging(this, new itemsRowChangeEvent(((itemsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -462,8 +508,8 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.VendorRowDeleted != null)) {
-                    this.VendorRowDeleted(this, new VendorRowChangeEvent(((VendorRow)(e.Row)), e.Action));
+                if ((this.itemsRowDeleted != null)) {
+                    this.itemsRowDeleted(this, new itemsRowChangeEvent(((itemsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -471,14 +517,14 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.VendorRowDeleting != null)) {
-                    this.VendorRowDeleting(this, new VendorRowChangeEvent(((VendorRow)(e.Row)), e.Action));
+                if ((this.itemsRowDeleting != null)) {
+                    this.itemsRowDeleting(this, new itemsRowChangeEvent(((itemsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveVendorRow(VendorRow row) {
+            public void RemoveitemsRow(itemsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -487,7 +533,7 @@ namespace main_menu {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SeniorDesignNewSIPDataSet5 ds = new SeniorDesignNewSIPDataSet5();
+                SeniorDesignNewSIPDataSet6 ds = new SeniorDesignNewSIPDataSet6();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -505,7 +551,7 @@ namespace main_menu {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "VendorDataTable";
+                attribute2.FixedValue = "itemsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -549,36 +595,69 @@ namespace main_menu {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class VendorRow : global::System.Data.DataRow {
+        public partial class itemsRow : global::System.Data.DataRow {
             
-            private VendorDataTable tableVendor;
+            private itemsDataTable tableitems;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal VendorRow(global::System.Data.DataRowBuilder rb) : 
+            internal itemsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableVendor = ((VendorDataTable)(this.Table));
+                this.tableitems = ((itemsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idVendor {
+            public int sku {
                 get {
-                    return ((int)(this[this.tableVendor.idVendorColumn]));
+                    return ((int)(this[this.tableitems.skuColumn]));
                 }
                 set {
-                    this[this.tableVendor.idVendorColumn] = value;
+                    this[this.tableitems.skuColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string vendorName {
+            public string itemName {
                 get {
-                    return ((string)(this[this.tableVendor.vendorNameColumn]));
+                    return ((string)(this[this.tableitems.itemNameColumn]));
                 }
                 set {
-                    this[this.tableVendor.vendorNameColumn] = value;
+                    this[this.tableitems.itemNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string itemSize {
+                get {
+                    return ((string)(this[this.tableitems.itemSizeColumn]));
+                }
+                set {
+                    this[this.tableitems.itemSizeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Vendor {
+                get {
+                    return ((int)(this[this.tableitems.VendorColumn]));
+                }
+                set {
+                    this[this.tableitems.VendorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal buyInprice {
+                get {
+                    return ((decimal)(this[this.tableitems.buyInpriceColumn]));
+                }
+                set {
+                    this[this.tableitems.buyInpriceColumn] = value;
                 }
             }
         }
@@ -587,22 +666,22 @@ namespace main_menu {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class VendorRowChangeEvent : global::System.EventArgs {
+        public class itemsRowChangeEvent : global::System.EventArgs {
             
-            private VendorRow eventRow;
+            private itemsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VendorRowChangeEvent(VendorRow row, global::System.Data.DataRowAction action) {
+            public itemsRowChangeEvent(itemsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VendorRow Row {
+            public itemsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -618,7 +697,7 @@ namespace main_menu {
         }
     }
 }
-namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
+namespace main_menu.SeniorDesignNewSIPDataSet6TableAdapters {
     
     
     /// <summary>
@@ -630,7 +709,7 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class VendorTableAdapter : global::System.ComponentModel.Component {
+    public partial class itemsTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -644,7 +723,7 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public VendorTableAdapter() {
+        public itemsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -741,20 +820,24 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Vendor";
-            tableMapping.ColumnMappings.Add("idVendor", "idVendor");
-            tableMapping.ColumnMappings.Add("vendorName", "vendorName");
+            tableMapping.DataSetTable = "items";
+            tableMapping.ColumnMappings.Add("sku", "sku");
+            tableMapping.ColumnMappings.Add("itemName", "itemName");
+            tableMapping.ColumnMappings.Add("itemSize", "itemSize");
+            tableMapping.ColumnMappings.Add("Vendor", "Vendor");
+            tableMapping.ColumnMappings.Add("buyInprice", "buyInprice");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Vendor` WHERE ((`idVendor` = @p1) AND (`vendorName` = @p2))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `items` WHERE ((`sku` = @p1) AND (`itemName` = @p2) AND (`itemSize` =" +
+                " @p3) AND (`Vendor` = @p4) AND (`buyInprice` = @p5))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "idVendor";
+            param.SourceColumn = "sku";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -762,40 +845,45 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "vendorName";
+            param.SourceColumn = "itemName";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
-            this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Vendor` (`idVendor`, `vendorName`) VALUES (@p1, @p2)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p1";
+            param.ParameterName = "@p3";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "itemSize";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "idVendor";
-            param.SourceVersion = global::System.Data.DataRowVersion.Current;
-            this._adapter.InsertCommand.Parameters.Add(param);
+            param.SourceColumn = "Vendor";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p2";
-            param.DbType = global::System.Data.DbType.String;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.ParameterName = "@p5";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
-            param.SourceColumn = "vendorName";
-            param.SourceVersion = global::System.Data.DataRowVersion.Current;
-            this._adapter.InsertCommand.Parameters.Add(param);
+            param.SourceColumn = "buyInprice";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Vendor` SET `idVendor` = @p1, `vendorName` = @p2 WHERE ((`idVendor` = @p3" +
-                ") AND (`vendorName` = @p4))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `items` SET `sku` = @p1, `itemName` = @p2, `itemSize` = @p3, `Vendor` = @p" +
+                "4, `buyInprice` = @p5 WHERE ((`sku` = @p6) AND (`itemName` = @p7) AND (`itemSize" +
+                "` = @p8) AND (`Vendor` = @p9) AND (`buyInprice` = @p10))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "idVendor";
+            param.SourceColumn = "sku";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -803,23 +891,71 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "vendorName";
+            param.SourceColumn = "itemName";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "idVendor";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "vendorName";
+            param.SourceColumn = "itemSize";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p4";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "Vendor";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
+            param.IsNullable = true;
+            param.SourceColumn = "buyInprice";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p6";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "sku";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p7";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "itemName";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p8";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "itemSize";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p9";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "Vendor";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p10";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
+            param.IsNullable = true;
+            param.SourceColumn = "buyInprice";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -837,7 +973,7 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `idVendor`, `vendorName` FROM `Vendor`";
+            this._commandCollection[0].CommandText = "SELECT `sku`, `itemName`, `itemSize`, `Vendor`, `buyInprice` FROM `items`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -845,7 +981,7 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SeniorDesignNewSIPDataSet5.VendorDataTable dataTable) {
+        public virtual int Fill(SeniorDesignNewSIPDataSet6.itemsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -858,9 +994,9 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SeniorDesignNewSIPDataSet5.VendorDataTable GetData() {
+        public virtual SeniorDesignNewSIPDataSet6.itemsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SeniorDesignNewSIPDataSet5.VendorDataTable dataTable = new SeniorDesignNewSIPDataSet5.VendorDataTable();
+            SeniorDesignNewSIPDataSet6.itemsDataTable dataTable = new SeniorDesignNewSIPDataSet6.itemsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -868,15 +1004,15 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SeniorDesignNewSIPDataSet5.VendorDataTable dataTable) {
+        public virtual int Update(SeniorDesignNewSIPDataSet6.itemsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SeniorDesignNewSIPDataSet5 dataSet) {
-            return this.Adapter.Update(dataSet, "Vendor");
+        public virtual int Update(SeniorDesignNewSIPDataSet6 dataSet) {
+            return this.Adapter.Update(dataSet, "items");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -898,7 +1034,7 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int p1, string p2) {
+        public virtual int Delete(int p1, string p2, string p3, int p4, decimal p5) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
@@ -906,6 +1042,14 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(p2));
             }
+            if ((p3 == null)) {
+                throw new global::System.ArgumentNullException("p3");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(p3));
+            }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(p4));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(p5));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -925,36 +1069,8 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int p1, string p2) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(p1));
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(p2));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int p1, string p2, int p3, string p4) {
+        public virtual int Update(int p1, string p2, string p3, int p4, decimal p5, int p6, string p7, string p8, int p9, decimal p10) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
@@ -962,13 +1078,29 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(p2));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(p3));
-            if ((p4 == null)) {
-                throw new global::System.ArgumentNullException("p4");
+            if ((p3 == null)) {
+                throw new global::System.ArgumentNullException("p3");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p3));
             }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(p4));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(p5));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(p6));
+            if ((p7 == null)) {
+                throw new global::System.ArgumentNullException("p7");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(p7));
+            }
+            if ((p8 == null)) {
+                throw new global::System.ArgumentNullException("p8");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(p8));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(p9));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(p10));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -989,8 +1121,8 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p2, int p3, string p4) {
-            return this.Update(p3, p2, p3, p4);
+        public virtual int Update(string p2, string p3, int p4, decimal p5, int p6, string p7, string p8, int p9, decimal p10) {
+            return this.Update(p6, p2, p3, p4, p5, p6, p7, p8, p9, p10);
         }
     }
     
@@ -1006,7 +1138,7 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private VendorTableAdapter _vendorTableAdapter;
+        private itemsTableAdapter _itemsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1028,12 +1160,12 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public VendorTableAdapter VendorTableAdapter {
+        public itemsTableAdapter itemsTableAdapter {
             get {
-                return this._vendorTableAdapter;
+                return this._itemsTableAdapter;
             }
             set {
-                this._vendorTableAdapter = value;
+                this._itemsTableAdapter = value;
             }
         }
         
@@ -1056,9 +1188,9 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._vendorTableAdapter != null) 
-                            && (this._vendorTableAdapter.Connection != null))) {
-                    return this._vendorTableAdapter.Connection;
+                if (((this._itemsTableAdapter != null) 
+                            && (this._itemsTableAdapter.Connection != null))) {
+                    return this._itemsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1073,7 +1205,7 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._vendorTableAdapter != null)) {
+                if ((this._itemsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1085,14 +1217,14 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(SeniorDesignNewSIPDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(SeniorDesignNewSIPDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._vendorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Vendor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._itemsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.items.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._vendorTableAdapter.Update(updatedRows));
+                    result = (result + this._itemsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1104,13 +1236,13 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(SeniorDesignNewSIPDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(SeniorDesignNewSIPDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._vendorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Vendor.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._itemsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.items.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._vendorTableAdapter.Update(addedRows));
+                    result = (result + this._itemsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1122,13 +1254,13 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(SeniorDesignNewSIPDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(SeniorDesignNewSIPDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._vendorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Vendor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._itemsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.items.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._vendorTableAdapter.Update(deletedRows));
+                    result = (result + this._itemsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1164,15 +1296,15 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(SeniorDesignNewSIPDataSet5 dataSet) {
+        public virtual int UpdateAll(SeniorDesignNewSIPDataSet6 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._vendorTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._vendorTableAdapter.Connection) == false))) {
+            if (((this._itemsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._itemsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1208,13 +1340,13 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._vendorTableAdapter != null)) {
-                    revertConnections.Add(this._vendorTableAdapter, this._vendorTableAdapter.Connection);
-                    this._vendorTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._vendorTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._vendorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._vendorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._vendorTableAdapter.Adapter);
+                if ((this._itemsTableAdapter != null)) {
+                    revertConnections.Add(this._itemsTableAdapter, this._itemsTableAdapter.Connection);
+                    this._itemsTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._itemsTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._itemsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._itemsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._itemsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1275,9 +1407,9 @@ namespace main_menu.SeniorDesignNewSIPDataSet5TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._vendorTableAdapter != null)) {
-                    this._vendorTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._vendorTableAdapter]));
-                    this._vendorTableAdapter.Transaction = null;
+                if ((this._itemsTableAdapter != null)) {
+                    this._itemsTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._itemsTableAdapter]));
+                    this._itemsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

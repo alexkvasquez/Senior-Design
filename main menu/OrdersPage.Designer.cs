@@ -28,25 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblOrders = new System.Windows.Forms.Label();
             this.ordersToInventory = new System.Windows.Forms.Button();
-            this.editInventory = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.editInventory = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.HomeIconPic = new System.Windows.Forms.PictureBox();
-            this.orderItem7 = new System.Windows.Forms.Button();
-            this.orderItem6 = new System.Windows.Forms.Button();
-            this.orderItem1 = new System.Windows.Forms.Button();
-            this.orderItem5 = new System.Windows.Forms.Button();
-            this.orderItem2 = new System.Windows.Forms.Button();
-            this.orderItem4 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbVendorName = new System.Windows.Forms.ComboBox();
+            this.vendorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblOrderNumber = new System.Windows.Forms.Label();
+            this.lblVendorName = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.itemsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.seniorDesignNewSIPDataSet6 = new main_menu.SeniorDesignNewSIPDataSet6();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsTableAdapter = new main_menu.SeniorDesignNewSIPDataSet6TableAdapters.itemsTableAdapter();
+            this.txtSearch = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,13 +78,12 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel1.Controls.Add(this.lblOrders);
             this.panel1.Controls.Add(this.ordersToInventory);
-            this.panel1.Controls.Add(this.editInventory);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(189, 470);
+            this.panel1.Size = new System.Drawing.Size(189, 543);
             this.panel1.TabIndex = 0;
             // 
             // lblOrders
@@ -78,7 +101,7 @@
             // ordersToInventory
             // 
             this.ordersToInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.ordersToInventory.Location = new System.Drawing.Point(11, 420);
+            this.ordersToInventory.Location = new System.Drawing.Point(11, 493);
             this.ordersToInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ordersToInventory.Name = "ordersToInventory";
             this.ordersToInventory.Size = new System.Drawing.Size(164, 39);
@@ -86,18 +109,6 @@
             this.ordersToInventory.Text = "View Inventory";
             this.ordersToInventory.UseVisualStyleBackColor = true;
             this.ordersToInventory.Click += new System.EventHandler(this.ordersToInventory_Click_1);
-            // 
-            // editInventory
-            // 
-            this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.editInventory.Location = new System.Drawing.Point(11, 377);
-            this.editInventory.Margin = new System.Windows.Forms.Padding(2);
-            this.editInventory.Name = "editInventory";
-            this.editInventory.Size = new System.Drawing.Size(164, 39);
-            this.editInventory.TabIndex = 12;
-            this.editInventory.Text = "View In-Place Orders";
-            this.editInventory.UseVisualStyleBackColor = true;
-            this.editInventory.Click += new System.EventHandler(this.editInventory_Click);
             // 
             // pictureBox1
             // 
@@ -110,21 +121,28 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // editInventory
+            // 
+            this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.editInventory.Location = new System.Drawing.Point(5, 493);
+            this.editInventory.Margin = new System.Windows.Forms.Padding(2);
+            this.editInventory.Name = "editInventory";
+            this.editInventory.Size = new System.Drawing.Size(101, 31);
+            this.editInventory.TabIndex = 12;
+            this.editInventory.Text = "Submit Order";
+            this.editInventory.UseVisualStyleBackColor = true;
+            this.editInventory.Click += new System.EventHandler(this.editInventory_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(219)))), ((int)(((byte)(230)))));
             this.panel2.Controls.Add(this.HomeIconPic);
-            this.panel2.Controls.Add(this.orderItem7);
-            this.panel2.Controls.Add(this.orderItem6);
-            this.panel2.Controls.Add(this.orderItem1);
-            this.panel2.Controls.Add(this.orderItem5);
-            this.panel2.Controls.Add(this.orderItem2);
-            this.panel2.Controls.Add(this.orderItem4);
+            this.panel2.Controls.Add(this.editInventory);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(805, 0);
+            this.panel2.Location = new System.Drawing.Point(812, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(111, 470);
+            this.panel2.Size = new System.Drawing.Size(111, 543);
             this.panel2.TabIndex = 4;
             // 
             // HomeIconPic
@@ -138,85 +156,26 @@
             this.HomeIconPic.TabStop = false;
             this.HomeIconPic.Click += new System.EventHandler(this.HomeIconPic_Click);
             // 
-            // orderItem7
+            // cbVendorName
             // 
-            this.orderItem7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.orderItem7.Location = new System.Drawing.Point(4, 312);
-            this.orderItem7.Margin = new System.Windows.Forms.Padding(2);
-            this.orderItem7.Name = "orderItem7";
-            this.orderItem7.Size = new System.Drawing.Size(100, 26);
-            this.orderItem7.TabIndex = 17;
-            this.orderItem7.Text = "Order Item";
-            this.orderItem7.UseVisualStyleBackColor = true;
-            // 
-            // orderItem6
-            // 
-            this.orderItem6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.orderItem6.Location = new System.Drawing.Point(4, 285);
-            this.orderItem6.Margin = new System.Windows.Forms.Padding(2);
-            this.orderItem6.Name = "orderItem6";
-            this.orderItem6.Size = new System.Drawing.Size(100, 26);
-            this.orderItem6.TabIndex = 16;
-            this.orderItem6.Text = "Order Item";
-            this.orderItem6.UseVisualStyleBackColor = true;
-            // 
-            // orderItem1
-            // 
-            this.orderItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.orderItem1.Location = new System.Drawing.Point(4, 150);
-            this.orderItem1.Margin = new System.Windows.Forms.Padding(2);
-            this.orderItem1.Name = "orderItem1";
-            this.orderItem1.Size = new System.Drawing.Size(100, 26);
-            this.orderItem1.TabIndex = 11;
-            this.orderItem1.Text = "Order Item";
-            this.orderItem1.UseVisualStyleBackColor = true;
-            // 
-            // orderItem5
-            // 
-            this.orderItem5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.orderItem5.Location = new System.Drawing.Point(4, 258);
-            this.orderItem5.Margin = new System.Windows.Forms.Padding(2);
-            this.orderItem5.Name = "orderItem5";
-            this.orderItem5.Size = new System.Drawing.Size(100, 26);
-            this.orderItem5.TabIndex = 15;
-            this.orderItem5.Text = "Order Item";
-            this.orderItem5.UseVisualStyleBackColor = true;
-            // 
-            // orderItem2
-            // 
-            this.orderItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.orderItem2.Location = new System.Drawing.Point(4, 177);
-            this.orderItem2.Margin = new System.Windows.Forms.Padding(2);
-            this.orderItem2.Name = "orderItem2";
-            this.orderItem2.Size = new System.Drawing.Size(100, 26);
-            this.orderItem2.TabIndex = 12;
-            this.orderItem2.Text = "Order Item";
-            this.orderItem2.UseVisualStyleBackColor = true;
-            // 
-            // orderItem4
-            // 
-            this.orderItem4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.orderItem4.Location = new System.Drawing.Point(4, 232);
-            this.orderItem4.Margin = new System.Windows.Forms.Padding(2);
-            this.orderItem4.Name = "orderItem4";
-            this.orderItem4.Size = new System.Drawing.Size(100, 26);
-            this.orderItem4.TabIndex = 14;
-            this.orderItem4.Text = "Order Item";
-            this.orderItem4.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "(1145) \tManhattan Beer Distributors",
-            "(13546) \tSKI Beer Corporation",
-            "(15674)\tClare Rose Inc",
-            "(32654)\tBoening Brothers Inc",
-            "(65498)\tUnion Beer Distributors"});
-            this.comboBox1.Location = new System.Drawing.Point(194, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(221, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cbVendorName.AutoCompleteCustomSource.AddRange(new string[] {
+            "Manhattan Beer Distributors",
+            "SKI Beer Corporation",
+            "Clare Rose Inc",
+            "Boening Brothers Inc",
+            "Union Beer Distributors"});
+            this.cbVendorName.Font = new System.Drawing.Font("Candara", 8.25F);
+            this.cbVendorName.FormattingEnabled = true;
+            this.cbVendorName.Items.AddRange(new object[] {
+            "Manhattan Beer Distributors",
+            "SKI Beer Corporation",
+            "Clare Rose Inc",
+            "Boening Brothers Inc",
+            "Union Beer Distributors"});
+            this.cbVendorName.Location = new System.Drawing.Point(198, 35);
+            this.cbVendorName.Name = "cbVendorName";
+            this.cbVendorName.Size = new System.Drawing.Size(221, 21);
+            this.cbVendorName.TabIndex = 5;
             // 
             // label1
             // 
@@ -225,29 +184,231 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.label1.Location = new System.Drawing.Point(194, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 23);
+            this.label1.Size = new System.Drawing.Size(122, 23);
             this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.label1.Text = "Select Vendor";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.button1.Location = new System.Drawing.Point(424, 29);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 29);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Start Order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblOrderNumber
+            // 
+            this.lblOrderNumber.AutoSize = true;
+            this.lblOrderNumber.Font = new System.Drawing.Font("Candara", 14F);
+            this.lblOrderNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblOrderNumber.Location = new System.Drawing.Point(194, 308);
+            this.lblOrderNumber.Name = "lblOrderNumber";
+            this.lblOrderNumber.Size = new System.Drawing.Size(133, 23);
+            this.lblOrderNumber.TabIndex = 16;
+            this.lblOrderNumber.Text = "Order Number:";
+            this.lblOrderNumber.Visible = false;
+            // 
+            // lblVendorName
+            // 
+            this.lblVendorName.AutoSize = true;
+            this.lblVendorName.Font = new System.Drawing.Font("Candara", 14F);
+            this.lblVendorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblVendorName.Location = new System.Drawing.Point(446, 308);
+            this.lblVendorName.Name = "lblVendorName";
+            this.lblVendorName.Size = new System.Drawing.Size(73, 23);
+            this.lblVendorName.TabIndex = 17;
+            this.lblVendorName.Text = "Vendor:";
+            this.lblVendorName.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(198, 103);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(594, 191);
+            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.Visible = false;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            // 
+            // itemsBindingSource1
+            // 
+            this.itemsBindingSource1.DataMember = "items";
+            // 
+            // seniorDesignNewSIPDataSet6
+            // 
+            this.seniorDesignNewSIPDataSet6.DataSetName = "SeniorDesignNewSIPDataSet6";
+            this.seniorDesignNewSIPDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "items";
+            this.itemsBindingSource.DataSource = this.seniorDesignNewSIPDataSet6;
+            // 
+            // itemsTableAdapter
+            // 
+            this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.AcceptsTab = true;
+            this.txtSearch.Location = new System.Drawing.Point(316, 79);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(476, 19);
+            this.txtSearch.TabIndex = 19;
+            this.txtSearch.Text = "";
+            this.txtSearch.Visible = false;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 12F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.label2.Location = new System.Drawing.Point(194, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 19);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Search for Item:";
+            this.label2.Visible = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeColumns = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView2.ContextMenuStrip = this.contextMenuStrip1;
+            this.dataGridView2.Location = new System.Drawing.Point(198, 333);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(594, 191);
+            this.dataGridView2.TabIndex = 21;
+            this.dataGridView2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "sku";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Item Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Item Size";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Vendor";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Buy In Price";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteItemToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(135, 26);
+            // 
+            // deleteItemToolStripMenuItem
+            // 
+            this.deleteItemToolStripMenuItem.Name = "deleteItemToolStripMenuItem";
+            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.deleteItemToolStripMenuItem.Text = "Delete Item";
+            this.deleteItemToolStripMenuItem.Click += new System.EventHandler(this.deleteItemToolStripMenuItem_Click);
             // 
             // OrdersPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(177)))), ((int)(((byte)(193)))));
-            this.ClientSize = new System.Drawing.Size(916, 470);
+            this.ClientSize = new System.Drawing.Size(923, 543);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblVendorName);
+            this.Controls.Add(this.lblOrderNumber);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbVendorName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrdersPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrdersPage";
+            this.Load += new System.EventHandler(this.OrdersPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,12 +421,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button orderItem7;
-        private System.Windows.Forms.Button orderItem6;
-        private System.Windows.Forms.Button orderItem1;
-        private System.Windows.Forms.Button orderItem5;
-        private System.Windows.Forms.Button orderItem2;
-        private System.Windows.Forms.Button orderItem4;
         private System.Windows.Forms.Button ordersToInventory;
         private System.Windows.Forms.Button editInventory;
         private void ordersToInventory_Click(object sender, System.EventArgs e)
@@ -276,7 +431,27 @@
 
         private System.Windows.Forms.PictureBox HomeIconPic;
         private System.Windows.Forms.Label lblOrders;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbVendorName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource vendorBindingSource;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblOrderNumber;
+        private System.Windows.Forms.Label lblVendorName;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private SeniorDesignNewSIPDataSet6 seniorDesignNewSIPDataSet6;
+        private System.Windows.Forms.BindingSource itemsBindingSource;
+        private SeniorDesignNewSIPDataSet6TableAdapters.itemsTableAdapter itemsTableAdapter;
+        private System.Windows.Forms.BindingSource itemsBindingSource1;
+        private System.Windows.Forms.RichTextBox txtSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deleteItemToolStripMenuItem;
     }
 }

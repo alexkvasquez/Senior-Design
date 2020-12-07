@@ -58,16 +58,20 @@ namespace main_menu
         {
             //this is going to check the data base if the login is correct
 
+            string hashedPassword = hashing(txtPassword.Text);
+
+
             cnn.Open();
             MySqlCommand cmd = cnn.CreateCommand();
-            cmd.CommandText = "SELECT userName,password,level,Name from Users WHERE userName ='"+ txtUserName.Text +"' AND password ='" + txtPassword.Text + "'";
+            cmd.CommandText = "SELECT idUsers,userName,password,level,Name from Users WHERE userName ='"+ txtUserName.Text +"' AND password ='" + hashedPassword + "'";
             MySqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.Read())
             {
-                globals.username = reader.GetValue(0).ToString();
-                globals.level = reader.GetValue(2).ToString();
-                globals.name = reader.GetValue(3).ToString();
+                globals.userid = int.Parse(reader.GetValue(0).ToString());
+                globals.username = reader.GetValue(1).ToString();
+                globals.level = reader.GetValue(3).ToString();
+                globals.name = reader.GetValue(4).ToString();
                 this.Hide();
                 Dashboard d = new Dashboard();
                 d.ShowDialog();
@@ -84,27 +88,36 @@ namespace main_menu
 
         }
 
-        private void panelLeft_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelLeft_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblForgotUserName_Click(object sender, EventArgs e)
         {
             this.Hide();
             ForgetPassword f = new ForgetPassword();
             f.ShowDialog();
         }
+
+        private string hashing(String str)
+        {
+            string hash;
+
+            cnn.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT sha2('"+ txtPassword.Text +"',512)", cnn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                hash = reader.GetValue(0).ToString();
+                cnn.Close();
+                return hash;
+                
+            }
+            else
+            {
+                cnn.Close();
+                return null;
+            }
+            
+        }
+
     }
 
 

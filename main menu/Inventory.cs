@@ -136,29 +136,6 @@ namespace main_menu
 
         }
 
-        private void editInventory_Click(object sender, EventArgs e)
-        {
-            //this is going to edit on hands
-            try
-            {
-                if (globals.level.Equals("Employee"))
-                {
-                    MessageBox.Show("You do not hasve access", "SIP");
-                }
-                else
-                {
-                    cnn.Open();
-                    MySqlCommand cmd = new MySqlCommand("UPDATE items SET Quantity =" + int.Parse(txtTextOnHands.Text) + " WHERE sku =" +
-                        int.Parse(txtTextSku.Text) + "", cnn);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-        }
-
         private void HomeIconPic_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -171,6 +148,31 @@ namespace main_menu
             this.Hide();
             OrdersPage O = new OrdersPage();
             O.ShowDialog();
+        }
+
+        private void editInventory_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (globals.level.Equals("Employee"))
+                {
+                    MessageBox.Show("You do not hasve access", "SIP");
+                }
+                else
+                {
+                    cnn.Open();
+                    MySqlCommand cmd = new MySqlCommand("UPDATE items SET Quantity = '" + int.Parse(txtTextOnHands.Text) + "' WHERE sku ='" +
+                        int.Parse(txtTextSku.Text) + "'", cnn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Inventory has been updated");
+                    cnn.Close();
+                    this.itemsTableAdapter2.Fill(this.seniorDesignNewSIPDataSet4.items);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
