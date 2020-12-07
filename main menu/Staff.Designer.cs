@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblStaff = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,10 +36,11 @@
             this.viewSchedule = new System.Windows.Forms.Button();
             this.clockOut = new System.Windows.Forms.Button();
             this.ClockIn = new System.Windows.Forms.Button();
+            this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,17 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(228, 600);
             this.panel1.TabIndex = 0;
-            // 
-            // HomeIconPic
-            // 
-            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
-            this.HomeIconPic.Location = new System.Drawing.Point(857, 12);
-            this.HomeIconPic.Name = "HomeIconPic";
-            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
-            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HomeIconPic.TabIndex = 18;
-            this.HomeIconPic.TabStop = false;
-            this.HomeIconPic.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox1
             // 
@@ -136,6 +125,7 @@
             this.clockOut.TabIndex = 5;
             this.clockOut.Text = "Clock Out";
             this.clockOut.UseVisualStyleBackColor = true;
+            this.clockOut.Click += new System.EventHandler(this.clockOut_Click);
             // 
             // ClockIn
             // 
@@ -147,6 +137,18 @@
             this.ClockIn.TabIndex = 4;
             this.ClockIn.Text = "Clock In";
             this.ClockIn.UseVisualStyleBackColor = true;
+            this.ClockIn.Click += new System.EventHandler(this.ClockIn_Click);
+            // 
+            // HomeIconPic
+            // 
+            this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
+            this.HomeIconPic.Location = new System.Drawing.Point(857, 12);
+            this.HomeIconPic.Name = "HomeIconPic";
+            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
+            this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomeIconPic.TabIndex = 18;
+            this.HomeIconPic.TabStop = false;
+            this.HomeIconPic.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Staff
             // 
@@ -162,9 +164,9 @@
             this.Text = "Staff Page";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             this.ResumeLayout(false);
 
         }
