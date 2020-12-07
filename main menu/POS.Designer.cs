@@ -207,7 +207,7 @@
             // HomeIconPic
             // 
             this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
-            this.HomeIconPic.Location = new System.Drawing.Point(1567, 2);
+            this.HomeIconPic.Location = new System.Drawing.Point(1523, 0);
             this.HomeIconPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HomeIconPic.Name = "HomeIconPic";
             this.HomeIconPic.Size = new System.Drawing.Size(29, 30);
