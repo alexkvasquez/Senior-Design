@@ -15,5 +15,6 @@ namespace main_menu
         public static int orderNumber;
         public static int vendorId;
         public static int getQuan;
+        public static int TimeClockID;
     }
 }
