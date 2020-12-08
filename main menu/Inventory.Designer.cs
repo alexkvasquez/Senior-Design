@@ -35,6 +35,10 @@
             this.inventoryToOrders = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.skuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.seniorDesignNewSIPDataSet4 = new main_menu.SeniorDesignNewSIPDataSet4();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,10 +71,6 @@
             this.itemsTableAdapter1 = new main_menu.SeniorDesignNewSIPDataSet3TableAdapters.itemsTableAdapter();
             this.itemsTableAdapter2 = new main_menu.SeniorDesignNewSIPDataSet4TableAdapters.itemsTableAdapter();
             this.process1 = new System.Diagnostics.Process();
-            this.skuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,7 +95,7 @@
             this.textBox1.Font = new System.Drawing.Font("Candara", 16F);
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.textBox1.Location = new System.Drawing.Point(0, 206);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(163, 27);
@@ -112,7 +112,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 463);
             this.panel1.TabIndex = 0;
@@ -122,7 +122,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::main_menu.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(2, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,7 +133,7 @@
             // 
             this.inventoryToOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.inventoryToOrders.Location = new System.Drawing.Point(11, 414);
-            this.inventoryToOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inventoryToOrders.Margin = new System.Windows.Forms.Padding(2);
             this.inventoryToOrders.Name = "inventoryToOrders";
             this.inventoryToOrders.Size = new System.Drawing.Size(132, 32);
             this.inventoryToOrders.TabIndex = 1;
@@ -151,7 +151,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel2.Location = new System.Drawing.Point(163, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(747, 463);
             this.panel2.TabIndex = 1;
@@ -174,9 +174,10 @@
             this.quantityDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.itemsBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(21, 14);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -184,6 +185,42 @@
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            // 
+            // skuDataGridViewTextBoxColumn
+            // 
+            this.skuDataGridViewTextBoxColumn.DataPropertyName = "sku";
+            this.skuDataGridViewTextBoxColumn.HeaderText = "sku";
+            this.skuDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.skuDataGridViewTextBoxColumn.Name = "skuDataGridViewTextBoxColumn";
+            this.skuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.skuDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "itemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "itemName";
+            this.itemNameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // itemSizeDataGridViewTextBoxColumn
+            // 
+            this.itemSizeDataGridViewTextBoxColumn.DataPropertyName = "itemSize";
+            this.itemSizeDataGridViewTextBoxColumn.HeaderText = "itemSize";
+            this.itemSizeDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.itemSizeDataGridViewTextBoxColumn.Name = "itemSizeDataGridViewTextBoxColumn";
+            this.itemSizeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.itemSizeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantityDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // itemsBindingSource2
             // 
@@ -229,7 +266,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel3.Location = new System.Drawing.Point(443, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(304, 463);
             this.panel3.TabIndex = 11;
@@ -238,7 +275,7 @@
             // 
             this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
             this.HomeIconPic.Location = new System.Drawing.Point(276, 10);
-            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(2);
             this.HomeIconPic.Name = "HomeIconPic";
             this.HomeIconPic.Size = new System.Drawing.Size(22, 24);
             this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -252,7 +289,7 @@
             this.txtTextDes.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextDes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextDes.Location = new System.Drawing.Point(97, 290);
-            this.txtTextDes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextDes.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextDes.Multiline = true;
             this.txtTextDes.Name = "txtTextDes";
             this.txtTextDes.ReadOnly = true;
@@ -266,7 +303,7 @@
             this.txtTextretail.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextretail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextretail.Location = new System.Drawing.Point(97, 241);
-            this.txtTextretail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextretail.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextretail.Name = "txtTextretail";
             this.txtTextretail.ReadOnly = true;
             this.txtTextretail.Size = new System.Drawing.Size(169, 27);
@@ -278,7 +315,7 @@
             this.txtTextSku.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextSku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextSku.Location = new System.Drawing.Point(97, 57);
-            this.txtTextSku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextSku.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextSku.Name = "txtTextSku";
             this.txtTextSku.ReadOnly = true;
             this.txtTextSku.Size = new System.Drawing.Size(169, 27);
@@ -290,7 +327,7 @@
             this.txtTextVendor.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextVendor.Location = new System.Drawing.Point(97, 149);
-            this.txtTextVendor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextVendor.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextVendor.Name = "txtTextVendor";
             this.txtTextVendor.ReadOnly = true;
             this.txtTextVendor.Size = new System.Drawing.Size(169, 27);
@@ -302,7 +339,7 @@
             this.txtTextName.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextName.Location = new System.Drawing.Point(97, 11);
-            this.txtTextName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextName.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextName.Name = "txtTextName";
             this.txtTextName.ReadOnly = true;
             this.txtTextName.Size = new System.Drawing.Size(169, 27);
@@ -314,7 +351,7 @@
             this.txtTextOnHands.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextOnHands.Location = new System.Drawing.Point(97, 195);
-            this.txtTextOnHands.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextOnHands.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextOnHands.Name = "txtTextOnHands";
             this.txtTextOnHands.Size = new System.Drawing.Size(169, 27);
             this.txtTextOnHands.TabIndex = 25;
@@ -325,7 +362,7 @@
             this.txtTextItemSize.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextItemSize.Location = new System.Drawing.Point(97, 103);
-            this.txtTextItemSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextItemSize.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextItemSize.Name = "txtTextItemSize";
             this.txtTextItemSize.ReadOnly = true;
             this.txtTextItemSize.Size = new System.Drawing.Size(169, 27);
@@ -430,7 +467,7 @@
             // 
             this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.editInventory.Location = new System.Drawing.Point(16, 421);
-            this.editInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editInventory.Margin = new System.Windows.Forms.Padding(2);
             this.editInventory.Name = "editInventory";
             this.editInventory.Size = new System.Drawing.Size(272, 22);
             this.editInventory.TabIndex = 3;
@@ -441,7 +478,7 @@
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(21, 421);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(404, 20);
             this.txtSearch.TabIndex = 11;
@@ -495,42 +532,6 @@
             this.process1.StartInfo.UserName = "";
             this.process1.SynchronizingObject = this;
             // 
-            // skuDataGridViewTextBoxColumn
-            // 
-            this.skuDataGridViewTextBoxColumn.DataPropertyName = "sku";
-            this.skuDataGridViewTextBoxColumn.HeaderText = "sku";
-            this.skuDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.skuDataGridViewTextBoxColumn.Name = "skuDataGridViewTextBoxColumn";
-            this.skuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.skuDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // itemNameDataGridViewTextBoxColumn
-            // 
-            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "itemName";
-            this.itemNameDataGridViewTextBoxColumn.HeaderText = "itemName";
-            this.itemNameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-            this.itemNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemNameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // itemSizeDataGridViewTextBoxColumn
-            // 
-            this.itemSizeDataGridViewTextBoxColumn.DataPropertyName = "itemSize";
-            this.itemSizeDataGridViewTextBoxColumn.HeaderText = "itemSize";
-            this.itemSizeDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.itemSizeDataGridViewTextBoxColumn.Name = "itemSizeDataGridViewTextBoxColumn";
-            this.itemSizeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.itemSizeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantityDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -542,7 +543,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Maroon;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

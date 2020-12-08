@@ -190,6 +190,8 @@ namespace main_menu
         {
             // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet5.items' table. You can move, or remove it, as needed.
             this.itemsTableAdapter3.Fill(this.seniorDesignNewSIPDataSet5.items);
+            // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet5.items' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter3.Fill(this.seniorDesignNewSIPDataSet5.items);
 
            //Sets up a checkbox in Item Search Data Table. Used in Add Item Function
             DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();

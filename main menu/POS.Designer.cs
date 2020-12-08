@@ -30,13 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTransactionID = new System.Windows.Forms.TextBox();
+            this.lblTransactionID = new System.Windows.Forms.Label();
             this.dataViewPOSCart = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.retailPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemsBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.seniorDesignNewSIPDataSet5 = new main_menu.SeniorDesignNewSIPDataSet5();
             this.lblItemSearch = new System.Windows.Forms.Label();
             this.HomeIconPic = new System.Windows.Forms.PictureBox();
             this.dataViewPOS = new System.Windows.Forms.DataGridView();
@@ -73,14 +70,17 @@
             this.seniorDesignNewSIPDataSet = new main_menu.SeniorDesignNewSIPDataSet();
             this.seniorDesignNewSIPDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsTableAdapter3 = new main_menu.SeniorDesignNewSIPDataSet5TableAdapters.itemsTableAdapter();
-            this.lblTransactionID = new System.Windows.Forms.Label();
-            this.txtTransactionID = new System.Windows.Forms.TextBox();
             this.seniorDesignNewSIPDataSet1 = new main_menu.SeniorDesignNewSIPDataSet();
+            this.seniorDesignNewSIPDataSet5 = new main_menu.SeniorDesignNewSIPDataSet5();
+            this.itemsBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsTableAdapter3 = new main_menu.SeniorDesignNewSIPDataSet5TableAdapters.itemsTableAdapter();
+            this.skuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retailPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataViewPOSCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataViewPOS)).BeginInit();
             this.panel2.SuspendLayout();
@@ -97,6 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -130,71 +132,54 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtTransactionID
+            // 
+            this.txtTransactionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.txtTransactionID.Location = new System.Drawing.Point(440, 468);
+            this.txtTransactionID.Name = "txtTransactionID";
+            this.txtTransactionID.Size = new System.Drawing.Size(296, 22);
+            this.txtTransactionID.TabIndex = 32;
+            // 
+            // lblTransactionID
+            // 
+            this.lblTransactionID.AutoSize = true;
+            this.lblTransactionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.lblTransactionID.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblTransactionID.ForeColor = System.Drawing.Color.Black;
+            this.lblTransactionID.Location = new System.Drawing.Point(295, 465);
+            this.lblTransactionID.Name = "lblTransactionID";
+            this.lblTransactionID.Size = new System.Drawing.Size(135, 24);
+            this.lblTransactionID.TabIndex = 31;
+            this.lblTransactionID.Text = "Transaction ID:";
+            // 
             // dataViewPOSCart
             // 
             this.dataViewPOSCart.AllowUserToAddRows = false;
             this.dataViewPOSCart.AllowUserToDeleteRows = false;
+            this.dataViewPOSCart.AllowUserToResizeColumns = false;
+            this.dataViewPOSCart.AllowUserToResizeRows = false;
             this.dataViewPOSCart.AutoGenerateColumns = false;
+            this.dataViewPOSCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataViewPOSCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.dataViewPOSCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataViewPOSCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.retailPrice,
+            this.skuDataGridViewTextBoxColumn,
+            this.itemNameDataGridViewTextBoxColumn,
+            this.retailPriceDataGridViewTextBoxColumn,
             this.itemSize});
-            this.dataViewPOSCart.DataSource = this.itemsBindingSource5;
+            this.dataViewPOSCart.DataSource = this.itemsBindingSource6;
             this.dataViewPOSCart.Location = new System.Drawing.Point(872, 90);
             this.dataViewPOSCart.Name = "dataViewPOSCart";
+            this.dataViewPOSCart.RowHeadersVisible = false;
             this.dataViewPOSCart.RowHeadersWidth = 51;
             this.dataViewPOSCart.RowTemplate.Height = 24;
             this.dataViewPOSCart.Size = new System.Drawing.Size(680, 359);
             this.dataViewPOSCart.TabIndex = 30;
             this.dataViewPOSCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataViewPOSCart_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "sku";
-            this.dataGridViewTextBoxColumn1.HeaderText = "sku";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "itemName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "itemName";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // retailPrice
-            // 
-            this.retailPrice.DataPropertyName = "retailPrice";
-            this.retailPrice.HeaderText = "retailPrice";
-            this.retailPrice.MinimumWidth = 6;
-            this.retailPrice.Name = "retailPrice";
-            this.retailPrice.Width = 125;
-            // 
-            // itemSize
-            // 
-            this.itemSize.DataPropertyName = "itemSize";
-            this.itemSize.HeaderText = "itemSize";
-            this.itemSize.MinimumWidth = 6;
-            this.itemSize.Name = "itemSize";
-            this.itemSize.ReadOnly = true;
-            this.itemSize.Width = 125;
-            // 
             // itemsBindingSource5
             // 
             this.itemsBindingSource5.DataMember = "items";
-            this.itemsBindingSource5.DataSource = this.seniorDesignNewSIPDataSet5;
-            // 
-            // seniorDesignNewSIPDataSet5
-            // 
-            this.seniorDesignNewSIPDataSet5.DataSetName = "SeniorDesignNewSIPDataSet5";
-            this.seniorDesignNewSIPDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblItemSearch
             // 
@@ -226,10 +211,14 @@
             // 
             this.dataViewPOS.AllowUserToAddRows = false;
             this.dataViewPOS.AllowUserToDeleteRows = false;
+            this.dataViewPOS.AllowUserToResizeColumns = false;
+            this.dataViewPOS.AllowUserToResizeRows = false;
+            this.dataViewPOS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataViewPOS.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.dataViewPOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataViewPOS.Location = new System.Drawing.Point(295, 90);
             this.dataViewPOS.Name = "dataViewPOS";
+            this.dataViewPOS.RowHeadersVisible = false;
             this.dataViewPOS.RowHeadersWidth = 51;
             this.dataViewPOS.RowTemplate.Height = 24;
             this.dataViewPOS.Size = new System.Drawing.Size(570, 359);
@@ -532,34 +521,53 @@
             this.itemsBindingSource3.DataMember = "items";
             this.itemsBindingSource3.DataSource = this.seniorDesignNewSIPDataSet2BindingSource;
             // 
-            // itemsTableAdapter3
-            // 
-            this.itemsTableAdapter3.ClearBeforeFill = true;
-            // 
-            // lblTransactionID
-            // 
-            this.lblTransactionID.AutoSize = true;
-            this.lblTransactionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.lblTransactionID.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblTransactionID.ForeColor = System.Drawing.Color.Black;
-            this.lblTransactionID.Location = new System.Drawing.Point(295, 465);
-            this.lblTransactionID.Name = "lblTransactionID";
-            this.lblTransactionID.Size = new System.Drawing.Size(135, 24);
-            this.lblTransactionID.TabIndex = 31;
-            this.lblTransactionID.Text = "Transaction ID:";
-            // 
-            // txtTransactionID
-            // 
-            this.txtTransactionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTransactionID.Location = new System.Drawing.Point(440, 468);
-            this.txtTransactionID.Name = "txtTransactionID";
-            this.txtTransactionID.Size = new System.Drawing.Size(296, 22);
-            this.txtTransactionID.TabIndex = 32;
-            // 
             // seniorDesignNewSIPDataSet1
             // 
             this.seniorDesignNewSIPDataSet1.DataSetName = "SeniorDesignNewSIPDataSet";
             this.seniorDesignNewSIPDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // seniorDesignNewSIPDataSet5
+            // 
+            this.seniorDesignNewSIPDataSet5.DataSetName = "SeniorDesignNewSIPDataSet5";
+            this.seniorDesignNewSIPDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // itemsBindingSource6
+            // 
+            this.itemsBindingSource6.DataMember = "items";
+            this.itemsBindingSource6.DataSource = this.seniorDesignNewSIPDataSet5;
+            // 
+            // itemsTableAdapter3
+            // 
+            this.itemsTableAdapter3.ClearBeforeFill = true;
+            // 
+            // skuDataGridViewTextBoxColumn
+            // 
+            this.skuDataGridViewTextBoxColumn.DataPropertyName = "sku";
+            this.skuDataGridViewTextBoxColumn.HeaderText = "sku";
+            this.skuDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.skuDataGridViewTextBoxColumn.Name = "skuDataGridViewTextBoxColumn";
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "itemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "itemName";
+            this.itemNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            // 
+            // retailPriceDataGridViewTextBoxColumn
+            // 
+            this.retailPriceDataGridViewTextBoxColumn.DataPropertyName = "retailPrice";
+            this.retailPriceDataGridViewTextBoxColumn.HeaderText = "retailPrice";
+            this.retailPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.retailPriceDataGridViewTextBoxColumn.Name = "retailPriceDataGridViewTextBoxColumn";
+            // 
+            // itemSize
+            // 
+            this.itemSize.DataPropertyName = "itemSize";
+            this.itemSize.HeaderText = "itemSize";
+            this.itemSize.MinimumWidth = 6;
+            this.itemSize.Name = "itemSize";
+            this.itemSize.ReadOnly = true;
             // 
             // POS
             // 
@@ -577,7 +585,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataViewPOSCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HomeIconPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataViewPOS)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -594,6 +601,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -639,14 +648,19 @@
         private System.Windows.Forms.BindingSource itemsBindingSource3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn retailPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemSize;
         private System.Windows.Forms.BindingSource itemsBindingSource4;
-        private SeniorDesignNewSIPDataSet5 seniorDesignNewSIPDataSet5;
+       
         private System.Windows.Forms.BindingSource itemsBindingSource5;
-        private SeniorDesignNewSIPDataSet5TableAdapters.itemsTableAdapter itemsTableAdapter3;
+       
         private System.Windows.Forms.TextBox txtTransactionID;
         private System.Windows.Forms.Label lblTransactionID;
         private SeniorDesignNewSIPDataSet seniorDesignNewSIPDataSet1;
+        private SeniorDesignNewSIPDataSet5 seniorDesignNewSIPDataSet5;
+        private System.Windows.Forms.BindingSource itemsBindingSource6;
+        private SeniorDesignNewSIPDataSet5TableAdapters.itemsTableAdapter itemsTableAdapter3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn retailPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemSize;
     }
 }
