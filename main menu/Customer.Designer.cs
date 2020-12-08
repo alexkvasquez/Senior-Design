@@ -49,6 +49,7 @@
             this.lblAddPhone = new System.Windows.Forms.Label();
             this.lblAddName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -76,24 +77,27 @@
             this.panel1.Controls.Add(this.lblAddName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(702, 562);
+            this.panel1.Size = new System.Drawing.Size(1404, 1081);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtAddName
             // 
             this.txtAddName.BackColor = System.Drawing.Color.White;
-            this.txtAddName.Location = new System.Drawing.Point(17, 80);
+            this.txtAddName.Location = new System.Drawing.Point(34, 154);
+            this.txtAddName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtAddName.Name = "txtAddName";
-            this.txtAddName.Size = new System.Drawing.Size(191, 20);
+            this.txtAddName.Size = new System.Drawing.Size(378, 31);
             this.txtAddName.TabIndex = 30;
             // 
             // btnDeleteCustomer
             // 
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(123, 501);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(246, 963);
+            this.btnDeleteCustomer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-            this.btnDeleteCustomer.Size = new System.Drawing.Size(85, 23);
+            this.btnDeleteCustomer.Size = new System.Drawing.Size(170, 44);
             this.btnDeleteCustomer.TabIndex = 29;
             this.btnDeleteCustomer.Text = "Delete";
             this.btnDeleteCustomer.UseVisualStyleBackColor = true;
@@ -102,19 +106,21 @@
             // txtAddPhone
             // 
             this.txtAddPhone.BackColor = System.Drawing.Color.White;
-            this.txtAddPhone.Location = new System.Drawing.Point(17, 136);
+            this.txtAddPhone.Location = new System.Drawing.Point(34, 262);
+            this.txtAddPhone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtAddPhone.Name = "txtAddPhone";
-            this.txtAddPhone.Size = new System.Drawing.Size(191, 20);
+            this.txtAddPhone.Size = new System.Drawing.Size(378, 31);
             this.txtAddPhone.TabIndex = 5;
             // 
             // txtCustomerID
             // 
             this.txtCustomerID.BackColor = System.Drawing.Color.White;
             this.txtCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCustomerID.Location = new System.Drawing.Point(17, 342);
+            this.txtCustomerID.Location = new System.Drawing.Point(34, 658);
+            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.ReadOnly = true;
-            this.txtCustomerID.Size = new System.Drawing.Size(191, 20);
+            this.txtCustomerID.Size = new System.Drawing.Size(380, 31);
             this.txtCustomerID.TabIndex = 28;
             // 
             // lblCustomerID
@@ -122,9 +128,10 @@
             this.lblCustomerID.AutoSize = true;
             this.lblCustomerID.Font = new System.Drawing.Font("Candara", 12F);
             this.lblCustomerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblCustomerID.Location = new System.Drawing.Point(13, 320);
+            this.lblCustomerID.Location = new System.Drawing.Point(26, 615);
+            this.lblCustomerID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblCustomerID.Name = "lblCustomerID";
-            this.lblCustomerID.Size = new System.Drawing.Size(93, 19);
+            this.lblCustomerID.Size = new System.Drawing.Size(184, 39);
             this.lblCustomerID.TabIndex = 27;
             this.lblCustomerID.Text = "Customer ID";
             // 
@@ -133,9 +140,10 @@
             this.lblEditPhone.AutoSize = true;
             this.lblEditPhone.Font = new System.Drawing.Font("Candara", 12F);
             this.lblEditPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblEditPhone.Location = new System.Drawing.Point(13, 431);
+            this.lblEditPhone.Location = new System.Drawing.Point(26, 829);
+            this.lblEditPhone.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblEditPhone.Name = "lblEditPhone";
-            this.lblEditPhone.Size = new System.Drawing.Size(112, 19);
+            this.lblEditPhone.Size = new System.Drawing.Size(220, 39);
             this.lblEditPhone.TabIndex = 26;
             this.lblEditPhone.Text = "Phone Number";
             // 
@@ -144,9 +152,10 @@
             this.lblEditName.AutoSize = true;
             this.lblEditName.Font = new System.Drawing.Font("Candara", 12F);
             this.lblEditName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblEditName.Location = new System.Drawing.Point(13, 375);
+            this.lblEditName.Location = new System.Drawing.Point(26, 721);
+            this.lblEditName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblEditName.Name = "lblEditName";
-            this.lblEditName.Size = new System.Drawing.Size(49, 19);
+            this.lblEditName.Size = new System.Drawing.Size(97, 39);
             this.lblEditName.TabIndex = 25;
             this.lblEditName.Text = "Name";
             // 
@@ -154,25 +163,28 @@
             // 
             this.txtEditPhone.BackColor = System.Drawing.Color.White;
             this.txtEditPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEditPhone.Location = new System.Drawing.Point(17, 453);
+            this.txtEditPhone.Location = new System.Drawing.Point(34, 871);
+            this.txtEditPhone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtEditPhone.Name = "txtEditPhone";
-            this.txtEditPhone.Size = new System.Drawing.Size(191, 20);
+            this.txtEditPhone.Size = new System.Drawing.Size(380, 31);
             this.txtEditPhone.TabIndex = 24;
             // 
             // txtEditName
             // 
             this.txtEditName.BackColor = System.Drawing.Color.White;
             this.txtEditName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEditName.Location = new System.Drawing.Point(17, 397);
+            this.txtEditName.Location = new System.Drawing.Point(34, 763);
+            this.txtEditName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtEditName.Name = "txtEditName";
-            this.txtEditName.Size = new System.Drawing.Size(191, 20);
+            this.txtEditName.Size = new System.Drawing.Size(380, 31);
             this.txtEditName.TabIndex = 23;
             // 
             // btnUpdateCustomer
             // 
-            this.btnUpdateCustomer.Location = new System.Drawing.Point(17, 501);
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(34, 963);
+            this.btnUpdateCustomer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
-            this.btnUpdateCustomer.Size = new System.Drawing.Size(85, 23);
+            this.btnUpdateCustomer.Size = new System.Drawing.Size(170, 44);
             this.btnUpdateCustomer.TabIndex = 22;
             this.btnUpdateCustomer.Text = "Update";
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
@@ -183,22 +195,25 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 18F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.label4.Location = new System.Drawing.Point(12, 277);
+            this.label4.Location = new System.Drawing.Point(24, 533);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 29);
+            this.label4.Size = new System.Drawing.Size(402, 59);
             this.label4.TabIndex = 21;
             this.label4.Text = "Edit Customer Info";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtCustomerSearch);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.HomeIconPic);
             this.panel2.Controls.Add(this.lblCustomerTitle);
-            this.panel2.Location = new System.Drawing.Point(278, 0);
+            this.panel2.Location = new System.Drawing.Point(556, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(424, 562);
+            this.panel2.Size = new System.Drawing.Size(848, 1081);
             this.panel2.TabIndex = 20;
             // 
             // txtCustomerSearch
@@ -206,12 +221,11 @@
             this.txtCustomerSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.txtCustomerSearch.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtCustomerSearch.Location = new System.Drawing.Point(36, 463);
-            this.txtCustomerSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerSearch.Location = new System.Drawing.Point(68, 895);
+            this.txtCustomerSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCustomerSearch.Name = "txtCustomerSearch";
-            this.txtCustomerSearch.Size = new System.Drawing.Size(358, 21);
+            this.txtCustomerSearch.Size = new System.Drawing.Size(712, 34);
             this.txtCustomerSearch.TabIndex = 21;
-            this.txtCustomerSearch.Text = "Enter Customer Name Here";
             this.txtCustomerSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCustomerSearch.TextChanged += new System.EventHandler(this.txtCustomerSearch_TextChanged);
             // 
@@ -221,10 +235,12 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(68, 231);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(358, 290);
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.Size = new System.Drawing.Size(712, 558);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -232,9 +248,10 @@
             // 
             this.HomeIconPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
-            this.HomeIconPic.Location = new System.Drawing.Point(383, 12);
+            this.HomeIconPic.Location = new System.Drawing.Point(766, 23);
+            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.HomeIconPic.Name = "HomeIconPic";
-            this.HomeIconPic.Size = new System.Drawing.Size(29, 29);
+            this.HomeIconPic.Size = new System.Drawing.Size(58, 56);
             this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HomeIconPic.TabIndex = 19;
             this.HomeIconPic.TabStop = false;
@@ -245,17 +262,19 @@
             this.lblCustomerTitle.AutoSize = true;
             this.lblCustomerTitle.Font = new System.Drawing.Font("Candara", 18F);
             this.lblCustomerTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.lblCustomerTitle.Location = new System.Drawing.Point(107, 88);
+            this.lblCustomerTitle.Location = new System.Drawing.Point(210, 169);
+            this.lblCustomerTitle.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblCustomerTitle.Name = "lblCustomerTitle";
-            this.lblCustomerTitle.Size = new System.Drawing.Size(229, 29);
+            this.lblCustomerTitle.Size = new System.Drawing.Size(454, 59);
             this.lblCustomerTitle.TabIndex = 1;
             this.lblCustomerTitle.Text = "Cutomer Information";
             // 
             // btnAddCust
             // 
-            this.btnAddCust.Location = new System.Drawing.Point(17, 182);
+            this.btnAddCust.Location = new System.Drawing.Point(34, 350);
+            this.btnAddCust.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnAddCust.Name = "btnAddCust";
-            this.btnAddCust.Size = new System.Drawing.Size(85, 23);
+            this.btnAddCust.Size = new System.Drawing.Size(170, 44);
             this.btnAddCust.TabIndex = 9;
             this.btnAddCust.Text = "Enter";
             this.btnAddCust.UseVisualStyleBackColor = true;
@@ -266,9 +285,10 @@
             this.lblAddPhone.AutoSize = true;
             this.lblAddPhone.Font = new System.Drawing.Font("Candara", 12F);
             this.lblAddPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblAddPhone.Location = new System.Drawing.Point(13, 114);
+            this.lblAddPhone.Location = new System.Drawing.Point(26, 219);
+            this.lblAddPhone.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblAddPhone.Name = "lblAddPhone";
-            this.lblAddPhone.Size = new System.Drawing.Size(112, 19);
+            this.lblAddPhone.Size = new System.Drawing.Size(220, 39);
             this.lblAddPhone.TabIndex = 8;
             this.lblAddPhone.Text = "Phone Number";
             // 
@@ -277,9 +297,10 @@
             this.lblAddName.AutoSize = true;
             this.lblAddName.Font = new System.Drawing.Font("Candara", 12F);
             this.lblAddName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(17)))), ((int)(((byte)(8)))));
-            this.lblAddName.Location = new System.Drawing.Point(13, 58);
+            this.lblAddName.Location = new System.Drawing.Point(26, 112);
+            this.lblAddName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblAddName.Name = "lblAddName";
-            this.lblAddName.Size = new System.Drawing.Size(49, 19);
+            this.lblAddName.Size = new System.Drawing.Size(97, 39);
             this.lblAddName.TabIndex = 7;
             this.lblAddName.Text = "Name";
             // 
@@ -287,19 +308,32 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 18F);
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(24, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 29);
+            this.label1.Size = new System.Drawing.Size(314, 59);
             this.label1.TabIndex = 6;
             this.label1.Text = "Add Customer";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 10F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            this.label2.Location = new System.Drawing.Point(62, 858);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 33);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Enter Name";
+            // 
             // Customer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 562);
+            this.ClientSize = new System.Drawing.Size(1404, 1081);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -337,5 +371,6 @@
         private System.Windows.Forms.Label lblCustomerID;
         private System.Windows.Forms.Button btnDeleteCustomer;
         private System.Windows.Forms.TextBox txtAddName;
+        private System.Windows.Forms.Label label2;
     }
 }
