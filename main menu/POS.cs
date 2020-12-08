@@ -20,18 +20,31 @@ namespace main_menu
 
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnCheckout_Click(object sender, EventArgs e)
         {
+            //
+            if (dataViewPOS.Rows.Count >= 1)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want submit the order.", "Adding Items to Order", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    for (int rows = 0; rows < dataViewPOS.Rows.Count; rows++)
+                    {
+                        try
+                        {
+                            DataGridViewRow row = dataViewPOS.Rows[rows];
 
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+            }
         }
-        
-       
-
         /* DISCLAIMER!!!!!!
            I messed up some code at the beginning of the redesign for POS, and made an accidental mistake.
            The dataviewset named dataViewPOS is the data view of the CART section.
@@ -50,11 +63,53 @@ namespace main_menu
         double subTotal = 0;
         double taxRate = 0.08875;
         double tax = 0;
-        double total = 0;
+        double total = 0; 
 
-        private void btnAddItem_Click(object sender, EventArgs e)
+        private void POS_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet5.items' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter3.Fill(this.seniorDesignNewSIPDataSet5.items);
+            // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet5.items' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter3.Fill(this.seniorDesignNewSIPDataSet5.items);
+
+           //Sets up a checkbox in Item Search Data Table. Used in Add Item Function
+            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
+            checkBoxColumn.HeaderText = "";
+            checkBoxColumn.Width = 30;
+            checkBoxColumn.Name = "checkBoxColumn";
+            dataViewPOSCart.Columns.Insert(0, checkBoxColumn);
+
+           //Sets up a checkbox in Cart Data Table. Used in Remove Item Function
+            DataGridViewCheckBoxColumn checkBoxColumn2 = new DataGridViewCheckBoxColumn();
+            checkBoxColumn2.HeaderText = "";
+            checkBoxColumn2.Width = 30;
+            checkBoxColumn2.Name = "checkBoxColumn2";
+            dataViewPOS.Columns.Insert(0, checkBoxColumn2);
+
+
+        }
+
+        private void HomeIconPic_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard m = new Dashboard();
+            m.ShowDialog();
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            //this is going to searh the database for word that matchs item
+            cnn.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT sku,itemName,itemSize,Quantity from items WHERE itemName LIKE '%" + txtSearch.Text + "%'", cnn);
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            dataViewPOSCart.DataSource = dt;
+            cnn.Close();
+        }
+
+        private void btnAddItem_Click_1(object sender, EventArgs e)
+        {
             //Differentiates between first addition to cart and later additions
             //First addition needs to be separate because first addition creates middleman data table, later additions add to it.
             //Simultaniously Functions as a 'Start Sale' button, since first iteration is separate from future iterations.
@@ -66,7 +121,7 @@ namespace main_menu
                 dt.Columns.Add("Item Name");
                 dt.Columns.Add("Retail Price");
                 dt.Columns.Add("Item Size");
-                
+
 
                 foreach (DataGridViewRow row in dataViewPOSCart.Rows)
                 {
@@ -123,12 +178,12 @@ namespace main_menu
 
                 }
                 dataViewPOS.DataSource = dt;
-               
+
             }
-            
+
         }
 
-        private void btnRemoveItem_Click(object sender, EventArgs e)
+        private void btnRemoveItem_Click_1(object sender, EventArgs e)
         {
             if (i == 0)
             {
@@ -138,13 +193,12 @@ namespace main_menu
             {
                 foreach (DataGridViewRow row in dataViewPOS.Rows)
                 {
-                  
 
                     bool isSelected = Convert.ToBoolean(row.Cells["checkBoxColumn2"].Value);
                     if (isSelected)
                     {
 
-                        
+
                         //Gets Double value of price, displays that value in subtotal text box.
                         subTotal = subTotal - Convert.ToDouble(row.Cells[3].Value);
                         txtSubTotal.Text = "$" + Math.Round(subTotal, 2, MidpointRounding.AwayFromZero).ToString();
@@ -161,118 +215,29 @@ namespace main_menu
                         dataViewPOS.Rows.RemoveAt(row.Index);
                     }
 
-                   
-
-
-
                 }
-
-
                 //Updates the Cart Data Table
                 dataViewPOS.Update();
                 dataViewPOS.Refresh();
             }
-        }   
-
-        private void lblOrders_Click(object sender, EventArgs e)
-        {
-
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Dashboard x = new Dashboard();
-            x.ShowDialog();
-        }
-
-        private void POS_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet5.items' table. You can move, or remove it, as needed.
-            this.itemsTableAdapter3.Fill(this.seniorDesignNewSIPDataSet5.items);
-            // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet5.items' table. You can move, or remove it, as needed.
-            this.itemsTableAdapter3.Fill(this.seniorDesignNewSIPDataSet5.items);
-
-           //Sets up a checkbox in Item Search Data Table. Used in Add Item Function
-            DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn();
-            checkBoxColumn.HeaderText = "";
-            checkBoxColumn.Width = 30;
-            checkBoxColumn.Name = "checkBoxColumn";
-            dataViewPOSCart.Columns.Insert(0, checkBoxColumn);
-
-           //Sets up a checkbox in Cart Data Table. Used in Remove Item Function
-            DataGridViewCheckBoxColumn checkBoxColumn2 = new DataGridViewCheckBoxColumn();
-            checkBoxColumn2.HeaderText = "";
-            checkBoxColumn2.Width = 30;
-            checkBoxColumn2.Name = "checkBoxColumn2";
-            dataViewPOS.Columns.Insert(0, checkBoxColumn2);
-
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void upDownPOS_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HomeIconPic_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Hide();
             Dashboard m = new Dashboard();
             m.ShowDialog();
         }
 
-        private void txtSubTotal_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-        
-        private void txtTax_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void txtTotal_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-          
-            //this is going to searh the database for word that matchs item
-            cnn.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT sku,itemName,itemSize,Quantity from items WHERE itemName LIKE '%" + txtSearch.Text + "%'", cnn);
-            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            dataViewPOSCart.DataSource = dt;
-            cnn.Close();
-        }
-
-        private void dataViewPOSCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnViewStock_Click(object sender, EventArgs e)
+        private void btnViewStock_Click_1(object sender, EventArgs e)
         {
             Inventory ToInventory = new Inventory();
             ToInventory.ShowDialog(); // Shows Orders Page
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
