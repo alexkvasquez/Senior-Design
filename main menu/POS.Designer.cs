@@ -134,7 +134,7 @@
             // txtTransactionID
             // 
             this.txtTransactionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.txtTransactionID.Location = new System.Drawing.Point(330, 396);
+            this.txtTransactionID.Location = new System.Drawing.Point(334, 368);
             this.txtTransactionID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtTransactionID.Name = "txtTransactionID";
             this.txtTransactionID.Size = new System.Drawing.Size(223, 20);
@@ -234,7 +234,7 @@
             // 
             this.HomeIconPic.Image = ((System.Drawing.Image)(resources.GetObject("HomeIconPic.Image")));
             this.HomeIconPic.Location = new System.Drawing.Point(1170, 6);
-            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(2);
             this.HomeIconPic.Name = "HomeIconPic";
             this.HomeIconPic.Size = new System.Drawing.Size(34, 31);
             this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -390,7 +390,7 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.txtSearch.Location = new System.Drawing.Point(666, 388);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(312, 20);
             this.txtSearch.TabIndex = 15;

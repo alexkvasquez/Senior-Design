@@ -16,6 +16,7 @@ namespace main_menu
         public POS()
         {
             InitializeComponent();
+            
         }
 
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
@@ -28,19 +29,65 @@ namespace main_menu
                 DialogResult dialogResult = MessageBox.Show("Are you sure you want submit the order.", "Adding Items to Order", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
+                    DateTime date = DateTime.Now;
+                    decimal subtotal = Convert.ToDecimal(txtSubTotal.Text.Substring(1));
+                    decimal grandtotal = Convert.ToDecimal(txtTotal.Text.Substring(1));
+
+                    cnn.Open();
+
+                    MySqlCommand cmd = new MySqlCommand("insert into SeniorDesignNewSIP.Transaction(idTransaction,empId,date,subtotal,grandtotal) " +
+                        "values( null,'" + globals.userid + "','" + date + "'," + subtotal + "," + grandtotal + ")", cnn);
+
+                    cmd.ExecuteNonQuery();
+
+                    cnn.Close();
+
+                    int transID = getTransID();
+                    Console.WriteLine(transID);
+
                     for (int rows = 0; rows < dataViewPOS.Rows.Count; rows++)
                     {
-                        try
-                        {
+                        //try
+                        //{
                             DataGridViewRow row = dataViewPOS.Rows[rows];
 
+                            int sku = int.Parse(row.Cells[1].Value.ToString());
+                            string itemName = row.Cells[2].Value.ToString();
+                            decimal retailP = Convert.ToDecimal(row.Cells[3].Value.ToString());
+                            string itemSize = row.Cells[4].Value.ToString();
+                            
 
 
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
+                            MySqlCommand cmd1 = new MySqlCommand("SELECT Quantity from items WHERE sku=" + sku + "", cnn);
+
+                            cnn.Open();
+
+                            MySqlDataReader reader = cmd1.ExecuteReader();
+                            while (reader.Read())
+                            {
+                                globals.getQuan = int.Parse(reader.GetValue(0).ToString());
+                            }
+
+                            cnn.Close();
+
+                            Console.WriteLine(sku + " " + globals.orderNumber);
+
+                            cnn.Open();
+                            MySqlCommand cmd2 = new MySqlCommand("Insert into SeniorDesignNewSIP.transaction_item(tranId,itemId) values("+ transID + ","+ sku + ")", cnn);
+
+                            //"UPDATE Users SET password = '" + txtNewPassword.Text + "' WHERE idUsers = '" + txtEmployeeID.Text + "' AND userName = '" + txtUsername.Text + "'", cnn
+                            MySqlCommand cmd3 = new MySqlCommand("UPDATE items SET Quantity =" + (globals.getQuan - 1) + " WHERE sku=" + sku + "", cnn);
+
+
+                            cmd2.ExecuteNonQuery();
+                            cmd3.ExecuteNonQuery();
+
+                            cnn.Close();
+                        //}
+                        //catch (Exception ex)
+                        //{
+                           // MessageBox.Show(ex.Message);
+                        //}
                     }
                 }
             }
@@ -239,5 +286,25 @@ namespace main_menu
         {
 
         }
+
+        //This is going to get the id from the tranaction id.
+        private int getTransID()
+        {
+            int id;
+            cnn.Open();
+
+            MySqlCommand cmd1 = new MySqlCommand("SELECT idTransaction FROM SeniorDesignNewSIP.Transaction ORDER BY idTransaction DESC LIMIT 1", cnn);
+
+            MySqlDataReader dr = cmd1.ExecuteReader();
+            while (dr.Read())
+            {
+                globals.transnumber = dr.GetInt32(0);
+            }
+            cnn.Close();
+
+            id = globals.transnumber;
+            return id;
+        }
+
     }
 }

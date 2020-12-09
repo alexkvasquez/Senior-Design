@@ -24,7 +24,7 @@ namespace main_menu {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet2 : global::System.Data.DataSet {
         
-        private transTableDataTable tabletransTable;
+        private TransrepDataTable tableTransrep;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace main_menu {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["transTable"] != null)) {
-                    base.Tables.Add(new transTableDataTable(ds.Tables["transTable"]));
+                if ((ds.Tables["Transrep"] != null)) {
+                    base.Tables.Add(new TransrepDataTable(ds.Tables["Transrep"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace main_menu {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public transTableDataTable transTable {
+        public TransrepDataTable Transrep {
             get {
-                return this.tabletransTable;
+                return this.tableTransrep;
             }
         }
         
@@ -152,8 +152,8 @@ namespace main_menu {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["transTable"] != null)) {
-                    base.Tables.Add(new transTableDataTable(ds.Tables["transTable"]));
+                if ((ds.Tables["Transrep"] != null)) {
+                    base.Tables.Add(new TransrepDataTable(ds.Tables["Transrep"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace main_menu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabletransTable = ((transTableDataTable)(base.Tables["transTable"]));
+            this.tableTransrep = ((TransrepDataTable)(base.Tables["Transrep"]));
             if ((initTable == true)) {
-                if ((this.tabletransTable != null)) {
-                    this.tabletransTable.InitVars();
+                if ((this.tableTransrep != null)) {
+                    this.tableTransrep.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace main_menu {
             this.Namespace = "http://tempuri.org/DataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabletransTable = new transTableDataTable();
-            base.Tables.Add(this.tabletransTable);
+            this.tableTransrep = new TransrepDataTable();
+            base.Tables.Add(this.tableTransrep);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializetransTable() {
+        private bool ShouldSerializeTransrep() {
             return false;
         }
         
@@ -270,35 +270,37 @@ namespace main_menu {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void transTableRowChangeEventHandler(object sender, transTableRowChangeEvent e);
+        public delegate void TransrepRowChangeEventHandler(object sender, TransrepRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class transTableDataTable : global::System.Data.TypedTableBase<transTableRow> {
+        public partial class TransrepDataTable : global::System.Data.TypedTableBase<TransrepRow> {
             
-            private global::System.Data.DataColumn columnidtransaction;
-            
-            private global::System.Data.DataColumn columnitemId;
-            
-            private global::System.Data.DataColumn columnquanity;
-            
-            private global::System.Data.DataColumn columnretailPrice;
-            
-            private global::System.Data.DataColumn columnsku;
-            
-            private global::System.Data.DataColumn columnitemName;
+            private global::System.Data.DataColumn columnidTransaction;
             
             private global::System.Data.DataColumn columnempId;
             
             private global::System.Data.DataColumn columndate;
             
+            private global::System.Data.DataColumn columnsubtotal;
+            
+            private global::System.Data.DataColumn columngrandTotal;
+            
+            private global::System.Data.DataColumn columnsku;
+            
+            private global::System.Data.DataColumn columnitemName;
+            
+            private global::System.Data.DataColumn columnitemSize;
+            
+            private global::System.Data.DataColumn columnretailPrice;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public transTableDataTable() {
-                this.TableName = "transTable";
+            public TransrepDataTable() {
+                this.TableName = "Transrep";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +308,7 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal transTableDataTable(global::System.Data.DataTable table) {
+            internal TransrepDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,56 +325,16 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected transTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TransrepDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idtransactionColumn {
+            public global::System.Data.DataColumn idTransactionColumn {
                 get {
-                    return this.columnidtransaction;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn itemIdColumn {
-                get {
-                    return this.columnitemId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn quanityColumn {
-                get {
-                    return this.columnquanity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn retailPriceColumn {
-                get {
-                    return this.columnretailPrice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn skuColumn {
-                get {
-                    return this.columnsku;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn itemNameColumn {
-                get {
-                    return this.columnitemName;
+                    return this.columnidTransaction;
                 }
             }
             
@@ -394,6 +356,54 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn subtotalColumn {
+                get {
+                    return this.columnsubtotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn grandTotalColumn {
+                get {
+                    return this.columngrandTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn skuColumn {
+                get {
+                    return this.columnsku;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn itemNameColumn {
+                get {
+                    return this.columnitemName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn itemSizeColumn {
+                get {
+                    return this.columnitemSize;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn retailPriceColumn {
+                get {
+                    return this.columnretailPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -403,52 +413,53 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public transTableRow this[int index] {
+            public TransrepRow this[int index] {
                 get {
-                    return ((transTableRow)(this.Rows[index]));
+                    return ((TransrepRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event transTableRowChangeEventHandler transTableRowChanging;
+            public event TransrepRowChangeEventHandler TransrepRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event transTableRowChangeEventHandler transTableRowChanged;
+            public event TransrepRowChangeEventHandler TransrepRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event transTableRowChangeEventHandler transTableRowDeleting;
+            public event TransrepRowChangeEventHandler TransrepRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event transTableRowChangeEventHandler transTableRowDeleted;
+            public event TransrepRowChangeEventHandler TransrepRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddtransTableRow(transTableRow row) {
+            public void AddTransrepRow(TransrepRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public transTableRow AddtransTableRow(short idtransaction, short itemId, short quanity, decimal retailPrice, short sku, string itemName, short empId, string date) {
-                transTableRow rowtransTableRow = ((transTableRow)(this.NewRow()));
+            public TransrepRow AddTransrepRow(short idTransaction, short empId, string date, decimal subtotal, decimal grandTotal, short sku, short itemName, string itemSize, decimal retailPrice) {
+                TransrepRow rowTransrepRow = ((TransrepRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idtransaction,
-                        itemId,
-                        quanity,
-                        retailPrice,
+                        idTransaction,
+                        empId,
+                        date,
+                        subtotal,
+                        grandTotal,
                         sku,
                         itemName,
-                        empId,
-                        date};
-                rowtransTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtransTableRow);
-                return rowtransTableRow;
+                        itemSize,
+                        retailPrice};
+                rowTransrepRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTransrepRow);
+                return rowTransrepRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                transTableDataTable cln = ((transTableDataTable)(base.Clone()));
+                TransrepDataTable cln = ((TransrepDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -456,68 +467,70 @@ namespace main_menu {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new transTableDataTable();
+                return new TransrepDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnidtransaction = base.Columns["idtransaction"];
-                this.columnitemId = base.Columns["itemId"];
-                this.columnquanity = base.Columns["quanity"];
-                this.columnretailPrice = base.Columns["retailPrice"];
-                this.columnsku = base.Columns["sku"];
-                this.columnitemName = base.Columns["itemName"];
+                this.columnidTransaction = base.Columns["idTransaction"];
                 this.columnempId = base.Columns["empId"];
                 this.columndate = base.Columns["date"];
+                this.columnsubtotal = base.Columns["subtotal"];
+                this.columngrandTotal = base.Columns["grandTotal"];
+                this.columnsku = base.Columns["sku"];
+                this.columnitemName = base.Columns["itemName"];
+                this.columnitemSize = base.Columns["itemSize"];
+                this.columnretailPrice = base.Columns["retailPrice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnidtransaction = new global::System.Data.DataColumn("idtransaction", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidtransaction);
-                this.columnitemId = new global::System.Data.DataColumn("itemId", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnitemId);
-                this.columnquanity = new global::System.Data.DataColumn("quanity", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquanity);
-                this.columnretailPrice = new global::System.Data.DataColumn("retailPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnretailPrice);
-                this.columnsku = new global::System.Data.DataColumn("sku", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsku);
-                this.columnitemName = new global::System.Data.DataColumn("itemName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnitemName);
+                this.columnidTransaction = new global::System.Data.DataColumn("idTransaction", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidTransaction);
                 this.columnempId = new global::System.Data.DataColumn("empId", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnempId);
                 this.columndate = new global::System.Data.DataColumn("date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate);
-                this.columnsku.Caption = "sku ";
+                this.columnsubtotal = new global::System.Data.DataColumn("subtotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsubtotal);
+                this.columngrandTotal = new global::System.Data.DataColumn("grandTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngrandTotal);
+                this.columnsku = new global::System.Data.DataColumn("sku", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsku);
+                this.columnitemName = new global::System.Data.DataColumn("itemName", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitemName);
+                this.columnitemSize = new global::System.Data.DataColumn("itemSize", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitemSize);
+                this.columnretailPrice = new global::System.Data.DataColumn("retailPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnretailPrice);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public transTableRow NewtransTableRow() {
-                return ((transTableRow)(this.NewRow()));
+            public TransrepRow NewTransrepRow() {
+                return ((TransrepRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new transTableRow(builder);
+                return new TransrepRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(transTableRow);
+                return typeof(TransrepRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.transTableRowChanged != null)) {
-                    this.transTableRowChanged(this, new transTableRowChangeEvent(((transTableRow)(e.Row)), e.Action));
+                if ((this.TransrepRowChanged != null)) {
+                    this.TransrepRowChanged(this, new TransrepRowChangeEvent(((TransrepRow)(e.Row)), e.Action));
                 }
             }
             
@@ -525,8 +538,8 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.transTableRowChanging != null)) {
-                    this.transTableRowChanging(this, new transTableRowChangeEvent(((transTableRow)(e.Row)), e.Action));
+                if ((this.TransrepRowChanging != null)) {
+                    this.TransrepRowChanging(this, new TransrepRowChangeEvent(((TransrepRow)(e.Row)), e.Action));
                 }
             }
             
@@ -534,8 +547,8 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.transTableRowDeleted != null)) {
-                    this.transTableRowDeleted(this, new transTableRowChangeEvent(((transTableRow)(e.Row)), e.Action));
+                if ((this.TransrepRowDeleted != null)) {
+                    this.TransrepRowDeleted(this, new TransrepRowChangeEvent(((TransrepRow)(e.Row)), e.Action));
                 }
             }
             
@@ -543,14 +556,14 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.transTableRowDeleting != null)) {
-                    this.transTableRowDeleting(this, new transTableRowChangeEvent(((transTableRow)(e.Row)), e.Action));
+                if ((this.TransrepRowDeleting != null)) {
+                    this.TransrepRowDeleting(this, new TransrepRowChangeEvent(((TransrepRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovetransTableRow(transTableRow row) {
+            public void RemoveTransrepRow(TransrepRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -577,7 +590,7 @@ namespace main_menu {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "transTableDataTable";
+                attribute2.FixedValue = "TransrepDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -621,110 +634,30 @@ namespace main_menu {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class transTableRow : global::System.Data.DataRow {
+        public partial class TransrepRow : global::System.Data.DataRow {
             
-            private transTableDataTable tabletransTable;
+            private TransrepDataTable tableTransrep;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal transTableRow(global::System.Data.DataRowBuilder rb) : 
+            internal TransrepRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletransTable = ((transTableDataTable)(this.Table));
+                this.tableTransrep = ((TransrepDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short idtransaction {
+            public short idTransaction {
                 get {
                     try {
-                        return ((short)(this[this.tabletransTable.idtransactionColumn]));
+                        return ((short)(this[this.tableTransrep.idTransactionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'idtransaction\' in table \'transTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'idTransaction\' in table \'Transrep\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletransTable.idtransactionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short itemId {
-                get {
-                    try {
-                        return ((short)(this[this.tabletransTable.itemIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'itemId\' in table \'transTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletransTable.itemIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short quanity {
-                get {
-                    try {
-                        return ((short)(this[this.tabletransTable.quanityColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'quanity\' in table \'transTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletransTable.quanityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal retailPrice {
-                get {
-                    try {
-                        return ((decimal)(this[this.tabletransTable.retailPriceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'retailPrice\' in table \'transTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletransTable.retailPriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short sku {
-                get {
-                    try {
-                        return ((short)(this[this.tabletransTable.skuColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sku\' in table \'transTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletransTable.skuColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string itemName {
-                get {
-                    try {
-                        return ((string)(this[this.tabletransTable.itemNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'itemName\' in table \'transTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletransTable.itemNameColumn] = value;
+                    this[this.tableTransrep.idTransactionColumn] = value;
                 }
             }
             
@@ -733,14 +666,14 @@ namespace main_menu {
             public short empId {
                 get {
                     try {
-                        return ((short)(this[this.tabletransTable.empIdColumn]));
+                        return ((short)(this[this.tableTransrep.empIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'empId\' in table \'transTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'empId\' in table \'Transrep\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletransTable.empIdColumn] = value;
+                    this[this.tableTransrep.empIdColumn] = value;
                 }
             }
             
@@ -749,111 +682,219 @@ namespace main_menu {
             public string date {
                 get {
                     try {
-                        return ((string)(this[this.tabletransTable.dateColumn]));
+                        return ((string)(this[this.tableTransrep.dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'transTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'Transrep\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletransTable.dateColumn] = value;
+                    this[this.tableTransrep.dateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsidtransactionNull() {
-                return this.IsNull(this.tabletransTable.idtransactionColumn);
+            public decimal subtotal {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTransrep.subtotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'subtotal\' in table \'Transrep\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransrep.subtotalColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetidtransactionNull() {
-                this[this.tabletransTable.idtransactionColumn] = global::System.Convert.DBNull;
+            public decimal grandTotal {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTransrep.grandTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'grandTotal\' in table \'Transrep\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransrep.grandTotalColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsitemIdNull() {
-                return this.IsNull(this.tabletransTable.itemIdColumn);
+            public short sku {
+                get {
+                    try {
+                        return ((short)(this[this.tableTransrep.skuColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sku\' in table \'Transrep\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransrep.skuColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetitemIdNull() {
-                this[this.tabletransTable.itemIdColumn] = global::System.Convert.DBNull;
+            public short itemName {
+                get {
+                    try {
+                        return ((short)(this[this.tableTransrep.itemNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'itemName\' in table \'Transrep\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransrep.itemNameColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsquanityNull() {
-                return this.IsNull(this.tabletransTable.quanityColumn);
+            public string itemSize {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransrep.itemSizeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'itemSize\' in table \'Transrep\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransrep.itemSizeColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetquanityNull() {
-                this[this.tabletransTable.quanityColumn] = global::System.Convert.DBNull;
+            public decimal retailPrice {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTransrep.retailPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'retailPrice\' in table \'Transrep\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransrep.retailPriceColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsretailPriceNull() {
-                return this.IsNull(this.tabletransTable.retailPriceColumn);
+            public bool IsidTransactionNull() {
+                return this.IsNull(this.tableTransrep.idTransactionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetretailPriceNull() {
-                this[this.tabletransTable.retailPriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsskuNull() {
-                return this.IsNull(this.tabletransTable.skuColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetskuNull() {
-                this[this.tabletransTable.skuColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsitemNameNull() {
-                return this.IsNull(this.tabletransTable.itemNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetitemNameNull() {
-                this[this.tabletransTable.itemNameColumn] = global::System.Convert.DBNull;
+            public void SetidTransactionNull() {
+                this[this.tableTransrep.idTransactionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsempIdNull() {
-                return this.IsNull(this.tabletransTable.empIdColumn);
+                return this.IsNull(this.tableTransrep.empIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetempIdNull() {
-                this[this.tabletransTable.empIdColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep.empIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsdateNull() {
-                return this.IsNull(this.tabletransTable.dateColumn);
+                return this.IsNull(this.tableTransrep.dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdateNull() {
-                this[this.tabletransTable.dateColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep.dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IssubtotalNull() {
+                return this.IsNull(this.tableTransrep.subtotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetsubtotalNull() {
+                this[this.tableTransrep.subtotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsgrandTotalNull() {
+                return this.IsNull(this.tableTransrep.grandTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetgrandTotalNull() {
+                this[this.tableTransrep.grandTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsskuNull() {
+                return this.IsNull(this.tableTransrep.skuColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetskuNull() {
+                this[this.tableTransrep.skuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsitemNameNull() {
+                return this.IsNull(this.tableTransrep.itemNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetitemNameNull() {
+                this[this.tableTransrep.itemNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsitemSizeNull() {
+                return this.IsNull(this.tableTransrep.itemSizeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetitemSizeNull() {
+                this[this.tableTransrep.itemSizeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsretailPriceNull() {
+                return this.IsNull(this.tableTransrep.retailPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetretailPriceNull() {
+                this[this.tableTransrep.retailPriceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -861,22 +902,22 @@ namespace main_menu {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class transTableRowChangeEvent : global::System.EventArgs {
+        public class TransrepRowChangeEvent : global::System.EventArgs {
             
-            private transTableRow eventRow;
+            private TransrepRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public transTableRowChangeEvent(transTableRow row, global::System.Data.DataRowAction action) {
+            public TransrepRowChangeEvent(TransrepRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public transTableRow Row {
+            public TransrepRow Row {
                 get {
                     return this.eventRow;
                 }

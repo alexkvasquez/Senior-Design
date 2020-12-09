@@ -41,7 +41,7 @@ namespace main_menu
             da = new MySqlDataAdapter(cmd,cnn);
             DataSet dst = new DataSet();
             da.Fill(dst, "DataReport");
-            cryrpt.Load("OrderReport.rpt");
+            cryrpt.Load("TransactionRep.rpt");
             cryrpt.SetDataSource(dst);
             crystalReportViewer1.ReportSource = cryrpt;
             cnn.Close();

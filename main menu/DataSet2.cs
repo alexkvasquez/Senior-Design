@@ -4,7 +4,7 @@
 
     partial class DataSet2
     {
-        partial class transTableDataTable
+        partial class TransrepDataTable
         {
         }
     }
