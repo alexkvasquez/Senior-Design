@@ -24,7 +24,7 @@ namespace main_menu {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet2 : global::System.Data.DataSet {
         
-        private TransrepDataTable tableTransrep;
+        private Transrep1DataTable tableTransrep1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace main_menu {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Transrep"] != null)) {
-                    base.Tables.Add(new TransrepDataTable(ds.Tables["Transrep"]));
+                if ((ds.Tables["Transrep1"] != null)) {
+                    base.Tables.Add(new Transrep1DataTable(ds.Tables["Transrep1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace main_menu {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TransrepDataTable Transrep {
+        public Transrep1DataTable Transrep1 {
             get {
-                return this.tableTransrep;
+                return this.tableTransrep1;
             }
         }
         
@@ -152,8 +152,8 @@ namespace main_menu {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Transrep"] != null)) {
-                    base.Tables.Add(new TransrepDataTable(ds.Tables["Transrep"]));
+                if ((ds.Tables["Transrep1"] != null)) {
+                    base.Tables.Add(new Transrep1DataTable(ds.Tables["Transrep1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace main_menu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTransrep = ((TransrepDataTable)(base.Tables["Transrep"]));
+            this.tableTransrep1 = ((Transrep1DataTable)(base.Tables["Transrep1"]));
             if ((initTable == true)) {
-                if ((this.tableTransrep != null)) {
-                    this.tableTransrep.InitVars();
+                if ((this.tableTransrep1 != null)) {
+                    this.tableTransrep1.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace main_menu {
             this.Namespace = "http://tempuri.org/DataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTransrep = new TransrepDataTable();
-            base.Tables.Add(this.tableTransrep);
+            this.tableTransrep1 = new Transrep1DataTable();
+            base.Tables.Add(this.tableTransrep1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeTransrep() {
+        private bool ShouldSerializeTransrep1() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace main_menu {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void TransrepRowChangeEventHandler(object sender, TransrepRowChangeEvent e);
+        public delegate void Transrep1RowChangeEventHandler(object sender, Transrep1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TransrepDataTable : global::System.Data.TypedTableBase<TransrepRow> {
+        public partial class Transrep1DataTable : global::System.Data.TypedTableBase<Transrep1Row> {
             
             private global::System.Data.DataColumn columnidTransaction;
             
@@ -299,8 +299,8 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TransrepDataTable() {
-                this.TableName = "Transrep";
+            public Transrep1DataTable() {
+                this.TableName = "Transrep1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +308,7 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal TransrepDataTable(global::System.Data.DataTable table) {
+            internal Transrep1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,7 +325,7 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected TransrepDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Transrep1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -413,34 +413,34 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TransrepRow this[int index] {
+            public Transrep1Row this[int index] {
                 get {
-                    return ((TransrepRow)(this.Rows[index]));
+                    return ((Transrep1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TransrepRowChangeEventHandler TransrepRowChanging;
+            public event Transrep1RowChangeEventHandler Transrep1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TransrepRowChangeEventHandler TransrepRowChanged;
+            public event Transrep1RowChangeEventHandler Transrep1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TransrepRowChangeEventHandler TransrepRowDeleting;
+            public event Transrep1RowChangeEventHandler Transrep1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TransrepRowChangeEventHandler TransrepRowDeleted;
+            public event Transrep1RowChangeEventHandler Transrep1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddTransrepRow(TransrepRow row) {
+            public void AddTransrep1Row(Transrep1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TransrepRow AddTransrepRow(short idTransaction, short empId, string date, decimal subtotal, decimal grandTotal, short sku, short itemName, string itemSize, decimal retailPrice) {
-                TransrepRow rowTransrepRow = ((TransrepRow)(this.NewRow()));
+            public Transrep1Row AddTransrep1Row(short idTransaction, short empId, string date, decimal subtotal, decimal grandTotal, short sku, string itemName, string itemSize, decimal retailPrice) {
+                Transrep1Row rowTransrep1Row = ((Transrep1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idTransaction,
                         empId,
@@ -451,15 +451,15 @@ namespace main_menu {
                         itemName,
                         itemSize,
                         retailPrice};
-                rowTransrepRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTransrepRow);
-                return rowTransrepRow;
+                rowTransrep1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTransrep1Row);
+                return rowTransrep1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TransrepDataTable cln = ((TransrepDataTable)(base.Clone()));
+                Transrep1DataTable cln = ((Transrep1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -467,7 +467,7 @@ namespace main_menu {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TransrepDataTable();
+                return new Transrep1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -499,7 +499,7 @@ namespace main_menu {
                 base.Columns.Add(this.columngrandTotal);
                 this.columnsku = new global::System.Data.DataColumn("sku", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsku);
-                this.columnitemName = new global::System.Data.DataColumn("itemName", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnitemName = new global::System.Data.DataColumn("itemName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnitemName);
                 this.columnitemSize = new global::System.Data.DataColumn("itemSize", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnitemSize);
@@ -509,28 +509,28 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TransrepRow NewTransrepRow() {
-                return ((TransrepRow)(this.NewRow()));
+            public Transrep1Row NewTransrep1Row() {
+                return ((Transrep1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TransrepRow(builder);
+                return new Transrep1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TransrepRow);
+                return typeof(Transrep1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TransrepRowChanged != null)) {
-                    this.TransrepRowChanged(this, new TransrepRowChangeEvent(((TransrepRow)(e.Row)), e.Action));
+                if ((this.Transrep1RowChanged != null)) {
+                    this.Transrep1RowChanged(this, new Transrep1RowChangeEvent(((Transrep1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -538,8 +538,8 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TransrepRowChanging != null)) {
-                    this.TransrepRowChanging(this, new TransrepRowChangeEvent(((TransrepRow)(e.Row)), e.Action));
+                if ((this.Transrep1RowChanging != null)) {
+                    this.Transrep1RowChanging(this, new Transrep1RowChangeEvent(((Transrep1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -547,8 +547,8 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TransrepRowDeleted != null)) {
-                    this.TransrepRowDeleted(this, new TransrepRowChangeEvent(((TransrepRow)(e.Row)), e.Action));
+                if ((this.Transrep1RowDeleted != null)) {
+                    this.Transrep1RowDeleted(this, new Transrep1RowChangeEvent(((Transrep1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -556,14 +556,14 @@ namespace main_menu {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TransrepRowDeleting != null)) {
-                    this.TransrepRowDeleting(this, new TransrepRowChangeEvent(((TransrepRow)(e.Row)), e.Action));
+                if ((this.Transrep1RowDeleting != null)) {
+                    this.Transrep1RowDeleting(this, new Transrep1RowChangeEvent(((Transrep1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveTransrepRow(TransrepRow row) {
+            public void RemoveTransrep1Row(Transrep1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -590,7 +590,7 @@ namespace main_menu {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TransrepDataTable";
+                attribute2.FixedValue = "Transrep1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -634,15 +634,15 @@ namespace main_menu {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TransrepRow : global::System.Data.DataRow {
+        public partial class Transrep1Row : global::System.Data.DataRow {
             
-            private TransrepDataTable tableTransrep;
+            private Transrep1DataTable tableTransrep1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal TransrepRow(global::System.Data.DataRowBuilder rb) : 
+            internal Transrep1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTransrep = ((TransrepDataTable)(this.Table));
+                this.tableTransrep1 = ((Transrep1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -650,14 +650,14 @@ namespace main_menu {
             public short idTransaction {
                 get {
                     try {
-                        return ((short)(this[this.tableTransrep.idTransactionColumn]));
+                        return ((short)(this[this.tableTransrep1.idTransactionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'idTransaction\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'idTransaction\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.idTransactionColumn] = value;
+                    this[this.tableTransrep1.idTransactionColumn] = value;
                 }
             }
             
@@ -666,14 +666,14 @@ namespace main_menu {
             public short empId {
                 get {
                     try {
-                        return ((short)(this[this.tableTransrep.empIdColumn]));
+                        return ((short)(this[this.tableTransrep1.empIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'empId\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'empId\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.empIdColumn] = value;
+                    this[this.tableTransrep1.empIdColumn] = value;
                 }
             }
             
@@ -682,14 +682,14 @@ namespace main_menu {
             public string date {
                 get {
                     try {
-                        return ((string)(this[this.tableTransrep.dateColumn]));
+                        return ((string)(this[this.tableTransrep1.dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.dateColumn] = value;
+                    this[this.tableTransrep1.dateColumn] = value;
                 }
             }
             
@@ -698,14 +698,14 @@ namespace main_menu {
             public decimal subtotal {
                 get {
                     try {
-                        return ((decimal)(this[this.tableTransrep.subtotalColumn]));
+                        return ((decimal)(this[this.tableTransrep1.subtotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'subtotal\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'subtotal\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.subtotalColumn] = value;
+                    this[this.tableTransrep1.subtotalColumn] = value;
                 }
             }
             
@@ -714,14 +714,14 @@ namespace main_menu {
             public decimal grandTotal {
                 get {
                     try {
-                        return ((decimal)(this[this.tableTransrep.grandTotalColumn]));
+                        return ((decimal)(this[this.tableTransrep1.grandTotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'grandTotal\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'grandTotal\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.grandTotalColumn] = value;
+                    this[this.tableTransrep1.grandTotalColumn] = value;
                 }
             }
             
@@ -730,30 +730,30 @@ namespace main_menu {
             public short sku {
                 get {
                     try {
-                        return ((short)(this[this.tableTransrep.skuColumn]));
+                        return ((short)(this[this.tableTransrep1.skuColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sku\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sku\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.skuColumn] = value;
+                    this[this.tableTransrep1.skuColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short itemName {
+            public string itemName {
                 get {
                     try {
-                        return ((short)(this[this.tableTransrep.itemNameColumn]));
+                        return ((string)(this[this.tableTransrep1.itemNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'itemName\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'itemName\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.itemNameColumn] = value;
+                    this[this.tableTransrep1.itemNameColumn] = value;
                 }
             }
             
@@ -762,14 +762,14 @@ namespace main_menu {
             public string itemSize {
                 get {
                     try {
-                        return ((string)(this[this.tableTransrep.itemSizeColumn]));
+                        return ((string)(this[this.tableTransrep1.itemSizeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'itemSize\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'itemSize\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.itemSizeColumn] = value;
+                    this[this.tableTransrep1.itemSizeColumn] = value;
                 }
             }
             
@@ -778,123 +778,123 @@ namespace main_menu {
             public decimal retailPrice {
                 get {
                     try {
-                        return ((decimal)(this[this.tableTransrep.retailPriceColumn]));
+                        return ((decimal)(this[this.tableTransrep1.retailPriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'retailPrice\' in table \'Transrep\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'retailPrice\' in table \'Transrep1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransrep.retailPriceColumn] = value;
+                    this[this.tableTransrep1.retailPriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsidTransactionNull() {
-                return this.IsNull(this.tableTransrep.idTransactionColumn);
+                return this.IsNull(this.tableTransrep1.idTransactionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetidTransactionNull() {
-                this[this.tableTransrep.idTransactionColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.idTransactionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsempIdNull() {
-                return this.IsNull(this.tableTransrep.empIdColumn);
+                return this.IsNull(this.tableTransrep1.empIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetempIdNull() {
-                this[this.tableTransrep.empIdColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.empIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsdateNull() {
-                return this.IsNull(this.tableTransrep.dateColumn);
+                return this.IsNull(this.tableTransrep1.dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdateNull() {
-                this[this.tableTransrep.dateColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IssubtotalNull() {
-                return this.IsNull(this.tableTransrep.subtotalColumn);
+                return this.IsNull(this.tableTransrep1.subtotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetsubtotalNull() {
-                this[this.tableTransrep.subtotalColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.subtotalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsgrandTotalNull() {
-                return this.IsNull(this.tableTransrep.grandTotalColumn);
+                return this.IsNull(this.tableTransrep1.grandTotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetgrandTotalNull() {
-                this[this.tableTransrep.grandTotalColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.grandTotalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsskuNull() {
-                return this.IsNull(this.tableTransrep.skuColumn);
+                return this.IsNull(this.tableTransrep1.skuColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetskuNull() {
-                this[this.tableTransrep.skuColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.skuColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsitemNameNull() {
-                return this.IsNull(this.tableTransrep.itemNameColumn);
+                return this.IsNull(this.tableTransrep1.itemNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetitemNameNull() {
-                this[this.tableTransrep.itemNameColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.itemNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsitemSizeNull() {
-                return this.IsNull(this.tableTransrep.itemSizeColumn);
+                return this.IsNull(this.tableTransrep1.itemSizeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetitemSizeNull() {
-                this[this.tableTransrep.itemSizeColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.itemSizeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsretailPriceNull() {
-                return this.IsNull(this.tableTransrep.retailPriceColumn);
+                return this.IsNull(this.tableTransrep1.retailPriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetretailPriceNull() {
-                this[this.tableTransrep.retailPriceColumn] = global::System.Convert.DBNull;
+                this[this.tableTransrep1.retailPriceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -902,22 +902,22 @@ namespace main_menu {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class TransrepRowChangeEvent : global::System.EventArgs {
+        public class Transrep1RowChangeEvent : global::System.EventArgs {
             
-            private TransrepRow eventRow;
+            private Transrep1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TransrepRowChangeEvent(TransrepRow row, global::System.Data.DataRowAction action) {
+            public Transrep1RowChangeEvent(Transrep1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TransrepRow Row {
+            public Transrep1Row Row {
                 get {
                     return this.eventRow;
                 }

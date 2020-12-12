@@ -2,8 +2,10 @@
 <xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-        <Connections />
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SeniorDesignNewSIPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SeniorDesignNewSIPConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.main_menu.Properties.Settings.GlobalReference.Default.SeniorDesignNewSIPConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
         <Tables />
         <Sources />
       </DataSource>
@@ -12,7 +14,7 @@
   <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Transrep" msprop:Generator_TableClassName="TransrepDataTable" msprop:Generator_TableVarName="tableTransrep" msprop:Generator_RowChangedName="TransrepRowChanged" msprop:Generator_TablePropName="Transrep" msprop:Generator_RowDeletingName="TransrepRowDeleting" msprop:Generator_RowChangingName="TransrepRowChanging" msprop:Generator_RowEvHandlerName="TransrepRowChangeEventHandler" msprop:Generator_RowDeletedName="TransrepRowDeleted" msprop:Generator_RowClassName="TransrepRow" msprop:Generator_UserTableName="Transrep" msprop:Generator_RowEvArgName="TransrepRowChangeEvent">
+        <xs:element name="Transrep1" msprop:Generator_TableClassName="Transrep1DataTable" msprop:Generator_TableVarName="tableTransrep1" msprop:Generator_RowChangedName="Transrep1RowChanged" msprop:Generator_TablePropName="Transrep1" msprop:Generator_RowDeletingName="Transrep1RowDeleting" msprop:Generator_RowChangingName="Transrep1RowChanging" msprop:Generator_RowEvHandlerName="Transrep1RowChangeEventHandler" msprop:Generator_RowDeletedName="Transrep1RowDeleted" msprop:Generator_RowClassName="Transrep1Row" msprop:Generator_UserTableName="Transrep1" msprop:Generator_RowEvArgName="Transrep1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idTransaction" msprop:Generator_ColumnVarNameInTable="columnidTransaction" msprop:Generator_ColumnPropNameInRow="idTransaction" msprop:Generator_ColumnPropNameInTable="idTransactionColumn" msprop:Generator_UserColumnName="idTransaction" type="xs:short" minOccurs="0" />
@@ -21,7 +23,7 @@
               <xs:element name="subtotal" msprop:Generator_ColumnVarNameInTable="columnsubtotal" msprop:Generator_ColumnPropNameInRow="subtotal" msprop:Generator_ColumnPropNameInTable="subtotalColumn" msprop:Generator_UserColumnName="subtotal" type="xs:decimal" minOccurs="0" />
               <xs:element name="grandTotal" msprop:Generator_ColumnVarNameInTable="columngrandTotal" msprop:Generator_ColumnPropNameInRow="grandTotal" msprop:Generator_ColumnPropNameInTable="grandTotalColumn" msprop:Generator_UserColumnName="grandTotal" type="xs:decimal" minOccurs="0" />
               <xs:element name="sku" msprop:Generator_ColumnVarNameInTable="columnsku" msprop:Generator_ColumnPropNameInRow="sku" msprop:Generator_ColumnPropNameInTable="skuColumn" msprop:Generator_UserColumnName="sku" type="xs:short" minOccurs="0" />
-              <xs:element name="itemName" msprop:Generator_ColumnVarNameInTable="columnitemName" msprop:Generator_ColumnPropNameInRow="itemName" msprop:Generator_ColumnPropNameInTable="itemNameColumn" msprop:Generator_UserColumnName="itemName" type="xs:short" minOccurs="0" />
+              <xs:element name="itemName" msprop:Generator_ColumnVarNameInTable="columnitemName" msprop:Generator_ColumnPropNameInRow="itemName" msprop:Generator_ColumnPropNameInTable="itemNameColumn" msprop:Generator_UserColumnName="itemName" type="xs:string" minOccurs="0" />
               <xs:element name="itemSize" msprop:Generator_ColumnVarNameInTable="columnitemSize" msprop:Generator_ColumnPropNameInRow="itemSize" msprop:Generator_ColumnPropNameInTable="itemSizeColumn" msprop:Generator_UserColumnName="itemSize" type="xs:string" minOccurs="0" />
               <xs:element name="retailPrice" msprop:Generator_ColumnVarNameInTable="columnretailPrice" msprop:Generator_ColumnPropNameInRow="retailPrice" msprop:Generator_ColumnPropNameInTable="retailPriceColumn" msprop:Generator_UserColumnName="retailPrice" type="xs:decimal" minOccurs="0" />
             </xs:sequence>

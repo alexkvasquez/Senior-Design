@@ -449,7 +449,7 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataReportRow AddDataReportRow(short order_id, short product_id, short quanity, decimal buyInPrice1, short vendor, string date, short employeeID, string itemName, string itemSize, decimal ItemTotal) {
+            public DataReportRow AddDataReportRow(short order_id, int product_id, short quanity, decimal buyInPrice1, int vendor, string date, short employeeID, string itemName, string itemSize, decimal ItemTotal) {
                 DataReportRow rowDataReportRow = ((DataReportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         order_id,
@@ -501,13 +501,13 @@ namespace main_menu {
             private void InitClass() {
                 this.columnorder_id = new global::System.Data.DataColumn("order_id", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnorder_id);
-                this.columnproduct_id = new global::System.Data.DataColumn("product_id", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnproduct_id = new global::System.Data.DataColumn("product_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproduct_id);
                 this.columnquanity = new global::System.Data.DataColumn("quanity", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnquanity);
                 this.columnbuyInPrice1 = new global::System.Data.DataColumn("buyInPrice1", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbuyInPrice1);
-                this.columnvendor = new global::System.Data.DataColumn("vendor", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnvendor = new global::System.Data.DataColumn("vendor", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvendor);
                 this.columndate = new global::System.Data.DataColumn("date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate);
@@ -677,10 +677,10 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short product_id {
+            public int product_id {
                 get {
                     try {
-                        return ((short)(this[this.tableDataReport.product_idColumn]));
+                        return ((int)(this[this.tableDataReport.product_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'product_id\' in table \'DataReport\' is DBNull.", e);
@@ -725,10 +725,10 @@ namespace main_menu {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short vendor {
+            public int vendor {
                 get {
                     try {
-                        return ((short)(this[this.tableDataReport.vendorColumn]));
+                        return ((int)(this[this.tableDataReport.vendorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'vendor\' in table \'DataReport\' is DBNull.", e);

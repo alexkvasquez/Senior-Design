@@ -43,12 +43,11 @@ namespace main_menu
                     cnn.Close();
 
                     int transID = getTransID();
-                    Console.WriteLine(transID);
-
+                    globals.transnumber = transID;
                     for (int rows = 0; rows < dataViewPOS.Rows.Count; rows++)
                     {
-                        //try
-                        //{
+                        try
+                        {
                             DataGridViewRow row = dataViewPOS.Rows[rows];
 
                             int sku = int.Parse(row.Cells[1].Value.ToString());
@@ -70,25 +69,25 @@ namespace main_menu
 
                             cnn.Close();
 
-                            Console.WriteLine(sku + " " + globals.orderNumber);
-
                             cnn.Open();
-                            MySqlCommand cmd2 = new MySqlCommand("Insert into SeniorDesignNewSIP.transaction_item(tranId,itemId) values("+ transID + ","+ sku + ")", cnn);
 
-                            //"UPDATE Users SET password = '" + txtNewPassword.Text + "' WHERE idUsers = '" + txtEmployeeID.Text + "' AND userName = '" + txtUsername.Text + "'", cnn
+                            MySqlCommand cmd2 = new MySqlCommand("Insert into SeniorDesignNewSIP.transaction_item(transaction_itemID,tranId,itemId) values(null," + transID + ","+ sku + ")", cnn);
                             MySqlCommand cmd3 = new MySqlCommand("UPDATE items SET Quantity =" + (globals.getQuan - 1) + " WHERE sku=" + sku + "", cnn);
-
-
                             cmd2.ExecuteNonQuery();
                             cmd3.ExecuteNonQuery();
 
                             cnn.Close();
-                        //}
-                        //catch (Exception ex)
-                        //{
-                           // MessageBox.Show(ex.Message);
-                        //}
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
+                    this.Hide();
+                    POSREPORT x = new POSREPORT();
+                    x.ShowDialog();
+
                 }
             }
         }

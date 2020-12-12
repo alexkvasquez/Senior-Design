@@ -24,8 +24,8 @@ namespace main_menu
 
         private void lblInventory_Click(object sender, EventArgs e)
         {
-            Inventory d = new Inventory();
             this.Hide();
+            Inventory d = new Inventory();
             d.ShowDialog();
         }
 
@@ -81,10 +81,6 @@ namespace main_menu
             {
                 System.Windows.Forms.Application.Exit();
             }
-            else if (dialogResult == DialogResult.No)
-            {
-
-            }
         }
 
 
@@ -130,6 +126,5 @@ namespace main_menu
             l.ShowDialog();
         }
 
-        
     }
 }

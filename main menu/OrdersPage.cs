@@ -22,14 +22,14 @@ namespace main_menu
 
         private void ordersToInventory_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Inventory I = new Inventory();
             I.ShowDialog();
         }
 
         private void HomeIconPic_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Dashboard m = new Dashboard();
             m.ShowDialog();
         }

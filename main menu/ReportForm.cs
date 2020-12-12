@@ -28,7 +28,7 @@ namespace main_menu
         {
             this.Hide();
             OrdersPage x = new OrdersPage();
-            x.ShowDialog();
+            x.Show();
         }
 
         private void ReportForm_Load(object sender, EventArgs e)
@@ -39,17 +39,13 @@ namespace main_menu
             cnn.Open();
 
             da = new MySqlDataAdapter(cmd,cnn);
-            DataSet dst = new DataSet();
+            DataSet1 dst = new DataSet1();
             da.Fill(dst, "DataReport");
-            cryrpt.Load("TransactionRep.rpt");
+            cryrpt.Load("OrderReport.rpt");
             cryrpt.SetDataSource(dst);
-            crystalReportViewer1.ReportSource = cryrpt;
+            crystalReportViewer.ReportSource = cryrpt;
             cnn.Close();
         }
 
-        private void crystalReportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
