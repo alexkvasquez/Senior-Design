@@ -26,7 +26,7 @@ namespace main_menu
         {
             cnn.Open();
 
-            da1 = new MySqlDataAdapter("SELECT items.sku, items.itemName, items.itemSize, items.retailPrice, Transaction.idTransaction, Transaction.empId, Transaction.`date`, Transaction.subtotal, Transaction.grandTotal FROM items INNER JOIN transaction_item ON items.sku = transaction_item.itemId INNER JOIN Transaction ON transaction_item.tranId = Transaction.idTransaction WHERE(transaction_item.tranId =" + globals.transnumber + ")",cnn);
+            da1 = new MySqlDataAdapter("SELECT items.sku, items.itemName,items.itemSize, items.retailPrice, Transaction.idTransaction, Transaction.empId, Transaction.`date`, Transaction.subtotal, Transaction.grandTotal FROM items INNER JOIN transaction_item ON items.sku = transaction_item.itemId INNER JOIN Transaction ON transaction_item.tranId = Transaction.idTransaction WHERE(transaction_item.tranId =" + globals.transnumber + ")",cnn);
             DataSet dst = new DataSet();
             da1.Fill(dst, "Transrep1");
             cryrpt1.Load("receipt.rpt");

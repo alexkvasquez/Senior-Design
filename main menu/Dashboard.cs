@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,13 @@ namespace main_menu
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet.Transaction' table. You can move, or remove it, as needed.
+            this.transactionTableAdapter.Fill(this.seniorDesignNewSIPDataSet.Transaction);
             lblWelcomeUser.Text = "Welcome " + globals.name + " ";
+            lblSales.Text = "$" +todaySales();
+            lblSalesGoalWeek.Text = "$3,000";
+            lblItemsSold.Text = "" + howMany();
+            lblHotItem.Text = bestItem();
         }
 
         private void lblInventory_Click(object sender, EventArgs e)
@@ -124,6 +131,74 @@ namespace main_menu
             this.Hide();
             Login l = new Login();
             l.ShowDialog();
+        }
+
+        MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
+        private decimal todaySales()
+        {
+            decimal i;
+            cnn.Open();
+            MySqlCommand cmd = new MySqlCommand("select sum(`subtotal`) from `Transaction` where str_to_date(`date`, '%m/%d/%y') = date_format(curdate(), '%y/%m/%d')", cnn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                i = decimal.Parse(reader.GetValue(0).ToString());
+                cnn.Close();
+                return i;
+
+            }
+            else
+            {
+                cnn.Close();
+                return 0;
+            }
+
+        }
+
+        private int howMany()
+        {
+            int i;
+            cnn.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(transaction_item.tranId) AS Expr1 FROM transaction_item INNER JOIN Transaction ON transaction_item.tranId = Transaction.idTransaction WHERE(str_to_date(Transaction.`date`, '%m/%d/%y') = date_format(CURDATE(), '%y/%m/%d'))", cnn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                i = int.Parse(reader.GetValue(0).ToString());
+                cnn.Close();
+                return i;
+
+            }
+            else
+            {
+                cnn.Close();
+                return 0;
+            }
+
+        }
+        private string bestItem()
+        {
+            string str;
+            cnn.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SELECT items.itemName, COUNT(transaction_item.itemId) AS Expr1 FROM transaction_item INNER JOIN Transaction ON transaction_item.tranId = Transaction.idTransaction INNER JOIN items ON transaction_item.itemId = items.sku" +
+                " WHERE(STR_TO_DATE(Transaction.`date`, '%m/%d/%y') = DATE_FORMAT(CURDATE(), '%y/%m/%d')) GROUP BY transaction_item.itemId ORDER BY Expr1 DESC LIMIT 1", cnn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                str = reader.GetValue(0).ToString();
+                cnn.Close();
+                return str;
+            }
+            else
+            {
+                cnn.Close();
+                return null;
+            }
+
         }
 
     }

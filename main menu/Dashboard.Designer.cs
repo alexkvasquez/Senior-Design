@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
@@ -49,18 +50,22 @@
             this.lblWelcomeUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblHotItem = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblItemsSold = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSalesGoalWeek = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSales = new System.Windows.Forms.Label();
             this.lblTotalSales = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.transactionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.seniorDesignNewSIPDataSet = new main_menu.SeniorDesignNewSIPDataSet();
+            this.transactionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.transactionTableAdapter = new main_menu.SeniorDesignNewSIPDataSetTableAdapters.TransactionTableAdapter();
             this.sideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersIconPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StaffIconPic)).BeginInit();
@@ -73,6 +78,9 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // sideMenu
@@ -286,22 +294,22 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.lblHotItem);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(752, 69);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(203, 99);
+            this.panel5.Size = new System.Drawing.Size(203, 146);
             this.panel5.TabIndex = 12;
             // 
-            // label6
+            // lblHotItem
             // 
-            this.label6.Font = new System.Drawing.Font("Candara", 18F);
-            this.label6.Location = new System.Drawing.Point(0, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 40);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "what the item is";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHotItem.Font = new System.Drawing.Font("Candara", 18F);
+            this.lblHotItem.Location = new System.Drawing.Point(3, 38);
+            this.lblHotItem.Name = "lblHotItem";
+            this.lblHotItem.Size = new System.Drawing.Size(197, 90);
+            this.lblHotItem.TabIndex = 11;
+            this.lblHotItem.Text = "what the item is";
+            this.lblHotItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -313,27 +321,26 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Hot Items";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.lblItemsSold);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Location = new System.Drawing.Point(499, 69);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(203, 99);
+            this.panel4.Size = new System.Drawing.Size(203, 146);
             this.panel4.TabIndex = 12;
             // 
-            // label4
+            // lblItemsSold
             // 
-            this.label4.Font = new System.Drawing.Font("Candara", 18F);
-            this.label4.Location = new System.Drawing.Point(0, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 40);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "#";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblItemsSold.Font = new System.Drawing.Font("Candara", 18F);
+            this.lblItemsSold.Location = new System.Drawing.Point(3, 38);
+            this.lblItemsSold.Name = "lblItemsSold";
+            this.lblItemsSold.Size = new System.Drawing.Size(197, 90);
+            this.lblItemsSold.TabIndex = 11;
+            this.lblItemsSold.Text = "#";
+            this.lblItemsSold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -349,22 +356,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblSalesGoalWeek);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(253, 69);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 99);
+            this.panel2.Size = new System.Drawing.Size(203, 146);
             this.panel2.TabIndex = 12;
             // 
-            // label2
+            // lblSalesGoalWeek
             // 
-            this.label2.Font = new System.Drawing.Font("Candara", 18F);
-            this.label2.Location = new System.Drawing.Point(0, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 31);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "$";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSalesGoalWeek.Font = new System.Drawing.Font("Candara", 18F);
+            this.lblSalesGoalWeek.Location = new System.Drawing.Point(3, 43);
+            this.lblSalesGoalWeek.Name = "lblSalesGoalWeek";
+            this.lblSalesGoalWeek.Size = new System.Drawing.Size(197, 85);
+            this.lblSalesGoalWeek.TabIndex = 11;
+            this.lblSalesGoalWeek.Text = "$";
+            this.lblSalesGoalWeek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -382,22 +389,22 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lblSales);
             this.panel3.Controls.Add(this.lblTotalSales);
             this.panel3.Location = new System.Drawing.Point(25, 69);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(203, 99);
+            this.panel3.Size = new System.Drawing.Size(203, 146);
             this.panel3.TabIndex = 3;
             // 
-            // label1
+            // lblSales
             // 
-            this.label1.Font = new System.Drawing.Font("Candara", 18F);
-            this.label1.Location = new System.Drawing.Point(0, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 40);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "$";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSales.Font = new System.Drawing.Font("Candara", 18F);
+            this.lblSales.Location = new System.Drawing.Point(3, 38);
+            this.lblSales.Name = "lblSales";
+            this.lblSales.Size = new System.Drawing.Size(197, 90);
+            this.lblSales.TabIndex = 11;
+            this.lblSales.Text = "$";
+            this.lblSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTotalSales
             // 
@@ -412,20 +419,51 @@
             // 
             // chart1
             // 
+            chartArea1.AxisX.Title = "Transactions";
+            chartArea1.AxisY.Title = "Dollars";
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.DataSource = this.transactionBindingSource1;
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 486);
+            this.chart1.Location = new System.Drawing.Point(0, 419);
             this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Top;
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.Red;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.MarkerSize = 10;
+            series1.Name = "Sales Chart of The Day";
+            series1.XValueMember = "idTransaction";
+            series1.YValueMembers = "subtotal";
+            series1.YValuesPerPoint = 2;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1006, 273);
+            this.chart1.Size = new System.Drawing.Size(1006, 340);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
+            // 
+            // transactionBindingSource1
+            // 
+            this.transactionBindingSource1.DataMember = "Transaction";
+            this.transactionBindingSource1.DataSource = this.seniorDesignNewSIPDataSet;
+            // 
+            // seniorDesignNewSIPDataSet
+            // 
+            this.seniorDesignNewSIPDataSet.DataSetName = "SeniorDesignNewSIPDataSet";
+            this.seniorDesignNewSIPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // transactionBindingSource
+            // 
+            this.transactionBindingSource.DataMember = "Transaction";
+            this.transactionBindingSource.DataSource = this.seniorDesignNewSIPDataSet;
+            // 
+            // transactionTableAdapter
+            // 
+            this.transactionTableAdapter.ClearBeforeFill = true;
             // 
             // Dashboard
             // 
@@ -453,6 +491,9 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seniorDesignNewSIPDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,21 +513,25 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblHotItem;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblItemsSold;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSalesGoalWeek;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSales;
         private System.Windows.Forms.Label lblTotalSales;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox CustomersIconPic;
         private System.Windows.Forms.PictureBox StaffIconPic;
         private System.Windows.Forms.PictureBox OrdersIconPic;
         private System.Windows.Forms.Label lblLogout;
+        private SeniorDesignNewSIPDataSet seniorDesignNewSIPDataSet;
+        private System.Windows.Forms.BindingSource transactionBindingSource;
+        private SeniorDesignNewSIPDataSetTableAdapters.TransactionTableAdapter transactionTableAdapter;
+        private System.Windows.Forms.BindingSource transactionBindingSource1;
     }
 }

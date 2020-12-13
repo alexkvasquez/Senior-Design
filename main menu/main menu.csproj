@@ -151,6 +151,9 @@
       <AutoGen>True</AutoGen>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="SeniorDesignNewSIPDataSet.cs">
+      <DependentUpon>SeniorDesignNewSIPDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SeniorDesignNewSIPDataSet52.Designer.cs">
       <DependentUpon>SeniorDesignNewSIPDataSet52.xsd</DependentUpon>
       <DesignTime>True</DesignTime>
