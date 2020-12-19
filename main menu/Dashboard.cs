@@ -23,7 +23,7 @@ namespace main_menu
             // TODO: This line of code loads data into the 'seniorDesignNewSIPDataSet.Transaction' table. You can move, or remove it, as needed.
             this.transactionTableAdapter.Fill(this.seniorDesignNewSIPDataSet.Transaction);
             lblWelcomeUser.Text = "Welcome " + globals.name + " ";
-            lblSales.Text = "$" +todaySales();
+            lblSales.Text = "$" + todaySales();
             lblSalesGoalWeek.Text = "$3,000";
             lblItemsSold.Text = "" + howMany();
             lblHotItem.Text = bestItem();
@@ -134,6 +134,7 @@ namespace main_menu
         }
 
         MySqlConnection cnn = new MySqlConnection("datasource=104.198.30.14;port=3306;database = SeniorDesignNewSIP;username=Alex Vazquez;password=NYIT2020");
+
         private decimal todaySales()
         {
             decimal i;
@@ -143,10 +144,19 @@ namespace main_menu
 
             if (reader.Read())
             {
-                i = decimal.Parse(reader.GetValue(0).ToString());
-                cnn.Close();
-                return i;
-
+                string b = reader.GetValue(0).ToString();
+                if (b.Equals(""))
+                {
+                    cnn.Close();
+                    return 0;
+                }
+                else
+                {
+                    i = decimal.Parse(b);
+                    cnn.Close();
+                    return i;
+                }
+      
             }
             else
             {
