@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label label3;
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -71,6 +72,7 @@
             this.itemsTableAdapter1 = new main_menu.SeniorDesignNewSIPDataSet3TableAdapters.itemsTableAdapter();
             this.itemsTableAdapter2 = new main_menu.SeniorDesignNewSIPDataSet4TableAdapters.itemsTableAdapter();
             this.process1 = new System.Diagnostics.Process();
+            label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,7 +97,7 @@
             this.textBox1.Font = new System.Drawing.Font("Candara", 16F);
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
             this.textBox1.Location = new System.Drawing.Point(0, 206);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(163, 27);
@@ -106,13 +108,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.panel1.Controls.Add(label3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.inventoryToOrders);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 463);
             this.panel1.TabIndex = 0;
@@ -122,7 +125,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::main_menu.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(2, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,7 +136,7 @@
             // 
             this.inventoryToOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.inventoryToOrders.Location = new System.Drawing.Point(11, 414);
-            this.inventoryToOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inventoryToOrders.Margin = new System.Windows.Forms.Padding(2);
             this.inventoryToOrders.Name = "inventoryToOrders";
             this.inventoryToOrders.Size = new System.Drawing.Size(132, 32);
             this.inventoryToOrders.TabIndex = 1;
@@ -151,7 +154,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel2.Location = new System.Drawing.Point(163, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(860, 463);
             this.panel2.TabIndex = 1;
@@ -174,7 +177,7 @@
             this.quantityDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.itemsBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(15, 19);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -266,7 +269,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.panel3.Location = new System.Drawing.Point(510, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(350, 463);
             this.panel3.TabIndex = 11;
@@ -275,7 +278,7 @@
             // 
             this.HomeIconPic.Image = global::main_menu.Properties.Resources.Home_Icon;
             this.HomeIconPic.Location = new System.Drawing.Point(322, 7);
-            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HomeIconPic.Margin = new System.Windows.Forms.Padding(2);
             this.HomeIconPic.Name = "HomeIconPic";
             this.HomeIconPic.Size = new System.Drawing.Size(22, 24);
             this.HomeIconPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -289,7 +292,7 @@
             this.txtTextDes.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextDes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextDes.Location = new System.Drawing.Point(97, 290);
-            this.txtTextDes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextDes.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextDes.Multiline = true;
             this.txtTextDes.Name = "txtTextDes";
             this.txtTextDes.ReadOnly = true;
@@ -303,7 +306,7 @@
             this.txtTextretail.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextretail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextretail.Location = new System.Drawing.Point(97, 241);
-            this.txtTextretail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextretail.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextretail.Name = "txtTextretail";
             this.txtTextretail.ReadOnly = true;
             this.txtTextretail.Size = new System.Drawing.Size(212, 27);
@@ -315,7 +318,7 @@
             this.txtTextSku.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextSku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextSku.Location = new System.Drawing.Point(97, 57);
-            this.txtTextSku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextSku.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextSku.Name = "txtTextSku";
             this.txtTextSku.ReadOnly = true;
             this.txtTextSku.Size = new System.Drawing.Size(212, 27);
@@ -327,7 +330,7 @@
             this.txtTextVendor.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextVendor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextVendor.Location = new System.Drawing.Point(97, 149);
-            this.txtTextVendor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextVendor.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextVendor.Name = "txtTextVendor";
             this.txtTextVendor.ReadOnly = true;
             this.txtTextVendor.Size = new System.Drawing.Size(212, 27);
@@ -339,7 +342,7 @@
             this.txtTextName.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextName.Location = new System.Drawing.Point(97, 11);
-            this.txtTextName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextName.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextName.Name = "txtTextName";
             this.txtTextName.ReadOnly = true;
             this.txtTextName.Size = new System.Drawing.Size(212, 27);
@@ -351,7 +354,7 @@
             this.txtTextOnHands.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextOnHands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextOnHands.Location = new System.Drawing.Point(97, 195);
-            this.txtTextOnHands.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextOnHands.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextOnHands.Name = "txtTextOnHands";
             this.txtTextOnHands.Size = new System.Drawing.Size(212, 27);
             this.txtTextOnHands.TabIndex = 25;
@@ -362,7 +365,7 @@
             this.txtTextItemSize.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTextItemSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.txtTextItemSize.Location = new System.Drawing.Point(97, 103);
-            this.txtTextItemSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextItemSize.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextItemSize.Name = "txtTextItemSize";
             this.txtTextItemSize.ReadOnly = true;
             this.txtTextItemSize.Size = new System.Drawing.Size(212, 27);
@@ -467,7 +470,7 @@
             // 
             this.editInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.editInventory.Location = new System.Drawing.Point(16, 421);
-            this.editInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editInventory.Margin = new System.Windows.Forms.Padding(2);
             this.editInventory.Name = "editInventory";
             this.editInventory.Size = new System.Drawing.Size(291, 22);
             this.editInventory.TabIndex = 3;
@@ -478,7 +481,7 @@
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(15, 421);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(478, 20);
             this.txtSearch.TabIndex = 11;
@@ -532,6 +535,19 @@
             this.process1.StartInfo.UserName = "";
             this.process1.SynchronizingObject = this;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            label3.Font = new System.Drawing.Font("Candara", 12F);
+            label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(190)))), ((int)(((byte)(198)))));
+            label3.Location = new System.Drawing.Point(12, 7);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(18, 19);
+            label3.TabIndex = 5;
+            label3.Text = "X";
+            label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -543,7 +559,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Maroon;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
