@@ -175,7 +175,6 @@ namespace main_menu
                 DialogResult dialogResult = MessageBox.Show("Are you sure you want submit the order.", "Adding Items to Order", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-
                     for (int rows = 0; rows < dataGridView2.Rows.Count; rows++)
                     {
                         try
@@ -187,15 +186,12 @@ namespace main_menu
                             decimal bip = Convert.ToDecimal(row.Cells[4].Value.ToString());
 
                             MySqlCommand cmd1 = new MySqlCommand("SELECT Quantity from items WHERE sku=" + sku + "", cnn);
-
                             cnn.Open();
-
                             MySqlDataReader reader = cmd1.ExecuteReader();
                             while (reader.Read())
                             {
                                 globals.getQuan = int.Parse(reader.GetValue(0).ToString());
                             }
-
                             cnn.Close();
 
                             Console.WriteLine(sku + " " + globals.orderNumber);
@@ -206,10 +202,8 @@ namespace main_menu
                             MySqlCommand cmd2 = new MySqlCommand("UPDATE items SET Quantity =" + (qu + globals.getQuan) + " WHERE sku=" + sku + "", cnn);
 
                             cnn.Open();
-
                             cmd.ExecuteNonQuery();
                             cmd2.ExecuteNonQuery();
-
                             cnn.Close();
                         }
                         catch (Exception ex)
@@ -218,9 +212,7 @@ namespace main_menu
                         }
 
                     }
-
                     MessageBox.Show("Order has been successfully placed!");
-
                     this.Hide();
                     ReportForm x = new ReportForm();
                     x.ShowDialog();

@@ -156,14 +156,12 @@ namespace main_menu
                     cnn.Close();
                     return i;
                 }
-      
             }
             else
             {
                 cnn.Close();
                 return 0;
             }
-
         }
 
         private int howMany()
@@ -171,7 +169,8 @@ namespace main_menu
             int i;
             cnn.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(transaction_item.tranId) AS Expr1 FROM transaction_item INNER JOIN Transaction ON transaction_item.tranId = Transaction.idTransaction WHERE(str_to_date(Transaction.`date`, '%m/%d/%y') = date_format(CURDATE(), '%y/%m/%d'))", cnn);
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(transaction_item.tranId) AS Expr1 FROM transaction_item INNER JOIN Transaction ON transaction_item.tranId = Transaction.idTransaction " +
+                "WHERE(str_to_date(Transaction.`date`, '%m/%d/%y') = date_format(CURDATE(), '%y/%m/%d'))", cnn);
             MySqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.Read())
@@ -179,7 +178,6 @@ namespace main_menu
                 i = int.Parse(reader.GetValue(0).ToString());
                 cnn.Close();
                 return i;
-
             }
             else
             {

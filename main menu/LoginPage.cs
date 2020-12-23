@@ -57,10 +57,7 @@ namespace main_menu
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //this is going to check the data base if the login is correct
-
             string hashedPassword = hashing(txtPassword.Text);
-
-
             cnn.Open();
             MySqlCommand cmd = cnn.CreateCommand();
             cmd.CommandText = "SELECT idUsers,userName,password,level,Name from Users WHERE userName ='"+ txtUserName.Text +"' AND password ='" + hashedPassword + "'";
@@ -75,17 +72,13 @@ namespace main_menu
                 this.Hide();
                 Dashboard d = new Dashboard();
                 d.ShowDialog();
-
-
             }
             else
             {
                 MessageBox.Show("Wrong Username And/Or Password");
                 txtPassword.Clear();
             }
-
             cnn.Close();
-
         }
 
         private void lblForgotUserName_Click(object sender, EventArgs e)
